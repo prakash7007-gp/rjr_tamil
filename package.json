@@ -12,7 +12,7 @@
     "@fontsource-variable/noto-sans-tamil": "^5.2.7",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.555.0",
-    "next": "16.0.6",
+    "next": "16.0.10",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "swiper": "^12.0.3"
