@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("useUnifiedShareSheetUtils",["MWChatSearchResultType","react","react-compiler-runtime"],(function(t,n,r,o,a,i,l){"use strict";var e,s=(e||(e=o("react"))).useCallback;function u(){var e=o("react-compiler-runtime").c(1),t=c,n;return e[0]===Symbol.for("react.memo_cache_sentinel")?(n={convertMWChatSearchResultType2FbSharingReceiverType:t},e[0]=n):n=e[0],n}function c(e){var t=e.chat_search_result_type,n;e:switch(t){case r("MWChatSearchResultType").USER:{n="one_to_one";break e}case r("MWChatSearchResultType").GROUP:{n="group";break e}case r("MWChatSearchResultType").MESSAGE:{n="community_messaging";break e}default:n="unknown"}return{receiver_type:n}}l.default=u}),98);

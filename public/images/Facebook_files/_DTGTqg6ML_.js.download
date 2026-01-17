@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("UnifiedShareSheetMessengerUtil",["FBLogger","MWChatSearchResultType"],(function(t,n,r,o,a,i,l){"use strict";function e(e){switch(e){case r("MWChatSearchResultType").GROUP:return"GROUP";case r("MWChatSearchResultType").USER:return"USER";default:return r("FBLogger")("fb_social_experience_web_sharing").mustfix("Unknown targettype for getDispatchAction messenger dispatch"),"USER"}}function s(e){switch(e){case"User":return"USER";case"MessengerViewer1To1Thread":return"USER";case"MessengerViewerGroupThread":return"GROUP";default:return r("FBLogger")("messenger_web_sharing").mustfix("Unknown __typename for getDispatchAction messenger dispatch"),"USER"}}var u={getTargetTypeFromTypenameForGQL:s,getTargetTypeFromTypenameForLightSpeed:e};l.default=u}),98);

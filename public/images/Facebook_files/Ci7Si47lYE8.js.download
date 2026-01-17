@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("CometSharingLoggingContextProvider",["CometSharingLoggingContext","react","react-compiler-runtime"],(function(t,n,r,o,a,i,l){"use strict";var e,s=e||(e=o("react")),u=e.useMemo;function c(e){var t=o("react-compiler-runtime").c(6),n=e.children,a=e.sessionID,i=e.tracking,l;t[0]!==a||t[1]!==i?(l={sessionID:a,tracking:i},t[0]=a,t[1]=i,t[2]=l):l=t[2];var u=l,c;return t[3]!==n||t[4]!==u?(c=s.jsx(r("CometSharingLoggingContext").Provider,{value:u,children:n}),t[3]=n,t[4]=u,t[5]=c):c=t[5],c}l.default=c}),98);

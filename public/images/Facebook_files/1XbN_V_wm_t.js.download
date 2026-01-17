@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("UnifiedShareSheetComposerHeaderPrivacySelector_privacy.graphql",[],(function(t,n,r,o,a,i){"use strict";var e={argumentDefinitions:[],kind:"Fragment",metadata:null,name:"UnifiedShareSheetComposerHeaderPrivacySelector_privacy",selections:[{args:null,kind:"FragmentSpread",name:"CometComposerPrivacyScope_scope"}],type:"PrivacyScope",abstractKey:null};a.exports=e}),null);

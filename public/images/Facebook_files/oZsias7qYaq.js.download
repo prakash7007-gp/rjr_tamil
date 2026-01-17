@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("useCometSharingLoggingProcessRoute",["CometRouteParams","react-compiler-runtime","useRoutePassthroughProps"],(function(t,n,r,o,a,i,l){"use strict";function e(){var e=o("react-compiler-runtime").c(4),t=o("CometRouteParams").useRouteParams(),n=r("useRoutePassthroughProps")()||{},a="";typeof t.entrypoint=="string"?a=t.entrypoint:typeof n.entrypoint=="string"&&(a=n.entrypoint);var i=typeof n.entrypointSessionID=="string"?n.entrypointSessionID:"",l=typeof n.entrypointTracking=="string"?n.entrypointTracking:"",s;return e[0]!==a||e[1]!==i||e[2]!==l?(s={entrypoint:a,entrypointSessionID:i,entrypointTracking:l},e[0]=a,e[1]=i,e[2]=l,e[3]=s):s=e[3],s}l.default=e}),98);

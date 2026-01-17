@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("UnifiedShareSheetMessengerHscrollUtil",["UnifiedShareSheetConstants"],(function(t,n,r,o,a,i,l){"use strict";function e(e,t){var n=e;if((t==null?void 0:t.current)==null)return 0;if(e>0){var r,a,i,l,s=(r=t==null||(a=t.current)==null||(a=a.parentElement)==null||(a=a.parentElement)==null||(a=a.parentElement)==null?void 0:a.getBoundingClientRect().x)!=null?r:0,u=(i=t==null||(l=t.current)==null?void 0:l.getBoundingClientRect().x)!=null?i:0,c=Math.floor((u-s-o("UnifiedShareSheetConstants").MESSENGER_HSCROLL_PADDING)/o("UnifiedShareSheetConstants").MESSENGER_CONTACT_WIDTH);return n=e-c,n>0?n:0}return 0}var s={getInitialScrollToIndexForMessengerHscroll:e};l.default=s}),98);

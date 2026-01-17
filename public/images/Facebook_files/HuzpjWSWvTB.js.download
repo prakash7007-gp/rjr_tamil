@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("UnifiedShareSheetFeedComposerSection_fragment.graphql",[],(function(t,n,r,o,a,i){"use strict";var e={argumentDefinitions:[{kind:"RootArgument",name:"isComposerDisabled"}],kind:"Fragment",metadata:null,name:"UnifiedShareSheetFeedComposerSection_fragment",selections:[{condition:"isComposerDisabled",kind:"Condition",passingValue:!1,selections:[{args:null,kind:"FragmentSpread",name:"UnifiedShareSheetComposerHeaderSection_fragment"},{args:null,kind:"FragmentSpread",name:"UnifiedShareSheetComposer_data"}]}],type:"Query",abstractKey:null};a.exports=e}),null);

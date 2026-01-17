@@ -1,0 +1,941 @@
+[
+    {
+        "state": "Tamil Nadu",
+        "branches": [
+            {
+                "id": "ambur",
+                "city": "Ambur",
+                "address": "Door No:1 Ground Floor, Anna Nagar, Ambur Plantation R F, Chennai to Bangalore Highway Road, Ambur. LM: Near Bajaj Bike Showroom. Pincode: 635802.",
+                "phone": "04174290066, +91 9514577711",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ambur&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "chennai",
+                "city": "Chennai",
+                "address": "No.150, Habibulla Road, Near Devar Kalyana Mandabam, North Usman Road Post Office Back Side, T.Nagar, Chennai, Tamil Nadu. Pincode: 600017.",
+                "phone": "+91 98404 98404",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Chennai&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "coimbatore",
+                "city": "Coimbatore",
+                "address": "RJR Herbal Hospital, Coimbatore Main Road, Near Bus Stand, Coimbatore.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Coimbatore&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "cuddalore",
+                "city": "Cuddalore",
+                "address": "RJR Herbal Hospital, Cuddalore Main Road, Near Bus Stand, Cuddalore.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Cuddalore&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "dharmapuri",
+                "city": "Dharmapuri",
+                "address": "RJR Herbal Hospital, Dharmapuri Main Road, Near Bus Stand, Dharmapuri.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Dharmapuri&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "dindigul",
+                "city": "Dindigul",
+                "address": "RJR Herbal Hospital, Dindigul Main Road, Near Bus Stand, Dindigul.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Dindigul&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "erode",
+                "city": "Erode",
+                "address": "RJR Herbal Hospital, Erode Main Road, Near Bus Stand, Erode.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Erode&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "hosur",
+                "city": "Hosur",
+                "address": "RJR Herbal Hospital, Hosur Main Road, Near Bus Stand, Hosur.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Hosur&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "kanchipuram",
+                "city": "Kanchipuram",
+                "address": "RJR Herbal Hospital, Kanchipuram Main Road, Near Bus Stand, Kanchipuram.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kanchipuram&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "karaikudi",
+                "city": "Karaikudi",
+                "address": "RJR Herbal Hospital, Karaikudi Main Road, Near Bus Stand, Karaikudi.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Karaikudi&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "karur",
+                "city": "Karur",
+                "address": "RJR Herbal Hospital, Karur Main Road, Near Bus Stand, Karur.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Karur&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "kovilpatti",
+                "city": "Kovilpatti",
+                "address": "RJR Herbal Hospital, Kovilpatti Main Road, Near Bus Stand, Kovilpatti.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kovilpatti&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "krishnagiri",
+                "city": "Krishnagiri",
+                "address": "RJR Herbal Hospital, Krishnagiri Main Road, Near Bus Stand, Krishnagiri.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Krishnagiri&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "kumbakonam",
+                "city": "Kumbakonam",
+                "address": "RJR Herbal Hospital, Kumbakonam Main Road, Near Bus Stand, Kumbakonam.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kumbakonam&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "madurai",
+                "city": "Madurai",
+                "address": "RJR Herbal Hospital, Madurai Main Road, Near Bus Stand, Madurai.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Madurai&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "marthandam",
+                "city": "Marthandam",
+                "address": "RJR Herbal Hospital, Marthandam Main Road, Near Bus Stand, Marthandam.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Marthandam&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "mayiladuthurai",
+                "city": "Mayiladuthurai",
+                "address": "RJR Herbal Hospital, Mayiladuthurai Main Road, Near Bus Stand, Mayiladuthurai.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Mayiladuthurai&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "nagapattinam",
+                "city": "Nagapattinam",
+                "address": "RJR Herbal Hospital, Nagapattinam Main Road, Near Bus Stand, Nagapattinam.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nagapattinam&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "nagercoil",
+                "city": "Nagercoil",
+                "address": "RJR Herbal Hospital, Nagercoil Main Road, Near Bus Stand, Nagercoil.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nagercoil&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "pollachi",
+                "city": "Pollachi",
+                "address": "RJR Herbal Hospital, Pollachi Main Road, Near Bus Stand, Pollachi.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Pollachi&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "pudukkottai",
+                "city": "Pudukkottai",
+                "address": "RJR Herbal Hospital, Pudukkottai Main Road, Near Bus Stand, Pudukkottai.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Pudukkottai&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "ramanathapuram",
+                "city": "Ramanathapuram",
+                "address": "RJR Herbal Hospital, Ramanathapuram Main Road, Near Bus Stand, Ramanathapuram.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ramanathapuram&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "salem",
+                "city": "Salem",
+                "address": "RJR Herbal Hospital, Salem Main Road, Near Bus Stand, Salem.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Salem&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "sivakasi",
+                "city": "Sivakasi",
+                "address": "RJR Herbal Hospital, Sivakasi Main Road, Near Bus Stand, Sivakasi.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Sivakasi&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "tenkasi",
+                "city": "Tenkasi",
+                "address": "RJR Herbal Hospital, Tenkasi Main Road, Near Bus Stand, Tenkasi.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tenkasi&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "thanjauvr",
+                "city": "Thanjauvr",
+                "address": "RJR Herbal Hospital, Thanjauvr Main Road, Near Bus Stand, Thanjauvr.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Thanjauvr&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "theni",
+                "city": "Theni",
+                "address": "RJR Herbal Hospital, Theni Main Road, Near Bus Stand, Theni.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Theni&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "thiruvallur",
+                "city": "Thiruvallur",
+                "address": "RJR Herbal Hospital, Thiruvallur Main Road, Near Bus Stand, Thiruvallur.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Thiruvallur&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "tirunelveli",
+                "city": "Tirunelveli",
+                "address": "RJR Herbal Hospital, Tirunelveli Main Road, Near Bus Stand, Tirunelveli.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tirunelveli&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "tiruppur",
+                "city": "Tiruppur",
+                "address": "RJR Herbal Hospital, Tiruppur Main Road, Near Bus Stand, Tiruppur.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tiruppur&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "tiruvannamalai",
+                "city": "Tiruvannamalai",
+                "address": "RJR Herbal Hospital, Tiruvannamalai Main Road, Near Bus Stand, Tiruvannamalai.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tiruvannamalai&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "trichy",
+                "city": "Trichy",
+                "address": "RJR Herbal Hospital, Trichy Main Road, Near Bus Stand, Trichy.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Trichy&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "vellore",
+                "city": "Vellore",
+                "address": "RJR Herbal Hospital, Vellore Main Road, Near Bus Stand, Vellore.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Vellore&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "villupuram",
+                "city": "Villupuram",
+                "address": "RJR Herbal Hospital, Villupuram Main Road, Near Bus Stand, Villupuram.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Villupuram&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "virudhachalam",
+                "city": "Virudhachalam",
+                "address": "RJR Herbal Hospital, Virudhachalam Main Road, Near Bus Stand, Virudhachalam.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Virudhachalam&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            }
+        ]
+    },
+    {
+        "state": "Andhra Pradesh",
+        "branches": [
+            {
+                "id": "anantapur",
+                "city": "Anantapur",
+                "address": "RJR Herbal Hospital, Anantapur Main Road, Near Bus Stand, Anantapur.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Anantapur&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "anakapalle",
+                "city": "Anakapalle",
+                "address": "RJR Herbal Hospital, Anakapalle Main Road, Near Bus Stand, Anakapalle.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Anakapalle&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "bhimavaram",
+                "city": "Bhimavaram",
+                "address": "RJR Herbal Hospital, Bhimavaram Main Road, Near Bus Stand, Bhimavaram.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Bhimavaram&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "eluru",
+                "city": "Eluru",
+                "address": "RJR Herbal Hospital, Eluru Main Road, Near Bus Stand, Eluru.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Eluru&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "guntur",
+                "city": "Guntur",
+                "address": "RJR Herbal Hospital, Guntur Main Road, Near Bus Stand, Guntur.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Guntur&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "kadapa",
+                "city": "Kadapa",
+                "address": "RJR Herbal Hospital, Kadapa Main Road, Near Bus Stand, Kadapa.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kadapa&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "kakinada",
+                "city": "Kakinada",
+                "address": "RJR Herbal Hospital, Kakinada Main Road, Near Bus Stand, Kakinada.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kakinada&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "kavali",
+                "city": "Kavali",
+                "address": "RJR Herbal Hospital, Kavali Main Road, Near Bus Stand, Kavali.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kavali&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "kurnool",
+                "city": "Kurnool",
+                "address": "RJR Herbal Hospital, Kurnool Main Road, Near Bus Stand, Kurnool.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kurnool&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "nandyal",
+                "city": "Nandyal",
+                "address": "RJR Herbal Hospital, Nandyal Main Road, Near Bus Stand, Nandyal.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nandyal&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "narasaraopet",
+                "city": "Narasaraopet",
+                "address": "RJR Herbal Hospital, Narasaraopet Main Road, Near Bus Stand, Narasaraopet.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Narasaraopet&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "nellore",
+                "city": "Nellore",
+                "address": "RJR Herbal Hospital, Nellore Main Road, Near Bus Stand, Nellore.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nellore&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "ongole",
+                "city": "Ongole",
+                "address": "RJR Herbal Hospital, Ongole Main Road, Near Bus Stand, Ongole.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ongole&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "rajahmundry",
+                "city": "Rajahmundry",
+                "address": "RJR Herbal Hospital, Rajahmundry Main Road, Near Bus Stand, Rajahmundry.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Rajahmundry&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "srikakulam",
+                "city": "Srikakulam",
+                "address": "RJR Herbal Hospital, Srikakulam Main Road, Near Bus Stand, Srikakulam.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Srikakulam&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "tirupati",
+                "city": "Tirupati",
+                "address": "RJR Herbal Hospital, Tirupati Main Road, Near Bus Stand, Tirupati.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tirupati&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "vijayawada",
+                "city": "Vijayawada",
+                "address": "RJR Herbal Hospital, Vijayawada Main Road, Near Bus Stand, Vijayawada.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Vijayawada&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "visakhapatnam",
+                "city": "Visakhapatnam",
+                "address": "RJR Herbal Hospital, Visakhapatnam Main Road, Near Bus Stand, Visakhapatnam.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Visakhapatnam&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "vizianagaram",
+                "city": "Vizianagaram",
+                "address": "RJR Herbal Hospital, Vizianagaram Main Road, Near Bus Stand, Vizianagaram.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Vizianagaram&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            }
+        ]
+    },
+    {
+        "state": "Telangana",
+        "branches": [
+            {
+                "id": "ameerpet---hyderabad",
+                "city": "Ameerpet - Hyderabad",
+                "address": "RJR Herbal Hospital, Ameerpet - Hyderabad Main Road, Near Bus Stand, Ameerpet - Hyderabad.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ameerpet+-+Hyderabad&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "a.s.rao-nagar---hyderabad",
+                "city": "A.S.Rao Nagar - Hyderabad",
+                "address": "RJR Herbal Hospital, A.S.Rao Nagar - Hyderabad Main Road, Near Bus Stand, A.S.Rao Nagar - Hyderabad.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+A.S.Rao+Nagar+-+Hyderabad&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "chanda-nagar---hyderabad",
+                "city": "Chanda Nagar - Hyderabad",
+                "address": "RJR Herbal Hospital, Chanda Nagar - Hyderabad Main Road, Near Bus Stand, Chanda Nagar - Hyderabad.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Chanda+Nagar+-+Hyderabad&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "himayat-nagar---hyderabad",
+                "city": "Himayat Nagar - Hyderabad",
+                "address": "RJR Herbal Hospital, Himayat Nagar - Hyderabad Main Road, Near Bus Stand, Himayat Nagar - Hyderabad.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Himayat+Nagar+-+Hyderabad&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "jadcherla",
+                "city": "Jadcherla",
+                "address": "RJR Herbal Hospital, Jadcherla Main Road, Near Bus Stand, Jadcherla.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Jadcherla&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "jagtial",
+                "city": "Jagtial",
+                "address": "RJR Herbal Hospital, Jagtial Main Road, Near Bus Stand, Jagtial.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Jagtial&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "karimnagar",
+                "city": "Karimnagar",
+                "address": "RJR Herbal Hospital, Karimnagar Main Road, Near Bus Stand, Karimnagar.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Karimnagar&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "khammam",
+                "city": "Khammam",
+                "address": "RJR Herbal Hospital, Khammam Main Road, Near Bus Stand, Khammam.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Khammam&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "mancherial",
+                "city": "Mancherial",
+                "address": "RJR Herbal Hospital, Mancherial Main Road, Near Bus Stand, Mancherial.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Mancherial&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "nalgonda",
+                "city": "Nalgonda",
+                "address": "RJR Herbal Hospital, Nalgonda Main Road, Near Bus Stand, Nalgonda.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nalgonda&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "nizamabad",
+                "city": "Nizamabad",
+                "address": "RJR Herbal Hospital, Nizamabad Main Road, Near Bus Stand, Nizamabad.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nizamabad&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "siddipet",
+                "city": "Siddipet",
+                "address": "RJR Herbal Hospital, Siddipet Main Road, Near Bus Stand, Siddipet.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Siddipet&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "suryapet",
+                "city": "Suryapet",
+                "address": "RJR Herbal Hospital, Suryapet Main Road, Near Bus Stand, Suryapet.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Suryapet&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "warangal",
+                "city": "Warangal",
+                "address": "RJR Herbal Hospital, Warangal Main Road, Near Bus Stand, Warangal.",
+                "phone": "+91 9655555517",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Warangal&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            }
+        ]
+    },
+    {
+        "state": "Karnataka",
+        "branches": [
+            {
+                "id": "ballari",
+                "city": "Ballari",
+                "address": "RJR Herbal Hospital, Ballari Main Road, Near Bus Stand, Ballari.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ballari&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "belgaum",
+                "city": "Belgaum",
+                "address": "RJR Herbal Hospital, Belgaum Main Road, Near Bus Stand, Belgaum.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Belgaum&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "davangere",
+                "city": "Davangere",
+                "address": "RJR Herbal Hospital, Davangere Main Road, Near Bus Stand, Davangere.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Davangere&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "gulbarga",
+                "city": "Gulbarga",
+                "address": "RJR Herbal Hospital, Gulbarga Main Road, Near Bus Stand, Gulbarga.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Gulbarga&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "hassan",
+                "city": "Hassan",
+                "address": "RJR Herbal Hospital, Hassan Main Road, Near Bus Stand, Hassan.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Hassan&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "hubli",
+                "city": "Hubli",
+                "address": "RJR Herbal Hospital, Hubli Main Road, Near Bus Stand, Hubli.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Hubli&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "hsr-layout",
+                "city": "Hsr Layout",
+                "address": "RJR Herbal Hospital, Hsr Layout Main Road, Near Bus Stand, Hsr Layout.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Hsr+Layout&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "kalyan-nagar---bangalore",
+                "city": "Kalyan Nagar - Bangalore",
+                "address": "RJR Herbal Hospital, Kalyan Nagar - Bangalore Main Road, Near Bus Stand, Kalyan Nagar - Bangalore.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kalyan+Nagar+-+Bangalore&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "kolar",
+                "city": "Kolar",
+                "address": "RJR Herbal Hospital, Kolar Main Road, Near Bus Stand, Kolar.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kolar&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "mangalore",
+                "city": "Mangalore",
+                "address": "RJR Herbal Hospital, Mangalore Main Road, Near Bus Stand, Mangalore.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Mangalore&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "mysore",
+                "city": "Mysore",
+                "address": "RJR Herbal Hospital, Mysore Main Road, Near Bus Stand, Mysore.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Mysore&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "rajaji-nagar---bangalore",
+                "city": "Rajaji Nagar - Bangalore",
+                "address": "RJR Herbal Hospital, Rajaji Nagar - Bangalore Main Road, Near Bus Stand, Rajaji Nagar - Bangalore.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Rajaji+Nagar+-+Bangalore&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "shivamogga",
+                "city": "Shivamogga",
+                "address": "RJR Herbal Hospital, Shivamogga Main Road, Near Bus Stand, Shivamogga.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Shivamogga&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "tumkur",
+                "city": "Tumkur",
+                "address": "RJR Herbal Hospital, Tumkur Main Road, Near Bus Stand, Tumkur.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tumkur&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "vijayapura",
+                "city": "Vijayapura",
+                "address": "RJR Herbal Hospital, Vijayapura Main Road, Near Bus Stand, Vijayapura.",
+                "phone": "+91 9962800003",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Vijayapura&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            }
+        ]
+    },
+    {
+        "state": "Puducherry",
+        "branches": [
+            {
+                "id": "pondicherry",
+                "city": "Pondicherry",
+                "address": "RJR Herbal Hospital, Pondicherry Main Road, Near Bus Stand, Pondicherry.",
+                "phone": "+91 7871111115",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Pondicherry&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            }
+        ]
+    },
+    {
+        "state": "Maharashtra",
+        "branches": [
+            {
+                "id": "mumbai-/-bombay",
+                "city": "Mumbai / Bombay",
+                "address": "RJR Herbal Hospital, Mumbai / Bombay Main Road, Near Bus Stand, Mumbai / Bombay.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Mumbai+/+Bombay&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "navi-mumbai",
+                "city": "Navi Mumbai",
+                "address": "RJR Herbal Hospital, Navi Mumbai Main Road, Near Bus Stand, Navi Mumbai.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Navi+Mumbai&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "dombivali",
+                "city": "Dombivali",
+                "address": "RJR Herbal Hospital, Dombivali Main Road, Near Bus Stand, Dombivali.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Dombivali&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "pune",
+                "city": "Pune",
+                "address": "RJR Herbal Hospital, Pune Main Road, Near Bus Stand, Pune.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Pune&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "nashik",
+                "city": "Nashik",
+                "address": "RJR Herbal Hospital, Nashik Main Road, Near Bus Stand, Nashik.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nashik&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "solapur",
+                "city": "Solapur",
+                "address": "RJR Herbal Hospital, Solapur Main Road, Near Bus Stand, Solapur.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Solapur&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "aurangabad",
+                "city": "Aurangabad",
+                "address": "RJR Herbal Hospital, Aurangabad Main Road, Near Bus Stand, Aurangabad.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Aurangabad&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "kolhapur",
+                "city": "Kolhapur",
+                "address": "RJR Herbal Hospital, Kolhapur Main Road, Near Bus Stand, Kolhapur.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kolhapur&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "ahmednagar",
+                "city": "Ahmednagar",
+                "address": "RJR Herbal Hospital, Ahmednagar Main Road, Near Bus Stand, Ahmednagar.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ahmednagar&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "nagpur",
+                "city": "Nagpur",
+                "address": "RJR Herbal Hospital, Nagpur Main Road, Near Bus Stand, Nagpur.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nagpur&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "nanded",
+                "city": "Nanded",
+                "address": "RJR Herbal Hospital, Nanded Main Road, Near Bus Stand, Nanded.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nanded&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "akola",
+                "city": "Akola",
+                "address": "RJR Herbal Hospital, Akola Main Road, Near Bus Stand, Akola.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Akola&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "amravathi",
+                "city": "Amravathi",
+                "address": "RJR Herbal Hospital, Amravathi Main Road, Near Bus Stand, Amravathi.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Amravathi&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            },
+            {
+                "id": "jalgaon",
+                "city": "Jalgaon",
+                "address": "RJR Herbal Hospital, Jalgaon Main Road, Near Bus Stand, Jalgaon.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Jalgaon&output=embed",
+                "doctorName": "Dr. Naveen",
+                "doctorImage": "/images/naveersir1.png"
+            },
+            {
+                "id": "pimpri-chinchwad",
+                "city": "Pimpri Chinchwad",
+                "address": "RJR Herbal Hospital, Pimpri Chinchwad Main Road, Near Bus Stand, Pimpri Chinchwad.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Pimpri+Chinchwad&output=embed",
+                "doctorName": "Dr. S. Rajalaxmi",
+                "doctorImage": "/images/md sir nadi.png"
+            },
+            {
+                "id": "satara",
+                "city": "SATARA",
+                "address": "RJR Herbal Hospital, SATARA Main Road, Near Bus Stand, SATARA.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+SATARA&output=embed",
+                "doctorName": "Dr. Dhakshnamoorthy",
+                "doctorImage": "/images/dhakshnamoorthy.png"
+            },
+            {
+                "id": "melegaon",
+                "city": "Melegaon",
+                "address": "RJR Herbal Hospital, Melegaon Main Road, Near Bus Stand, Melegaon.",
+                "phone": "+91 8591122222",
+                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Melegaon&output=embed",
+                "doctorName": "Dr. Kavitha",
+                "doctorImage": "/images/kavitha.png"
+            }
+        ]
+    }
+]

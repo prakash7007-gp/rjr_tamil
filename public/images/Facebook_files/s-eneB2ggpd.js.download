@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("UnifiedShareSheetMessengerMultiSelectionDialog.entrypoint",["JSResourceForInteraction","UnifiedShareSheetMessengerMultiSelectionDialogQuery$Parameters","UnifiedShareSheetMessengerSectionQuery$Parameters"],(function(t,n,r,o,a,i,l){"use strict";var e={getPreloadProps:function(){return{queries:{messengerQueryReference:{parameters:r("UnifiedShareSheetMessengerSectionQuery$Parameters"),variables:{}},multipleSelectionQueryReference:{parameters:r("UnifiedShareSheetMessengerMultiSelectionDialogQuery$Parameters"),variables:{}}}}},root:r("JSResourceForInteraction")("UnifiedShareSheetMessengerMultiSelectionDialog.react").__setRef("UnifiedShareSheetMessengerMultiSelectionDialog.entrypoint")};l.default=e}),98);

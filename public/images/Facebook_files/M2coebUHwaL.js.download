@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("UnifiedShareSheetComposerSection_fragment.graphql",[],(function(t,n,r,o,a,i){"use strict";var e={argumentDefinitions:[],kind:"Fragment",metadata:null,name:"UnifiedShareSheetComposerSection_fragment",selections:[{args:null,kind:"FragmentSpread",name:"UnifiedShareSheetFeedComposerSection_fragment"},{args:null,kind:"FragmentSpread",name:"UnifiedShareSheetFriendsFeedComposerSection_fragment"}],type:"Query",abstractKey:null};a.exports=e}),null);

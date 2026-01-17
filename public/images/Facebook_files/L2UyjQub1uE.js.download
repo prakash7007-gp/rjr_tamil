@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("CometComposerDestinationSelectorContext",["CometComposerDestinationSelectorUtil","TCometComposerTarget","react"],(function(t,n,r,o,a,i,l){"use strict";var e,s=e||(e=o("react")),u={destinationPillLabel:o("CometComposerDestinationSelectorUtil").getUnifiedShareSheetDestinationPillLabel(o("TCometComposerTarget").ComposerTargetType.Feed),destinationTargetID:null,destinationTargetType:o("TCometComposerTarget").ComposerTargetType.Feed,updateComposerDestination:function(){}},c=s.createContext(u);l.default=c}),98);

@@ -1,0 +1,944 @@
+{
+  "site": {
+    "name": "RJR ஹெர்பல் மருத்துவமனை",
+    "description": "150+ ஆண்டுகளாக பாரம்பரிய ஆயுர்வேத மற்றும் சித்த மருத்துவத்தில் நிபுணத்துவம் பெற்ற முன்னணி மூலிகை வைத்தியமனை.",
+    "contact": {
+      "phone": "+91 7871111115",
+      "email": "care@rjrherbalhospitals.com",
+      "address": "150, ஹபிபுல்‌லா ரோடு, டி நகர், நார்த் உத்மான் ரோட் போஸ்ட் ஆபிஸ் பின் பக்கத்தில், சென்னை – 600017, தமிழ்நாடு, இந்தியா.",
+      "facebook": "https://facebook.com/rjrherbal",
+      "instagram": "https://instagram.com/rjrherbal",
+      "twitter": "https://twitter.com/rjrherbal",
+      "youtube": "https://youtube.com/@rjrherbal"
+    },
+    "footerLinks": [
+      {
+        "title": "வேகமான இணைப்புகள்",
+        "links": [
+          {
+            "label": "முகப்பு",
+            "href": "/"
+          },
+          {
+            "label": "எங்களை பற்றி",
+            "href": "/about"
+          },
+          {
+            "label": "சிகிச்சைகள்",
+            "href": "/treatments"
+          },
+          {
+            "label": "மருத்துவர்கள்",
+            "href": "/doctors"
+          },
+          {
+            "label": "கிளைகள்",
+            "href": "/branches"
+          },
+          {
+            "label": "IPD",
+            "href": "/ipd"
+          },
+          {
+            "label": "தொடர்பு",
+            "href": "/contact"
+          }
+        ]
+      },
+      {
+        "title": "சிகிச்சைகள்",
+        "links": [
+          {
+            "label": "PCOD / PCOS சிகிச்சை",
+            "href": "/treatments/pcod-pcos"
+          },
+          {
+            "label": "முடி உதிர்வு",
+            "href": "/treatments/hair-fall"
+          },
+          {
+            "label": "உடல் எடை குறைப்பு",
+            "href": "/treatments/obesity"
+          },
+          {
+            "label": "தைராய்டு சிகிச்சை",
+            "href": "/treatments/thyroid"
+          },
+          {
+            "label": "முதுகு / மூட்டு வலி",
+            "href": "/treatments/back-pain"
+          },
+          {
+            "label": "சொரியாசிஸ்",
+            "href": "/treatments/psoriasis"
+          },
+          {
+            "label": "நீரிழிவு சிகிச்சை",
+            "href": "/treatments/diabetes"
+          },
+          {
+            "label": "ஆஸ்துமா சிகிச்சை",
+            "href": "/treatments/asthma"
+          },
+          {
+            "label": "அர்திரைடிஸ் சிகிச்சை",
+            "href": "/treatments/arthritis"
+          }
+        ]
+      }
+    ],
+    "navLinks": [
+      {
+        "label": "முகப்பு",
+        "href": "/"
+      },
+      {
+        "label": "எங்கள் பற்றி",
+        "href": "/about"
+      },
+      {
+        "label": "சிகிச்சைகள்",
+        "href": "/treatments",
+        "isDropdown": true
+      },
+      {
+        "label": "கிளைகள்",
+        "href": "/branches"
+      },
+      {
+        "label": "IPD",
+        "href": "/ipd"
+      },
+      {
+        "label": "தெரஃபிகள்",
+        "href": "/therapies"
+      },
+      {
+        "label": "கேலரி",
+        "href": "/gallery"
+      },
+      {
+        "label": "தொடர்பு",
+        "href": "/contact"
+      }
+    ]
+  },
+  "hero": {
+    "slides": [
+      {
+        "image": "/images/RJR. 88.jpg",
+        "title": "150 -ஆண்டுகால பாரம்பரிய மூலிகை மருத்துவம்",
+        "subtitle": "150 -ஆண்டுகால பாரம்பரிய அனுபவ மூலிகை  செய்முறைகள் மூலம் தயாரிக்கப்பட்ட எங்கள் மருந்துகள்,எந்தப் பக்கவிளைவும் இல்லாமல், நோயின் மூலத்தை முழுமையாக நீக்குகின்றன.மீண்டும் நோய்  திரும்ப வராத ஆரோக்கியமான வாழ்க்கையை RJR மூலிகை மருத்துவம் உங்களுக்கு உறுதியளிக்கிறது."
+      },
+      {
+        "image": "/images/RJR. 111.jpg",
+        "title": "102-க்கும் மேற்பட்ட கிளைகள்",
+        "subtitle": "RJR-ன் மூலிகைச் சிகிச்சை இப்போது தென்னிந்தியா முழுவதும் தமிழ்நாடு, ஆந்திர பிரதேசம்,தெலுங்கானா,மகாராஷ்டிரா, கர்நாடகா, பாண்டிச்சேரி "
+      },
+      {
+        "image": "/images/RJR. 81.jpg",
+        "title": "நாடிப் பரிசோதனை முறை",
+        "subtitle": "எங்கள் மருத்துவமனையில், ஒவ்வொரு நோயாளியின் உடல் நிலையையும், நாடிப் பரிசோதனை மூலம் ஆராய்ந்து,நிரந்தரமான குணம் செய்கிறோம்."
+      },
+      {
+        "image": "/images/RJR. 81.jpg",
+        "title": "RJR மூலிகை மருத்துவம்",
+        "subtitle": "ஐந்து தலைமுறைகளாக (5th generation) சுமார் 150 ஆண்டுகளுக்கும் மேலாக மக்களை குணப்படுத்தி வரும் ஒரு மூலிகைப் பாரம்பரியத்தின் அடையாளம் "
+      },
+      {
+        "image": "/images/RJR. 81.jpg",
+        "title": "நோயின் அறிகுறிகளுக்கு அல்ல, அதன் ஆணிவேருக்கே சிகிச்சை அளிக்கிறோம் ",
+        "subtitle": "ஐந்து தலைமுறை (5th Generation) அனுபவத்துடன் 150 ஆண்டுகால மூலிகை வைத்தியப் பாரம்பரியம் RJR மருத்துவமனையில், நோயின் அறிகுறிகளுக்கு அல்ல, அதன் ஆணிவேருக்கே சிகிச்சை அளிக்கிறோம்."
+      }
+    ]
+  },
+  "items": [
+    {
+      "name": "ராமன்",
+      "condition": "மூட்டு வலி",
+      "testimonial": "30 நாட்களில் 80% நிவாரணம்...",
+      "image": "/images/testimonials/p1.jpg"
+    },
+    {
+      "name": "சரவணன்",
+      "condition": "முதுகு வலி",
+      "testimonial": "7 நாட்களில் வலி 60% குறைந்தது...",
+      "image": "/images/testimonials/p2.jpg"
+    },
+    {
+      "name": "கோமதி",
+      "condition": "தோல் நோய்",
+      "testimonial": "1 மாதத்தில் தோல் மேம்பாடு...",
+      "image": "/images/testimonials/p3.jpg"
+    }
+  ],
+  "home": {
+    "title": "RJR Herbal Hospital",
+    "subtitle": "உயிரின் நலனுக்காக இயற்கை சிகிச்சை வழிமுறைகள்"
+  },
+  "therapies": [
+    {
+      "id": "t1",
+      "title": "வர்ம சிகிச்சை",
+      "subtitle": "Varma Therapy",
+      "description": "நரம்புகளைத் தூண்டி, வலி நிவாரணம் அளிக்கும் பண்டைய தமிழ் மருத்துவ முறை.",
+      "image": "/images/varma.jpg",
+      "color": "from-red-500 to-orange-500"
+    },
+    {
+      "id": "t2",
+      "title": "தொக்கணம்",
+      "subtitle": "Thokkanam (Massage)",
+      "description": "உடல் வலிகளை நீக்கி, இரத்த ஓட்டத்தை சீராக்கும் சிறப்பு மூலிகை எண்ணெய் மசாஜ்.",
+      "image": "/images/thokkanam.jpg",
+      "color": "from-blue-500 to-cyan-500"
+    },
+    {
+      "id": "t3",
+      "title": "மூலிகை நீராவி",
+      "subtitle": "Herbal Steam Bath",
+      "description": "உடலில் உள்ள நச்சுகளை வியர்வை மூலம் வெளியேற்றி புத்துணர்ச்சி அளிக்கும்.",
+      "image": "/images/streambath.JPG",
+      "color": "from-green-500 to-emerald-500"
+    },
+    {
+      "id": "t4",
+      "title": "யோகா சிகிச்சை",
+      "subtitle": "Therapeutic Yoga",
+      "description": "மன அமைதி மற்றும் உடல் ஆரோக்கியத்தை மேம்படுத்தும் பிரத்யேக ஆசனங்கள்.",
+      "image": "/images/yoga.jpg",
+      "color": "from-purple-500 to-pink-500"
+    },
+    {
+      "id": "t5",
+      "title": "மண் சிகிச்சை",
+      "subtitle": "Mud Therapy",
+      "description": "இயற்கையான மண் குளியல் மூலம் தோல் நோய்கள் மற்றும் உடல் சூட்டை தணிக்கிறது.",
+      "image": "/images/RJR. 81.jpg",
+      "color": "from-yellow-500 to-amber-500"
+    }
+  ],
+  "about": {
+    "title": "ஐந்து தலைமுறை நம்பிக்கை! 150 ஆண்டு கால மூலிகை வரம்!",
+    "button": "மேலும் அறிக",
+    "slides": [
+      {
+        "title": "150 ஆண்டுகால பாரம்பரிய மூலிகை மருத்துவம்",
+        "text": "ஐந்து தலைமுறைகளாக (5th generation) சுமார் 150 ஆண்டுகளுக்கும் மேலாக மக்களை குணப்படுத்தி வரும் ஒரு மூலிகைப் பாரம்பரியத்தின் அடையாளம் - RJR மூலிகை மருத்துவம்.",
+        "image": "/images/exterior.jpg"
+      },
+      {
+        "title": "முக்குற்றங்களின் சமநிலை - எங்கள் சிறப்பு",
+        "text": "எங்களின் சிறப்பு என்னவென்றால், நோய்க்கான உண்மைக் காரணம் என்று கருதப்படும் வாதம், பித்தம், கபம் ஆகிய 'முக்குற்றங்களின்' சமநிலையை மீட்டெடுப்பதில் நாங்கள் கவனம் செலுத்துகிறோம். இந்த சமநிலையின்மையே நோய்களின் வேர் என்று அறிந்து, அதை நிரந்தரமாக சரிசெய்வதே எங்கள் மருத்துவமனையின் சிறப்பம்சமாகும்.",
+        "image": "/images/exterior.jpg"
+      }
+    ]
+  },
+  "treatments": [
+    {
+      "name": "மூட்டு வலி (Joint Pain)",
+      "slug": "joint-pain",
+      "description": "மூட்டு வலி மற்றும் வீக்கத்தை குறைக்கும் 100% இயற்கை மூலிகை சிகிச்சை.",
+      "image": "/images/treatments/joint.jpg"
+    },
+    {
+      "name": "ஆஸ்துமா (Asthma)",
+      "slug": "asthma",
+      "description": "மூச்சுத் திணறல் மற்றும் சுவாச கோளாறுகளுக்கு நிரந்தரத் தீர்வு.",
+      "image": "/images/treatments/asthma.jpg"
+    },
+    {
+      "name": "சர்க்கரை நோய் (Diabetes)",
+      "slug": "diabetes",
+      "description": "இரத்த சர்க்கரை அளவை கட்டுக்குள் வைக்க உதவும் மூலிகை மருந்துகள்.",
+      "image": "/images/treatments/diabetes.jpg"
+    },
+    {
+      "name": "இரத்த அழுத்தம் (Hypertension)",
+      "slug": "hypertension",
+      "description": "உயர் இரத்த அழுத்தத்தை சீராக பராமரிக்க உதவும் இயற்கை மருத்துவம்.",
+      "image": "/images/treatments/bp.jpg"
+    },
+    {
+      "name": "சொரியாசிஸ் (Psoriasis)",
+      "slug": "psoriasis",
+      "description": "தோல் செதில் மற்றும் அரிப்பை குணப்படுத்தும் சித்தா சிகிச்சை.",
+      "image": "/images/treatments/psoriasis.jpg"
+    },
+    {
+      "name": "கரப்பான் (Eczema)",
+      "slug": "eczema",
+      "description": "தோல் ஒவ்வாமை மற்றும் தடிப்புகளுக்கான சிறந்த நிவாரணம்.",
+      "image": "/images/treatments/eczema.jpg"
+    },
+    {
+      "name": "முடி உதிர்வு (Hair Fall)",
+      "slug": "hair-fall",
+      "description": "முடி உதிர்வதை தடுத்து வேரிலிருந்து வலுவாக்கும் சிகிச்சை.",
+      "image": "/images/treatments/hair.jpg"
+    },
+    {
+      "name": "பொடுகு தொல்லை (Dandruff)",
+      "slug": "dandruff",
+      "description": "பொடுகு மற்றும் தலை அரிப்பை போக்கும் மூலிகை எண்ணெய் சிகிச்சை.",
+      "image": "/images/treatments/dandruff.jpg"
+    },
+    {
+      "name": "மூலம் (Piles)",
+      "slug": "piles",
+      "description": "அறுவை சிகிச்சை இல்லா மூல நோய் நிவர்த்தி.",
+      "image": "/images/treatments/piles.jpg"
+    },
+    {
+      "name": "பவுத்திரம் (Fistula)",
+      "slug": "fistula",
+      "description": "குதப் பகுதியில் ஏற்படும் புண்களை ஆற்றும் இயற்கை வைத்தியம்.",
+      "image": "/images/treatments/fistula.jpg"
+    },
+    {
+      "name": "சிறுநீரக கல் (Kidney Stone)",
+      "slug": "kidney-stone",
+      "description": "சிறுநீரக கற்களை கரைத்து வெளியேற்றும் மூலிகை மருந்துகள்.",
+      "image": "/images/treatments/kidneystone.jpg"
+    },
+    {
+      "name": "பீனிசம் (Sinusitis)",
+      "slug": "sinusitis",
+      "description": "தலைபாரம், மூக்கடைப்பு மற்றும் தும்மலுக்கு தீர்வு.",
+      "image": "/images/treatments/sinus.jpg"
+    },
+    {
+      "name": "ஒற்றை தலைவலி (Migraine)",
+      "slug": "migraine",
+      "description": "நாள்பட்ட ஒற்றை தலைவலியை போக்கும் சிறப்பு சிகிச்சை.",
+      "image": "/images/treatments/migraine.jpg"
+    },
+    {
+      "name": "குடல் புண் (Ulcer)",
+      "slug": "ulcer",
+      "description": "வயிறு மற்றும் குடல் புண்களை ஆற்றும் மூலிகை மருந்துகள்.",
+      "image": "/images/treatments/ulcer.jpg"
+    },
+    {
+      "name": "வாயு தொல்லை (Gastritis)",
+      "slug": "gastritis",
+      "description": "செரிமான கோளாறு மற்றும் வாயு பிரச்சனைகளுக்கு தீர்வு.",
+      "image": "/images/treatments/gastritis.jpg"
+    },
+    {
+      "name": "உடல் பருமன் (Obesity)",
+      "slug": "obesity",
+      "description": "பக்கவிளைவு இல்லாத இயற்கையான உடல் எடை குறைப்பு.",
+      "image": "/images/treatments/weightloss.jpg"
+    },
+    {
+      "name": "தைராய்டு (Thyroid)",
+      "slug": "thyroid",
+      "description": "தைராய்டு சுரப்பி கோளாறுகளை சீர் செய்யும் சிகிச்சை.",
+      "image": "/images/treatments/thyroid.jpg"
+    },
+    {
+      "name": "பெண் மலட்டுத்தன்மை (Infertility - F)",
+      "slug": "infertility-female",
+      "description": "கருப்பை கோளாறுகளை நீக்கி கருத்தரிப்பை ஊக்குவிக்கும் சிகிச்சை.",
+      "image": "/images/treatments/infertility_f.jpg"
+    },
+    {
+      "name": "ஆண் மலட்டுத்தன்மை (Infertility - M)",
+      "slug": "infertility-male",
+      "description": "விந்தணு குறைபாடுகளை போக்கும் இயற்கை மருத்துவம்.",
+      "image": "/images/treatments/infertility_m.jpg"
+    },
+    {
+      "name": "நீர்க்கட்டி (PCOD/PCOS)",
+      "slug": "pcod-pcos",
+      "description": "மாதவிடாய் பிரச்சனைகள் மற்றும் கர்பப்பை நீர்க்கட்டிகளுக்கு தீர்வு.",
+      "image": "/images/treatments/pcod.jpg"
+    },
+    {
+      "name": "மாதவிடாய் கோளாறு (Menstrual Issues)",
+      "slug": "menstrual-issues",
+      "description": "முறையற்ற மாதவிடாய் மற்றும் அதிகப்படியான உதிரப்போக்கு சிகிச்சை.",
+      "image": "/images/treatments/menstrual.jpg"
+    },
+    {
+      "name": "வெள்ளைப்படுதல் (Leucorrhea)",
+      "slug": "leucorrhea",
+      "description": "வெள்ளைப்படுதல் பிரச்சனையை முற்றிலுமாக குணப்படுத்தும் முறை.",
+      "image": "/images/treatments/leucorrhea.jpg"
+    },
+    {
+      "name": "முதுகு வலி (Back Pain)",
+      "slug": "back-pain",
+      "description": "நாள்பட்ட முதுகு வலி மற்றும் தசை பிடிப்பு நீங்க.",
+      "image": "/images/treatments/backpain.jpg"
+    },
+    {
+      "name": "கழுத்து வலி (Neck Pain)",
+      "slug": "neck-pain",
+      "description": "கழுத்து எலும்பு தேய்மானம் மற்றும் வலிக்கு நிவாரணம்.",
+      "image": "/images/treatments/neckpain.jpg"
+    },
+    {
+      "name": "தண்டுவட அழற்சி (Spondylitis)",
+      "slug": "spondylitis",
+      "description": "முதுகு தண்டுவட வலிகளை குறைக்கும் வர்ம சிகிச்சை.",
+      "image": "/images/treatments/spondylitis.jpg"
+    },
+    {
+      "name": "ஜவ்வு விலகல் (Disc Prolapse)",
+      "slug": "disc-prolapse",
+      "description": "ஜவ்வு விலகல் மற்றும் நரம்பு அழுத்தத்தை சரிசெய்யும் மருத்துவம்.",
+      "image": "/images/treatments/disc.jpg"
+    },
+    {
+      "name": "பக்கவாதம் (Paralysis)",
+      "slug": "paralysis",
+      "description": "கை கால் செயல் இழப்பை மீட்கும் சிறப்பு வர்ம சிகிச்சை.",
+      "image": "/images/treatments/paralysis.jpg"
+    },
+    {
+      "name": "தோல் ஒவ்வாமை (Skin Allergy)",
+      "slug": "skin-allergy",
+      "description": "அரிப்பு, தடிப்பு மற்றும் தோல் ஒவ்வாமைக்கு சிகிச்சை.",
+      "image": "/images/treatments/skinallergy.jpg"
+    },
+    {
+      "name": "முகப்பரு (Acne)",
+      "slug": "acne",
+      "description": "முகப்பரு மற்றும் தழும்புகளை போக்கும் மூலிகை சிகிச்சை.",
+      "image": "/images/treatments/acne.jpg"
+    },
+    {
+      "name": "நரம்பு சுருட்டல் (Varicose Veins)",
+      "slug": "varicose-veins",
+      "description": "கால்களில் நரம்பு சுருட்டல் பிரச்சனைக்கு தீர்வு.",
+      "image": "/images/treatments/varicose.jpg"
+    },
+    {
+      "name": "குதிங்கால் வலி (Heel Pain)",
+      "slug": "heel-pain",
+      "description": "குதிங்கால் வலி மற்றும் எரிச்சலை போக்கும் மருத்துவம்.",
+      "image": "/images/treatments/heelpain.jpg"
+    },
+    {
+      "name": "தோள்பட்டை வலி (Frozen Shoulder)",
+      "slug": "frozen-shoulder",
+      "description": "தோள்பட்டை இறுக்கம் மற்றும் வலியை குணப்படுத்தும்.",
+      "image": "/images/treatments/frozen_shoulder.jpg"
+    },
+    {
+      "name": "தூக்கமின்மை (Insomnia)",
+      "slug": "insomnia",
+      "description": "ஆழ்ந்த நிம்மதியான உறக்கத்திற்கு மன அழுத்தம் நீக்கும் சிகிச்சை.",
+      "image": "/images/treatments/insomnia.jpg"
+    },
+    {
+      "name": "மன அழுத்தம் (Stress/Anxiety)",
+      "slug": "stress-anxiety",
+      "description": "மன அமைதி மற்றும் புத்துணர்ச்சி தரும் சிகிச்சை.",
+      "image": "/images/treatments/stress.jpg"
+    },
+    {
+      "name": "மனச்சோர்வு (Depression)",
+      "slug": "depression",
+      "description": "மனச்சோர்வை நீக்கி உற்சாகம் தரும் ஆலோசனை மற்றும் மருந்துகள்.",
+      "image": "/images/treatments/depression.jpg"
+    },
+    {
+      "name": "கல்லீரல் நோய் (Liver Care)",
+      "slug": "liver-care",
+      "description": "கல்லீரல் வீக்கம் மற்றும் கழிவுகளை நீக்கும் சிகிச்சை.",
+      "image": "/images/treatments/liver.jpg"
+    },
+    {
+      "name": "மஞ்சள் காமாலை (Jaundice)",
+      "slug": "jaundice",
+      "description": "மஞ்சள் காமாலைக்கு பாதுகாப்பான நாட்டு மருந்து.",
+      "image": "/images/treatments/jaundice.jpg"
+    },
+    {
+      "name": "இரத்த சோகை (Anemia)",
+      "slug": "anemia",
+      "description": "இரத்தத்தில் ஹீமோகுளோபின் அளவை அதிகரிக்கும் இயற்கை உணவு முறை.",
+      "image": "/images/treatments/anemia.jpg"
+    },
+    {
+      "name": "சிறுநீர் தொற்று (UTI)",
+      "slug": "uti",
+      "description": "சிறுநீர் பாதை எரிச்சல் மற்றும் தொற்றை நீக்கும்.",
+      "image": "/images/treatments/uti.jpg"
+    },
+    {
+      "name": "மலச்சிக்கல் (Constipation)",
+      "slug": "constipation",
+      "description": "நாட்பட்ட மலச்சிக்கலை போக்கும் எளிய மூலிகை தீர்வு.",
+      "image": "/images/treatments/constipation.jpg"
+    },
+    {
+      "name": "செரிமான கோளாறு (Indigestion)",
+      "slug": "indigestion",
+      "description": "பசி இன்மை மற்றும் செரிமான பிரச்சனைகளை சரிசெய்தல்.",
+      "image": "/images/treatments/indigestion.jpg"
+    },
+    {
+      "name": "தொண்டை சதை (Tonsillitis)",
+      "slug": "tonsillitis",
+      "description": "அறுவை சிகிச்சை இன்றி டான்சில்ஸ் கரைக்கும் மருத்துவம்.",
+      "image": "/images/treatments/tonsils.jpg"
+    },
+    {
+      "name": "இளைப்பு நோய் (Wheezing)",
+      "slug": "wheezing",
+      "description": "நெஞ்சு சளி மற்றும் இளைப்பு நோய்க்கு நிரந்தர நிவாரணம்.",
+      "image": "/images/treatments/wheezing.jpg"
+    },
+    {
+      "name": "கொலஸ்ட்ரால் (Cholesterol)",
+      "slug": "cholesterol",
+      "description": "கெட்ட கொழுப்பை குறைத்து இதய நலம் காக்கும்.",
+      "image": "/images/treatments/cholesterol.jpg"
+    },
+    {
+      "name": "இதய நலம் (Heart Care)",
+      "slug": "heart-care",
+      "description": "இதய தசைகளை வலுப்படுத்தும் சித்த மருந்துகள்.",
+      "image": "/images/treatments/heart.jpg"
+    },
+    {
+      "name": "ஞாபக சக்தி (Memory Power)",
+      "slug": "memory-power",
+      "description": "மாணவர்களுக்கான ஞாபக சக்தி மற்றும் கவன சிதறல் நீக்கும் மருந்து.",
+      "image": "/images/treatments/memory.jpg"
+    },
+    {
+      "name": "நோய் எதிர்ப்பு சக்தி (Immunity)",
+      "slug": "immunity",
+      "description": "உடலின் இயற்கையான நோய் எதிர்ப்பு மண்டலத்தை வலுப்படுத்தும்.",
+      "image": "/images/treatments/immunity.jpg"
+    },
+    {
+      "name": "மூப்பியல் (Anti-Aging)",
+      "slug": "anti-aging",
+      "description": "உடல் தளர்ச்சியை நீக்கி இளமையை தக்கவைக்கும் காயகல்ப சிகிச்சை.",
+      "image": "/images/treatments/antiaging.jpg"
+    },
+    {
+      "name": "உடல் சுத்திகரிப்பு (Detox)",
+      "slug": "detox",
+      "description": "உடலில் உள்ள நச்சுகளை வெளியேற்றி புத்துணர்ச்சி அளிக்கும்.",
+      "image": "/images/treatments/detox.jpg"
+    },
+    {
+      "name": "பொது மருத்துவம் (General Wellness)",
+      "slug": "general-wellness",
+      "description": "அனைத்து விதமான பொது உடல்நல பிரச்சனைகளுக்கும் ஆலோசனை.",
+      "image": "/images/treatments/general.jpg"
+    }
+  ],
+  "branches": [
+    {
+      "name": "RJR Herbal Hospital - Chennai",
+      "address": "123, Anna Salai, Chennai, Tamil Nadu",
+      "phone": "+91-44-12345678",
+      "image": "/images/branches/chennai.jpg"
+    },
+    {
+      "name": "RJR Herbal Hospital - Coimbatore",
+      "address": "456, Avinashi Road, Coimbatore, Tamil Nadu",
+      "phone": "+91-422-87654321",
+      "image": "/images/branches/coimbatore.jpg"
+    },
+    {
+      "name": "RJR Herbal Hospital - Madurai",
+      "address": "789, M.G. Road, Madurai, Tamil Nadu",
+      "phone": "+91-452-98765432",
+      "image": "/images/branches/madurai.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "/images/gallery/hospital1.jpg",
+      "alt": "RJR Hospital Main Entrance"
+    },
+    {
+      "src": "/images/gallery/hospital2.jpg",
+      "alt": "Treatment Room"
+    },
+    {
+      "src": "/images/gallery/hospital3.jpg",
+      "alt": "Herbal Medicines"
+    },
+    {
+      "src": "/images/gallery/hospital4.jpg",
+      "alt": "Patient Care"
+    }
+  ],
+  "contact": {
+    "title": "தொடர்பு",
+    "address": "RJR Herbal Hospital, சென்னையில், இந்தியா",
+    "phone": "+91-",
+    "email": "contact@rjrherbalhospitals.com"
+  },
+  "majorTreatments": [
+    {
+      "title": "சோரியாசிஸ் தோல் நோய் சிகிச்சை (PSORIASIS)",
+      "image": "/images/psoriasis1.png",
+      "points": [
+        "தோல் உலர்ச்சி மற்றும் பொடுகு போன்ற அறிகுறிகளை குறைக்கும் மூலிகை வெளிப் மருந்துகள்",
+        "இரத்த சுத்திகரிப்பு மற்றும் உடல் டிடாக்ஸ் மூலம் உட்புற காரணங்களை சரிசெய்தல்",
+        "மீண்டும் மீண்டும் வராமல் தடுக்கும் உணவு கட்டுப்பாடு மற்றும் வாழ்க்கை முறை ஆலோசனை"
+      ]
+    },
+    {
+      "title": "முழங்கால் / மூட்டு வலி சிகிச்சை (KNEE PAIN)",
+      "image": "/images/knee-pain.png",
+      "points": [
+        "முழங்காலில் உள்ள அழற்சி மற்றும் வீக்கத்தை குறைக்கும் எண்ணெய் மசாஜ் மற்றும் பூட்டு சிகிச்சைகள்",
+        "எலும்பு மற்றும் மூட்டு பலத்தை அதிகரிக்கும் சிறப்பு சித்த மூலிகை மருந்துகள்",
+        "நாள் போக்கு உடற்பயிற்சி, எடை கட்டுப்பாடு மற்றும் வாழ்க்கை முறை மாற்ற ஆலோசனை"
+      ]
+    },
+    {
+      "title": "நீரிழிவு சிகிச்சை (DIABETES)",
+      "image": "/images/diabetes1.png",
+      "points": [
+        "இன்சுலின் உணர்திறனை மேம்படுத்தும் சித்த மூலிகைகள்",
+        "இரத்த சர்க்கரை கட்டுப்பாட்டுக்கான தனிப்பட்ட மருந்து திட்டம்",
+        "உணவு கட்டுப்பாடு மற்றும் உடற்பயிற்சி ஆலோசனை"
+      ]
+    },
+    {
+      "title": "PCOD / PCOS சிகிச்சை",
+      "image": "/images/pcod12.png",
+      "points": [
+        "ஹார்மோன் சமநிலையை கட்டுப்படுத்தும் சித்த மருந்துகள்",
+        "மாதவிடாய் சுழற்சி ஒழுங்குபடுத்தும் இயற்கை சிகிச்சை",
+        "எடை கட்டுப்பாடு மற்றும் மனஅழுத்த பராமரிப்பு திட்டம்"
+      ]
+    },
+    {
+      "title": "அர்திரைடிஸ் / மூட்டு வலி (ARTHRITIS)",
+      "image": "/images/arthritis.png",
+      "points": [
+        "மூட்டு அழற்சி மற்றும் வலி குறைக்கும் வெளி மற்றும் உள்மருந்துகள்",
+        "பஞ்சகர்மா / வாஸ்தி போன்ற சுத்திகரிப்பு சிகிச்சைகள்",
+        "நாள்பட்ட மூட்டு பராமரிப்புக்கான உடற்பயிற்சி வழிகாட்டல்"
+      ]
+    },
+    {
+      "title": "ஆஸ்துமா சிகிச்சை (ASTHMA)",
+      "image": "/images/astma1.png",
+      "points": [
+        "சுவாசக் குழாயின் அழற்சியை குறைக்கும் மூலிகை மருந்துகள்",
+        "நுரையீரல் திறனை மேம்படுத்தும் மூலிகை நீராவி மற்றும் நஷ்யம் சிகிச்சைகள்",
+        "தொடர்ச்சியான மூச்சுப்பயிற்சி மற்றும் வாழ்க்கை முறை ஆலோசனை"
+      ]
+    },
+    {
+      "title": "சைனஸைட்டிஸ் சிகிச்சை (SINUSITIS)",
+      "image": "/images/sinusitis.png",
+      "points": [
+        "சைனஸ் பகுதிகளில் சளி அடைவை நீக்கும் நஸ்யம் மற்றும் நீராவி சிகிச்சைகள்",
+        "தலைவலி, மூக்கு அடைப்பு மற்றும் கண் அழுத்தத்தை குறைக்கும் மூலிகை மருந்துகள்",
+        "குளிர், தூசி போன்ற காரணிகளை தவிர்க்க தனிப்பட்ட வாழ்க்கை முறை வழிகாட்டல்"
+      ]
+    },
+    {
+      "title": "தைராய்டு சிகிச்சை (THYROID)",
+      "image": "/images/thyroid.png",
+      "points": [
+        "ஹார்மோன் சமநிலையை சீர்படுத்தும் சித்த / ஆயுர்வேத மூலிகை மருந்துகள்",
+        "உடல் எடை, சோர்வு, மனஅழுத்தம் போன்ற அறிகுறிகளை குறைக்கும் முழுமையான அணுகுமுறை",
+        "அளவுக்கோலான உணவு கட்டுப்பாடு மற்றும் யோகா / பிராணாயாம ஆலோசனை"
+      ]
+    },
+    {
+      "title": "மூல்பிண்மை / இனப்பெருக்க குறைபாடு (INFERTILITY)",
+      "image": "/images/infertility.png",
+      "points": [
+        "ஆண் மற்றும் பெண் இருவருக்கும் தனிப்பட்ட ஹார்மோன் மற்றும் கணை தரத்தை மேம்படுத்தும் சிகிச்சைகள்",
+        "கருப்பை மற்றும் இனப்பெருக்க உறுப்புகளின் ஆரோக்கியத்தை மேம்படுத்தும் பஞ்சகர்மா / ஸ்த்ரீ ரோகவியல் சிகிச்சைகள்",
+        "மனஅழுத்த கட்டுப்பாடு, உணவு முறை மற்றும் வாழ்க்கை முறை மாற்ற வழிகாட்டல்"
+      ]
+    },
+    {
+      "title": "முதுகெலும்பு டிஸ்க் பிரச்சனை (DISC ISSUE)",
+      "image": "/images/disc bulge.png",
+      "points": [
+        "சரிவான டிஸ்க் / ஸ்பொண்டிலோசிஸ் காரணமாக வரும் வலியை குறைக்கும் குளியல், எண்ணெய் மசாஜ் மற்றும் கழுவுதல் சிகிச்சைகள்",
+        "முதுகெலும்பு மற்றும் நரம்பு பலப்படுத்தும் மூலிகை மருந்துகள் மற்றும் வைத்திய முறை",
+        "ஒழுங்கான உடற்பயிற்சி, உட்காரும் / நிற்கும் நிலை திருத்தம் மற்றும் எடை கட்டுப்பாடு ஆலோசனை"
+      ]
+    }
+  ],
+  "doctors": [
+    {
+      "name": "டாக்டர் நவீன்.N ",
+      "qualification": "B.S.M.S, MD (Siddha)",
+      "image": "/images/naveersir1.png",
+      "experience": "15+ Years Experience"
+    },
+    {
+      "name": "டாக்டர்.தட்சிணாமூர்த்தி",
+      "qualification": "Ayurveda Specialist",
+      "image": "/images/dhakshnamoorthy.png",
+      "experience": "10+ Years Experience"
+    },
+    {
+      "name": "டாக்டர்.கவிதா.ஜே",
+      "qualification": "Ayurveda Specialist",
+      "image": "/images/kavitha.png",
+      "experience": "5+ Years Experience"
+    },
+    {
+      "name": "டாக்டர். புவனேஸ்வரி ",
+      "qualification": "Ayurveda Specialist",
+      "image": "/images/bhuvaneshwari.png",
+      "experience": "5+ Years Experience"
+    }
+  ],
+  "testimonialsContent": [
+    {
+      "title": "வெற்றி கதைகள்",
+      "links": [
+        {
+          "label": "மூட்டு வலி – 90% நிவாரணம்",
+          "href": "/testimonials#joint-pain"
+        },
+        {
+          "label": "முதுகு வலி – விரைவான நலம்",
+          "href": "/testimonials#back-pain"
+        },
+        {
+          "label": "தோல் நோய் – 30 நாட்களில் மேம்பாடு",
+          "href": "/testimonials#skin-disease"
+        },
+        {
+          "label": "மாதவிடாய் கோளாறு – இயற்கையியல் தீர்வு",
+          "href": "/testimonials#pcos"
+        }
+      ]
+    },
+    {
+      "title": "நோயாளிகள் பகிர்வு",
+      "links": [
+        {
+          "label": "அர்திரைடிஸ் – நடைப்பதில் மேம்பாடு",
+          "href": "/testimonials#arthritis"
+        },
+        {
+          "label": "குடல் சம்பந்தப்பட்ட பிரச்சனை – 21 நாட்களில் நலம்",
+          "href": "/testimonials#digestive"
+        },
+        {
+          "label": "பருமன் குறைப்பு – 5 கிலோ குறைவு",
+          "href": "/testimonials#weight-loss"
+        }
+      ]
+    }
+  ],
+  "beforeAfter": [
+    {
+      "videoId": "wbDLSviL2eg",
+      "title": "முழங்கால் / மூட்டு வலி சிகிச்சை (KNEE PAIN)",
+      "description": "சிகிச்சைக்குப் பின் ஏற்பட்ட மாற்றம்"
+    },
+    {
+      "videoId": "gVU2yXzm2hM",
+      "title": "சிகிச்சை முடிவு 2",
+      "description": "வெற்றிகரமான சிகிச்சை"
+    },
+    {
+      "videoId": "SkRHkx_lQ60",
+      "title": "சிகிச்சை முடிவு 3",
+      "description": "அற்புதமான முன்னேற்றம்"
+    },
+    {
+      "videoId": "Tk6ooUrCASA",
+      "title": "சிகிச்சை முடிவு 4",
+      "description": "ஆரோக்கியமான மீட்பு"
+    },
+    {
+      "videoId": "MKXs41ICdeo",
+      "title": "சிகிச்சை முடிவு 5",
+      "description": "சிறந்த முடிவுகள்"
+    },
+    {
+      "videoId": "Ezm69jbHEHM",
+      "title": "சிகிச்சை முடிவு 6",
+      "description": "மீண்டும் புத்துயிர்"
+    }
+  ],
+  "testimonials": {
+    "title": "நோயாளிகள் கருத்துகள்",
+    "subtitle": "எங்கள் சிகிச்சையை அனுபவித்தவர்களின் உண்மையான கருத்துகள்",
+    "button": "மேலும் படிக்க",
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "குமார்",
+        "age": 58,
+        "condition": "ஆஸ்துமா (மூச்சுத்திணறல்)",
+        "treatment": "சித்த & ஆயுர்வேத இயற்கை சிகிச்சை",
+        "testimonial": "நிரந்தர மூச்சுத்திணறல் குறைந்து, 45 நாட்களில் சுவாசம் சீராகி வாழ்க்கை தரம் மேம்பட்டது.",
+        "image": "/images/testimonials/kl.jpg",
+        "imageAlt": "ஆஸ்துமா சிகிச்சை பெற்ற கோமதி"
+      },
+      {
+        "id": 2,
+        "name": "லதா",
+        "age": 55,
+        "condition": "முதுகு வலி",
+        "treatment": "சித்த ஆயுர்வேத சிகிச்சை",
+        "testimonial": "7 நாட்களில் வலி 60% குறைந்தது.",
+        "image": "/images/testimonials/backpain.png",
+        "imageAlt": "லதா படம்"
+      },
+      {
+        "id": 3,
+        "name": "சரவணன்",
+        "age": 38,
+        "condition": "தூசி அலர்ஜி",
+        "treatment": "சித்த & ஆயுர்வேத மூலிகை சிகிச்சை",
+        "testimonial": "தூசி அலர்ஜி காரணமான தும்மல், மூக்கடைப்பு குறைந்து 30 நாட்களில் சுவாசம் சீரானது.",
+        "image": "/images/testimonials/dustallergy.png",
+        "imageAlt": "தூசி அலர்ஜி சிகிச்சை பெற்ற சரவணன்"
+      },
+      {
+        "id": 4,
+        "name": "கார்த்திக்",
+        "age": 48,
+        "condition": "கைவலி",
+        "treatment": "சித்த & ஆயுர்வேத இயற்கை சிகிச்சை",
+        "testimonial": "கைவலி மற்றும் கை சோர்வு குறைந்து 20 நாட்களில் தினசரி வேலைகளை சிரமமின்றி செய்ய முடிந்தது.",
+        "image": "/images/testimonials/kaivali.png",
+        "imageAlt": "கைவலி சிகிச்சை பெற்ற கார்த்திக்"
+      },
+      {
+        "id": 5,
+        "name": "மீனா",
+        "age": 68,
+        "condition": "மூட்டு வலி",
+        "treatment": "சித்த & ஆயுர்வேத இயற்கை சிகிச்சை",
+        "testimonial": "மூட்டு வலி மற்றும் உறைப்பு குறைந்து 25 நாட்களில் நடப்பதும் அமர்வதும் எளிதானது.",
+        "image": "/images/testimonials/mootuvali.png",
+        "imageAlt": "மூட்டு வலி சிகிச்சை பெற்ற மீனா"
+      },
+      {
+        "id": 6,
+        "name": "சுமதி",
+        "age": 62,
+        "condition": "முடக்குவாதம்",
+        "treatment": "சித்த & ஆயுர்வேத இயற்கை சிகிச்சை",
+        "testimonial": "முடக்குவாதம் காரணமான மூட்டு வலி மற்றும் கடினம் குறைந்து, 30 நாட்களில் அசைவுகள் சீரானது.",
+        "image": "/images/testimonials/mudakkuvadham.png",
+        "imageAlt": "முடக்குவாதம் சிகிச்சை பெற்ற சுமதி"
+      },
+      {
+        "id": 7,
+        "name": "பிரவீன்",
+        "age": 71,
+        "condition": "முதுகு வலி",
+        "treatment": "சித்த & ஆயுர்வேத இயற்கை சிகிச்சை",
+        "testimonial": "முதுகு வலி குறைந்து 20 நாட்களில் உடல் இயக்கம் சீராகி தினசரி வேலைகள் எளிதானது.",
+        "image": "/images/testimonials/mudhuguvali.png",
+        "imageAlt": "முதுகு வலி சிகிச்சை பெற்ற பிரவீன்"
+      },
+      {
+        "id": 8,
+        "name": "ரமேஷ்",
+        "age": 43,
+        "condition": "பக்கவாதம்",
+        "treatment": "சித்த & ஆயுர்வேத இயற்கை சிகிச்சை",
+        "testimonial": "பக்கவாதம் காரணமான கை மற்றும் கால் பலவீனம் குறைந்து, தொடர்ச்சியான சிகிச்சையால் அசைவுகள் மேம்பட்டது.",
+        "image": "/images/testimonials/pakkavadham.png",
+        "imageAlt": "பக்கவாதம் சிகிச்சை பெற்ற ரமேஷ்"
+      },
+      {
+        "id": 9,
+        "name": "கவிதா",
+        "age": 64,
+        "condition": "சொரியாசிஸ்",
+        "treatment": "சித்த & ஆயுர்வேத இயற்கை சிகிச்சை",
+        "testimonial": "சொரியாசிஸ் காரணமான அரிப்பு மற்றும் தோல் சிவத்தல் குறைந்து, 45 நாட்களில் தோல் நிலை கணிசமாக மேம்பட்டது.",
+        "image": "/images/testimonials/psoriasis2.png",
+        "imageAlt": "சொரியாசிஸ் சிகிச்சை பெற்ற கவிதா"
+      },
+      {
+        "id": 10,
+        "name": "மாலதி",
+        "age": 58,
+        "condition": "தோல் பட்டை வலி",
+        "treatment": "சித்த & ஆயுர்வேத இயற்கை சிகிச்சை",
+        "testimonial": "தோல் பட்டை வலி காரணமான எரிச்சல் மற்றும் வலி குறைந்து, 30 நாட்களில் தோல் நிலை கணிசமாக மேம்பட்டது.",
+        "image": "/images/testimonials/tholpattaivali.png",
+        "imageAlt": "தோல் பட்டை வலி சிகிச்சை பெற்ற மாலதி"
+      },
+      {
+        "id": 11,
+        "name": "அரவிந்த்",
+        "age": 64,
+        "condition": "வீஸிங் (மூச்சுச் சீழல்)",
+        "treatment": "சித்த & ஆயுர்வேத இயற்கை சிகிச்சை",
+        "testimonial": "மூச்சுச் சீழல் மற்றும் சுவாச சிரமம் குறைந்து, 20 நாட்களில் சுவாசம் சீரானது.",
+        "image": "/images/testimonials/wheezing.png",
+        "imageAlt": "வீஸிங் சிகிச்சை பெற்ற அரவிந்த்"
+      }
+    ]
+  },
+  "whyChooseUs": [
+    {
+      "icon": "/images/permanant.png",
+      "title": "நிரந்தரமான தீர்வு",
+      "desc": "நோயின் மூலத்தை நீக்கி, மீண்டும் வராமல் தடுக்கும் உறுதியான மருத்துவம்."
+    },
+    {
+      "icon": "/images/med.png",
+      "title": "பக்க விளைவு அற்றது",
+      "desc": "முழுக்க முழுக்க பக்க விளைவுகள் அற்ற மருத்துவம்."
+    },
+    {
+      "icon": "/images/leaf.png",
+      "title": "பாதுகாப்பானது",
+      "desc": "இயற்கை மூலிகைகளால் உருவான நம்பகமான சிகிச்சை."
+    },
+    {
+      "icon": "/images/protection.png",
+      "title": "நோய் எதிர்ப்புச் சக்தி மேம்பாடு",
+      "desc": "எதிர்ப்பு சக்தியைப் பலப்படுத்தி உங்களைப் பாதுகாக்கும்."
+    },
+    {
+      "icon": "/images/solution.png",
+      "title": "நாடி மருத்துவம்",
+      "desc": "வாதம், பித்தம், கபம்—உங்கள் நாடி வகைக்கேற்ப தனிப்பயன் சிகிச்சை."
+    },
+    {
+      "icon": "/images/shield.png",
+      "title": "மீண்டும் வராமல் தடுக்கும்",
+      "desc": "நோயின் மூலத்தை நீக்கி, மீண்டும் வராமல் தடுக்கும் உறுதியான மருத்துவம்."
+    }
+  ],
+  "stats": [
+    {
+      "icon": "calendar",
+      "value": "150+",
+      "label": "Years of Excellence"
+    },
+    {
+      "icon": "users",
+      "value": "60,00,000+",
+      "label": "Patients Treated"
+    },
+    {
+      "icon": "bar-chart",
+      "value": "98%",
+      "label": "Success Rate"
+    },
+    {
+      "icon": "flask",
+      "value": "50+",
+      "label": "Herbal Treatments"
+    }
+  ]
+}
