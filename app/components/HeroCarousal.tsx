@@ -11,6 +11,7 @@ interface Slide {
   image: string;
   title?: string;
   subtitle?: string;
+  badge?: string;
 }
 
 interface HeroCarouselProps {
@@ -84,7 +85,7 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
             {/* Badge */}
             <div className="inline-block px-4 py-1.5 rounded-full bg-white backdrop-blur-sm mb-6">
               <span className="text-black font-bold tracking-wider text-xs lg:text-sm uppercase">
-                150 Years of Excellence
+                {slides[current].badge || "150 Years of Excellence"}
               </span>
             </div>
 
@@ -95,9 +96,12 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
             </h1>
 
             {/* Description */}
-            <p className="text-gray-100 text-base sm:text-lg max-w-lg mb-8 opacity-90">
-              {slides[current].subtitle || "Experience the best traditional and modern medical treatments tailored for your well-being."}
-            </p>
+            <p
+              className="text-gray-100 text-base sm:text-lg max-w-lg mb-8 opacity-90 [&_strong]:text-yellow-400 [&_strong]:font-bold"
+              dangerouslySetInnerHTML={{
+                __html: slides[current].subtitle || "Experience the best traditional and modern medical treatments tailored for your well-being."
+              }}
+            />
 
 
           </motion.div>

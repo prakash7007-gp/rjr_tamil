@@ -80,7 +80,7 @@ export default function Navbar() {
               <h1 className="text-lg md:text-xl font-bold text-[#c22220]">
                 RJR ஹெர்பல் மருத்துவமனை
               </h1>
-              <p className="text-xs md:text-sm text-gray-500">
+              <p className="text-xs md:text-sm text-gray-700">
                 ஐந்து தலைமுறை அனுபவம்
               </p>
             </div>

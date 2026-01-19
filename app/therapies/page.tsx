@@ -14,10 +14,13 @@ import {
     X,
     Zap,
     ShieldCheck,
-    Wind
+    Wind,
+    CheckCircle2,
+    Phone,
+    Calendar
 } from "lucide-react";
 
-// Helper components for missing icons (Defined first to avoid TDZ)
+// Helper components for missing icons
 const DropletsIcon = ({ className }: { className?: string }) => (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12 18a6 6 0 100-12 6 6 0 000 12z" />
@@ -44,6 +47,7 @@ interface Therapy {
     fullDesc: string;
     image: string;
     benefits: string[];
+    duration?: string;
     color: string;
     icon: ReactNode;
 }
@@ -53,89 +57,97 @@ const therapies: Therapy[] = [
         id: "snehavasti",
         titleTa: "சினேஹவஸ்தி",
         titleEn: "Snehavasti",
-        shortDesc: "Oil or ghee enema to lubricate the colon and treat Vata disorders.",
-        fullDesc: "Snehavasti is an oil or ghee enema which is very useful in lubricating the colon. It is the main therapy for all Vata disorders such as constipation, neurological ailments, back ache, gout, and arthritis. It causes colonic detoxification and helps flush out toxins from the lower body. The medicated oil stays in the body for 1-2 hours for maximum effectiveness.",
+        shortDesc: "குடலை மென்மையாக்கி வாத நோய்களைக் குணப்படுத்தும் எண்ணெய் அல்லது நெய் எனிமா.",
+        fullDesc: "சினேஹவஸ்தி என்பது எண்ணெய் அல்லது நெய் மூலம் செய்யப்படும் எனிமா சிகிச்சை. இது பெருங்குடலை மென்மையாக்க மிகவும் பயனுள்ளதாக இருக்கும். இது மலச்சிக்கல், நரம்பியல் கோளாறுகள், முதுகுவலி, கீல்வாதம் மற்றும் மூட்டுவலி போன்ற அனைத்து வாத நோய்களுக்கும் முக்கிய சிகிச்சையாகும். இது குடல் நச்சுகளை நீக்கி, உடலின் கீழ் பகுதியில் உள்ள கழிவுகளை வெளியேற்ற உதவுகிறது. அதிகபட்ச பலனுக்காக மூலிகை எண்ணெய் உடலில் 1-2 மணி நேரம் தங்கியிருக்கும்.",
         image: "/images/streambath.JPG",
-        benefits: ["Nourishes Saptha Thathu", "Vata Balance", "Colon Detox"],
-        color: "bg-amber-500/10 border-amber-500/20",
-        icon: <DropletsIcon className="w-6 h-6 text-amber-500" />
+        benefits: ["சப்த தாதுக்களுக்கு ஊட்டம்", "வாத சமநிலை", "குடல் நச்சு நீக்கம்"],
+        duration: "45-60 நிமிடங்கள்",
+        color: "from-amber-50 to-amber-100/50",
+        icon: <DropletsIcon className="w-6 h-6 text-amber-600" />
     },
     {
         id: "kashayavasti",
         titleTa: "கஷாய வஸ்தி",
         titleEn: "Kashaya Vasti",
-        shortDesc: "Cleansing enema prepared with herbal decoctions and honey.",
-        fullDesc: "A potent cleansing enema prepared with a mix of herbal decoctions, honey, and rock salt. It is highly effective for treating chronic constipation, neurological disorders, and musculoskeletal pains. It works deeply to balance the body's digestive fire and eliminate deep-rooted toxins.",
+        shortDesc: "மூலிகை கஷாயம் மற்றும் தேன் கலந்த சுத்தம் செய்யும் எனிமா.",
+        fullDesc: "மூலிகை கஷாயம், தேன் மற்றும் இந்துப்பு கலந்த கலவையால் தயாரிக்கப்படும் சக்திவாய்ந்த குடல் சுத்தம் செய்யும் எனிமா. இது நாள்பட்ட மலச்சிக்கல், நரம்பியல் கோளாறுகள், தசை மற்றும் எலும்பு வலிகளுக்கு மிகவும் பயனுள்ளதாக இருக்கும். இது உடலின் ஜீரண சக்தியை சமநிலைப்படுத்தி, ஆழமான நச்சுகளை வெளியேற்றுகிறது.",
         image: "/images/therpy-1.JPG",
-        benefits: ["Deep Cleansing", "Nervous System Support", "Pain Relief"],
-        color: "bg-red-500/10 border-red-500/20",
-        icon: <FlaskIcon className="w-6 h-6 text-red-500" />
+        benefits: ["ஆழமான சுத்தம்", "நரம்பு மண்டலம்", "வலி நிவாரணம்"],
+        duration: "30-45 நிமிடங்கள்",
+        color: "from-red-50 to-red-100/50",
+        icon: <FlaskIcon className="w-6 h-6 text-red-600" />
     },
     {
         id: "shirodhara",
         titleTa: "சிரோதாரா",
         titleEn: "Shirodhara",
-        shortDesc: "Continuous stream of warm medicinal oil on the forehead.",
-        fullDesc: "Shirodhara involves the gentle, continuous pouring of warm medicated oil, milk, or buttermilk onto the forehead. It deeply relaxes the nervous system, cures insomnia, reduces stress, and improves concentration. It is considered one of the most divine relaxing treatments in Ayurveda.",
+        shortDesc: "நெற்றியில் தொடர்ச்சியாக மூலிகை எண்ணெய் ஊற்றும் சிகிச்சை.",
+        fullDesc: "சிரோதாரா என்பது நெற்றியில் வெதுவெதுப்பான மூலிகை எண்ணெய், பால் அல்லது மோரை மெதுவாகவும் தொடர்ச்சியாகவும் ஊற்றுவதாகும். இது நரம்பு மண்டலத்தை ஆழமாக தளர்த்துகிறது, தூக்கமின்மையை குணப்படுத்துகிறது, மன அழுத்தத்தை குறைக்கிறது மற்றும் கவனத்தை மேம்படுத்துகிறது. ஆயுர்வேதத்தில் இது ஒரு தெய்வீகமான சிகிச்சையாக கருதப்படுகிறது.",
         image: "/images/therpy-1.JPG",
-        benefits: ["Stress Relief", "Insomnia Cure", "Mental Clarity"],
-        color: "bg-blue-500/10 border-blue-500/20",
-        icon: <Zap className="w-6 h-6 text-blue-500" />
+        benefits: ["மன அழுத்த நிவாரணம்", "தூக்கமின்மை தீர்வு", "மனத் தெளிவு"],
+        duration: "60-90 நிமிடங்கள்",
+        color: "from-blue-50 to-blue-100/50",
+        icon: <Zap className="w-6 h-6 text-blue-600" />
     },
     {
         id: "abhiyangham",
         titleTa: "அப்யங்கம்",
         titleEn: "Abhiyangham",
-        shortDesc: "Traditional Ayurvedic full body massage with herbal oils.",
-        fullDesc: "A rhythmic and relaxing full-body massage performed by trained therapists using specialized herbal oils. It improves blood circulation, strengthens the immune system, and helps in the removal of metabolic wastes. It is essential for maintaining youthful skin and healthy muscles.",
+        shortDesc: "மூலிகை எண்ணெய்களுடன் கூடிய பாரம்பரிய ஆயுர்வேத முழு உடல் மசாஜ்.",
+        fullDesc: "சிறப்பு மூலிகை எண்ணெய்களைப் பயன்படுத்தி பயிற்சி பெற்ற சிகிச்சையாளர்களால் செய்யப்படும் முழு உடல் மசாஜ். இது இரத்த ஓட்டத்தை மேம்படுத்துகிறது, நோய் எதிர்ப்பு சக்தியை பலப்படுத்துகிறது மற்றும் வளர்சிதை மாற்ற கழிவுகளை வெளியேற்ற உதவுகிறது. இளமையான சருமம் மற்றும் ஆரோக்கியமான தசைகளை பராமரிக்க இது அவசியம்.",
         image: "/images/thokkanam.jpg",
-        benefits: ["Blood Circulation", "Immunity Booster", "Relaxation"],
-        color: "bg-emerald-500/10 border-emerald-500/20",
-        icon: <Sparkles className="w-6 h-6 text-emerald-500" />
+        benefits: ["இரத்த ஓட்டம்", "நோய் எதிர்ப்பு சக்தி", "உடல் தளர்வு"],
+        duration: "45-60 நிமிடங்கள்",
+        color: "from-emerald-50 to-emerald-100/50",
+        icon: <Sparkles className="w-6 h-6 text-emerald-600" />
     },
     {
         id: "steambath",
         titleTa: "மூலிகை நீராவி",
         titleEn: "Herbal Steam Bath",
-        shortDesc: "Sweat out toxins in a chamber of herbal vapor.",
-        fullDesc: "A unique procedure where the patient is made to sit in a steam chamber filled with the vapors of rare medicinal herbs. The heat opens the skin pores, allowing the herbal properties to penetrate deeply while flushing out toxins through sweat. Excellent for skin diseases and weight loss.",
+        shortDesc: "மூலிகை நீராவி மூலம் உடலில் உள்ள நச்சுகளை வியர்வை வழியாக வெளியேற்றுதல்.",
+        fullDesc: "அரிதான மூலிகைகளின் நீராவி நிரப்பப்பட்ட அறையில் நோயாளி அமர வைக்கப்படும் ஒரு தனித்துவமான செயல்முறை. வெப்பம் தோல் துளைகளைத் திறந்து, மூலிகை குணங்களை ஆழமாக ஊடுருவச் செய்கிறது, அதே நேரத்தில் வியர்வை மூலம் நச்சுகளை வெளியேற்றுகிறது. தோல் நோய்கள் மற்றும் உடல் எடையைக் குறைக்க இது சிறந்தது.",
         image: "/images/streambath.JPG",
-        benefits: ["Full Body Detox", "Skin Health", "Weight Management"],
-        color: "bg-green-500/10 border-green-500/20",
-        icon: <Wind className="w-6 h-6 text-green-500" />
+        benefits: ["முழு உடல் நச்சு நீக்கம்", "சரும ஆரோக்கியம்", "எடை மேலாண்மை"],
+        duration: "20-30 நிமிடங்கள்",
+        color: "from-green-50 to-green-100/50",
+        icon: <Wind className="w-6 h-6 text-green-600" />
     },
     {
         id: "pizhichil",
         titleTa: "பிழிச்சல்",
         titleEn: "Pizhichil",
-        shortDesc: "The Royal Treatment combining Snehana and Swedana.",
-        fullDesc: "Known as the 'King's Treatment', Pizhichil involves squeezing streams of warm medicated oil from a cloth over the entire body. It is highly effective for neurological disorders, muscle stiffness, and rheumatic diseases. It tones the skin and rejuvenates the entire system.",
+        shortDesc: "சினேஹனா மற்றும் ஸ்வேதனாவை இணைக்கும் ராஜ சிகிச்சை.",
+        fullDesc: "'மன்னர்களின் சிகிச்சை' என்று அழைக்கப்படும் பிழிச்சல், உடல் முழுவதும் ஒரு துணியிலிருந்து வெதுவெதுப்பான மருத்துவ எண்ணெயை ஊற்றுவதாகும். இது நரம்பியல் கோளாறுகள், தசை விறைப்பு மற்றும் வாத நோய்களுக்கு மிகவும் பயனுள்ளதாக இருக்கும். இது சருமத்தை மெருகூட்டுகிறது மற்றும் முழு உடலையும் புத்துணர்ச்சியூட்டுகிறது.",
         image: "/images/therpy-2.jpg",
-        benefits: ["Muscle Strengthening", "Rejuvenation", "Anti-Aging"],
-        color: "bg-purple-500/10 border-purple-500/20",
-        icon: <CrownIcon className="w-6 h-6 text-purple-500" />
+        benefits: ["தசை வலுவூட்டல்", "புத்துணர்ச்சி", "முதுமைத் தோற்றத் தடுப்பு"],
+        duration: "60-75 நிமிடங்கள்",
+        color: "from-purple-50 to-purple-100/50",
+        icon: <CrownIcon className="w-6 h-6 text-purple-600" />
     },
     {
         id: "navarakizhi",
         titleTa: "நவரகிழி",
         titleEn: "Navara Kizhi",
-        shortDesc: "Massage with medicated rice boluses dipped in milk.",
-        fullDesc: "Navara Kizhi is a unique strengthening treatment where boluses of cooked Navara rice are dipped in a herbal decoction and warm milk, then applied across the body. It provides strength to the nerves, muscles, and bones. Highly recommended for paralysis and degenerative diseases.",
+        shortDesc: "மூலிகை பாலில் முக்கப்பட்ட நவரை அரிசி முடிச்சுகளைக் கொண்டு மசாஜ் செய்தல்.",
+        fullDesc: "நவரகிழி என்பது மூலிகை கஷாயம் மற்றும் வெதுவெதுப்பான பாலில் வேகவைத்த நவரை அரிசி முடிச்சுகளைக் கொண்டு உடல் முழுவதும் ஒத்தடம் கொடுக்கும் சிகிச்சையாகும். இது நரம்புகள், தசைகள் மற்றும் எலும்புகளுக்கு வலிமை அளிக்கிறது. பக்கவாதம் மற்றும் நரம்பு தளர்ச்சி நோய்களுக்கு மிகவும் பரிந்துரைக்கப்படுகிறது.",
         image: "/images/varma.jpg",
-        benefits: ["Nerve Strengthening", "Deep Nourishment", "Para-analysis Help"],
-        color: "bg-orange-500/10 border-orange-500/20",
-        icon: <Activity className="w-6 h-6 text-orange-500" />
+        benefits: ["நரம்பு வலுவூட்டல்", "ஆழமான ஊட்டம்", "பக்கவாத உதவி"],
+        duration: "45-60 நிமிடங்கள்",
+        color: "from-orange-50 to-orange-100/50",
+        icon: <Activity className="w-6 h-6 text-orange-600" />
     },
     {
         id: "colonhydro",
         titleTa: "கோலன் ஹைட்ரோ",
         titleEn: "Colonhydro Therapy",
-        shortDesc: "Deep colon cleansing for ultimate detoxification.",
-        fullDesc: "A safe and effective method of removing waste from the large intestine without using drugs. By introducing filtered water into the colon, waste is softened and loosened, resulting in its evacuation. This improves digestion, enhances energy levels, and clears the skin.",
+        shortDesc: "முழுமையான நச்சு நீக்கத்திற்கான ஆழமான குடல் சுத்தம்.",
+        fullDesc: "மருந்துகள் பயன்படுத்தாமல் பெருங்குடலில் இருந்து கழிவுகளை அகற்றும் பாதுகாப்பான மற்றும் பயனுள்ள முறை. சுத்திகரிக்கப்பட்ட நீரை குடலுக்குள் செலுத்துவதன் மூலம், கழிவுகள் மென்மையாக்கப்பட்டு வெளியேற்றப்படுகின்றன. இது செரிமானத்தை மேம்படுத்துகிறது, ஆற்றல் நிலைகளை அதிகரிக்கிறது மற்றும் சருமத்தை தெளிவாக்குகிறது.",
         image: "/images/therpy-1.JPG",
-        benefits: ["Internal Cleansing", "Improved Digestion", "Energy Boost"],
-        color: "bg-cyan-500/10 border-cyan-500/20",
-        icon: <ShieldCheck className="w-6 h-6 text-cyan-500" />
+        benefits: ["உட்புற சுத்தம்", "செரிமான மேம்பாடு", "ஆற்றல் அதிகரிப்பு"],
+        duration: "30-45 நிமிடங்கள்",
+        color: "from-cyan-50 to-cyan-100/50",
+        icon: <ShieldCheck className="w-6 h-6 text-cyan-600" />
     }
 ];
 
@@ -143,134 +155,252 @@ export default function TherapiesPage() {
     const [selectedTherapy, setSelectedTherapy] = useState<Therapy | null>(null);
 
     return (
-        <main className="min-h-screen bg-slate-50 text-slate-900 pb-20">
-            {/* Dynamic Header */}
-            <section className="bg-white border-b border-slate-200 pt-32 pb-16">
-                <div className="container mx-auto px-6">
-                    <Link href="/ipd" className="inline-flex items-center gap-2 text-slate-500 hover:text-[#c22220] transition-colors mb-8 group">
+        <main className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white">
+            {/* Hero Header Section */}
+            <section className="relative bg-gradient-to-br from-[#c22220] via-[#991b1b] to-[#7f1d1d] pt-32 pb-24 overflow-hidden">
+                {/* Decorative Elements */}
+                <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/10 rounded-full blur-3xl" />
+
+                <div className="container mx-auto px-6 relative z-10">
+                    <Link
+                        href="/ipd"
+                        className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors mb-8 group"
+                    >
                         <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
-                        <span>Back to IPD Department</span>
+                        <span className="font-medium">ஐபிடி பிரிவுக்கு திரும்ப</span>
                     </Link>
 
                     <div className="max-w-4xl">
-                        <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 leading-tight">
-                            Advanced <span className="text-[#c22220]">Healing</span> Modalities
-                        </h1>
-                        <p className="text-xl text-slate-600 leading-relaxed">
-                            Experience our flagship IPD treatments. We blend 150 years of herbal wisdom with clinical precision to offer life-changing recovery results.
-                        </p>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+                                <Leaf className="w-4 h-4 text-emerald-300" />
+                                <span className="text-white/90 text-sm font-semibold uppercase tracking-wider">
+                                    பாரம்பரிய சிகிச்சைகள்
+                                </span>
+                            </div>
+
+                            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+                                மேம்பட்ட <span className="text-yellow-400">சிகிச்சை</span> முறைகள்
+                            </h1>
+
+                            <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-3xl font-light">
+                                150 ஆண்டுகால மூலிகை மருத்துவ பாரம்பரியத்துடன் நவீன அறிவியலை இணைத்து,
+                                உங்கள் ஆரோக்கியத்திற்கான முழுமையான தீர்வுகளை வழங்குகிறோம்.
+                            </p>
+
+                            <div className="flex flex-wrap gap-4 mt-8">
+                                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
+                                    <CheckCircle2 className="w-5 h-5 text-emerald-300" />
+                                    <span className="text-white font-medium">100% இயற்கை</span>
+                                </div>
+                                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
+                                    <CheckCircle2 className="w-5 h-5 text-emerald-300" />
+                                    <span className="text-white font-medium">அனுபவம் வாய்ந்த மருத்துவர்கள்</span>
+                                </div>
+                                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
+                                    <CheckCircle2 className="w-5 h-5 text-emerald-300" />
+                                    <span className="text-white font-medium">நிரூபிக்கப்பட்ட முடிவுகள்</span>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* Bento Grid Explorer */}
-            <section className="container mx-auto px-6 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {therapies.map((therapy) => (
+            {/* Therapies Grid Section */}
+            <section className="container mx-auto px-6 py-20">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                        எங்கள் சிறப்பு சிகிச்சைகள்
+                    </h2>
+                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                        ஒவ்வொரு சிகிச்சையும் உங்கள் குறிப்பிட்ட தேவைகளுக்கு ஏற்ப வடிவமைக்கப்பட்டுள்ளது
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {therapies.map((therapy, index) => (
                         <motion.div
-                            layoutId={therapy.id}
                             key={therapy.id}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                             onClick={() => setSelectedTherapy(therapy)}
-                            className={`p-8 rounded-[2rem] border ${therapy.color} cursor-pointer hover:shadow-2xl hover:shadow-slate-200 transition-all duration-300 group relative overflow-hidden bg-white shadow-sm h-full flex flex-col`}
+                            className="group cursor-pointer"
                         >
-                            <div className="mb-6 w-14 h-14 rounded-2xl bg-white shadow-inner flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                                {therapy.icon}
-                            </div>
+                            <div className={`relative h-full bg-gradient-to-br ${therapy.color} rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-200/50`}>
+                                {/* Card Header with Image */}
+                                <div className="relative h-48 overflow-hidden">
+                                    <Image
+                                        src={therapy.image}
+                                        alt={therapy.titleEn}
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
-                            <div className="flex-grow">
-                                <h3 className="text-2xl font-bold text-slate-900 mb-1">{therapy.titleTa}</h3>
-                                <h4 className="text-sm font-bold text-[#c22220] uppercase tracking-widest mb-4 opacity-70">{therapy.titleEn}</h4>
-                                <p className="text-slate-600 leading-relaxed mb-6 group-hover:text-slate-900 transition-colors">
-                                    {therapy.shortDesc}
-                                </p>
-                            </div>
+                                    {/* Icon Badge */}
+                                    <div className="absolute top-4 right-4 w-12 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                        {therapy.icon}
+                                    </div>
 
-                            <div className="flex flex-wrap gap-2 mt-auto">
-                                {therapy.benefits.slice(0, 2).map((benefit, i) => (
-                                    <span key={i} className="px-3 py-1 bg-white/50 border border-slate-200 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-500">
-                                        {benefit}
-                                    </span>
-                                ))}
-                            </div>
+                                    {/* Duration Badge */}
+                                    {therapy.duration && (
+                                        <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                                            <Clock className="w-4 h-4 text-slate-600" />
+                                            <span className="text-xs font-bold text-slate-700">{therapy.duration}</span>
+                                        </div>
+                                    )}
+                                </div>
 
-                            <div className="absolute top-8 right-8 text-slate-300 group-hover:text-[#c22220] transition-colors">
-                                <ArrowRight size={20} />
+                                {/* Card Content */}
+                                <div className="p-6">
+                                    <h3 className="text-2xl font-bold text-slate-900 mb-1">
+                                        {therapy.titleTa}
+                                    </h3>
+                                    <p className="text-sm font-semibold text-[#c22220] uppercase tracking-wider mb-4">
+                                        {therapy.titleEn}
+                                    </p>
+
+                                    <p className="text-slate-600 leading-relaxed mb-6 line-clamp-3">
+                                        {therapy.shortDesc}
+                                    </p>
+
+                                    {/* Benefits Pills */}
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {therapy.benefits.slice(0, 2).map((benefit, i) => (
+                                            <span
+                                                key={i}
+                                                className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-xs font-semibold text-slate-700 border border-slate-200"
+                                            >
+                                                {benefit}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    {/* Read More Button */}
+                                    <button className="w-full mt-4 py-3 bg-slate-900 text-white rounded-xl font-semibold hover:bg-[#c22220] transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3">
+                                        <span>மேலும் அறிக</span>
+                                        <ArrowRight className="w-4 h-4" />
+                                    </button>
+                                </div>
                             </div>
                         </motion.div>
                     ))}
                 </div>
             </section>
 
-            {/* Detail Modal Overlay */}
+            {/* Detail Modal */}
             <AnimatePresence>
                 {selectedTherapy && (
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 md:p-12">
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setSelectedTherapy(null)}
-                            className="absolute inset-0 bg-slate-900/60 backdrop-blur-xl"
+                            className="absolute inset-0 bg-slate-900/80 backdrop-blur-xl"
                         />
 
                         <motion.div
-                            layoutId={selectedTherapy.id}
-                            className="relative w-full max-w-5xl bg-white rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh]"
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            transition={{ type: "spring", duration: 0.5 }}
+                            className="relative w-full max-w-6xl bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row max-h-[90vh]"
                         >
+                            {/* Close Button */}
                             <button
                                 onClick={() => setSelectedTherapy(null)}
-                                className="absolute top-8 right-8 z-30 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#c22220] hover:text-white transition-all group"
+                                className="absolute top-6 right-6 z-30 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl hover:bg-[#c22220] hover:text-white transition-all group"
                             >
                                 <X size={24} className="group-hover:rotate-90 transition-transform" />
                             </button>
 
-                            {/* Modal Image */}
-                            <div className="md:w-1/2 relative min-h-[300px] md:min-h-full overflow-hidden">
+                            {/* Modal Image Side */}
+                            <div className="lg:w-2/5 relative min-h-[300px] lg:min-h-full">
                                 <Image
                                     src={selectedTherapy.image}
                                     alt={selectedTherapy.titleEn}
                                     fill
                                     className="object-cover"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                                <div className="absolute bottom-12 left-12">
-                                    <div className="bg-yellow-400 text-black px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-4">
-                                        Clinical Excellence
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
+                                <div className="absolute bottom-0 left-0 right-0 p-8">
+                                    <div className="inline-flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-full text-xs font-black uppercase tracking-wider mb-4">
+                                        <Sparkles className="w-4 h-4" />
+                                        <span>சிறப்பு சிகிச்சை</span>
                                     </div>
-                                    <h2 className="text-4xl font-black text-white">{selectedTherapy.titleTa}</h2>
-                                    <p className="text-xl text-white/80 italic">{selectedTherapy.titleEn}</p>
+                                    <h2 className="text-4xl font-black text-white mb-2">{selectedTherapy.titleTa}</h2>
+                                    <p className="text-xl text-white/90 italic font-light">{selectedTherapy.titleEn}</p>
+
+                                    {selectedTherapy.duration && (
+                                        <div className="flex items-center gap-2 mt-4 text-white/80">
+                                            <Clock className="w-5 h-5" />
+                                            <span className="font-semibold">{selectedTherapy.duration}</span>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
 
-                            {/* Modal Content */}
-                            <div className="md:w-1/2 p-8 md:p-16 overflow-y-auto">
+                            {/* Modal Content Side */}
+                            <div className="lg:w-3/5 p-8 lg:p-12 overflow-y-auto">
                                 <div className="space-y-8">
+                                    {/* Description */}
                                     <div>
-                                        <h3 className="text-sm font-black text-[#c22220] uppercase tracking-[0.2em] mb-4">The Procedure</h3>
-                                        <p className="text-lg text-slate-700 leading-relaxed font-medium">
+                                        <h3 className="text-sm font-black text-[#c22220] uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                                            <div className="w-8 h-0.5 bg-[#c22220]" />
+                                            சிகிச்சை விவரம்
+                                        </h3>
+                                        <p className="text-lg text-slate-700 leading-relaxed">
                                             {selectedTherapy.fullDesc}
                                         </p>
                                     </div>
 
+                                    {/* Benefits */}
                                     <div>
-                                        <h3 className="text-sm font-black text-[#c22220] uppercase tracking-[0.2em] mb-4">Key Benefits</h3>
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <h3 className="text-sm font-black text-[#c22220] uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                                            <div className="w-8 h-0.5 bg-[#c22220]" />
+                                            முக்கிய நன்மைகள்
+                                        </h3>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                             {selectedTherapy.benefits.map((benefit, i) => (
-                                                <div key={i} className="flex items-center gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                                                    <div className="w-2 h-2 rounded-full bg-emerald-500" />
-                                                    <span className="font-bold text-sm text-slate-800 tracking-wide">{benefit}</span>
+                                                <div
+                                                    key={i}
+                                                    className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100/50 border border-emerald-200/50"
+                                                >
+                                                    <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                                                    <span className="font-semibold text-sm text-slate-800">{benefit}</span>
                                                 </div>
                                             ))}
                                         </div>
                                     </div>
 
-                                    <div className="pt-8">
-                                        <button className="w-full py-5 bg-[#c22220] text-white rounded-2xl font-bold text-lg hover:bg-black transition-all shadow-xl shadow-red-900/10">
-                                            Request This Treatment
+                                    {/* CTA Buttons */}
+                                    <div className="pt-6 space-y-4">
+                                        <button className="w-full py-4 bg-gradient-to-r from-[#c22220] to-[#991b1b] text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-red-500/30 transition-all duration-300 flex items-center justify-center gap-3 group">
+                                            <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                            <span>இந்த சிகிச்சையை முன்பதிவு செய்யவும்</span>
                                         </button>
-                                        <p className="text-center mt-4 text-slate-400 text-sm"> Consultation required before all IPD therapies. </p>
+
+                                        <a
+                                            href="tel:+917871111115"
+                                            className="w-full py-4 bg-slate-100 text-slate-900 rounded-2xl font-bold text-lg hover:bg-slate-200 transition-all duration-300 flex items-center justify-center gap-3 group"
+                                        >
+                                            <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                            <span>மருத்துவரை அழைக்கவும்</span>
+                                        </a>
+
+                                        <p className="text-center text-slate-500 text-sm">
+                                            அனைத்து சிகிச்சைகளுக்கும் மருத்துவ ஆலோசனை அவசியம்
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -279,26 +409,46 @@ export default function TherapiesPage() {
                 )}
             </AnimatePresence>
 
-            {/* Featured Banner */}
-            <section className="container mx-auto px-6 mt-20">
-                <div className="bg-slate-900 rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-[#c22220]/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
-                    <div className="relative z-10 max-w-2xl">
-                        <div className="flex items-center gap-3 mb-8">
-                            <Leaf className="text-emerald-400" />
-                            <span className="font-bold uppercase tracking-widest text-emerald-400">Holistic Care</span>
+            {/* CTA Section */}
+            <section className="container mx-auto px-6 py-20">
+                <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-[3rem] p-12 md:p-20 overflow-hidden">
+                    {/* Decorative Elements */}
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-[#c22220]/20 rounded-full blur-3xl" />
+                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
+
+                    <div className="relative z-10 max-w-3xl mx-auto text-center">
+                        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+                            <Leaf className="w-4 h-4 text-emerald-400" />
+                            <span className="text-white/90 text-sm font-semibold uppercase tracking-wider">
+                                தனிப்பயனாக்கப்பட்ட பராமரிப்பு
+                            </span>
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight">Can&apos;t find what you are looking for?</h2>
-                        <p className="text-xl text-white/60 mb-12">
-                            Our specialists customize treatments for every patient. Talk to us for a personalized detoxification and recovery plan.
+
+                        <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                            உங்களுக்கு ஏற்ற சிகிச்சையை கண்டறியுங்கள்
+                        </h2>
+
+                        <p className="text-xl text-white/70 mb-10 leading-relaxed">
+                            எங்கள் மருத்துவ நிபுணர்கள் உங்கள் குறிப்பிட்ட தேவைகளுக்கு ஏற்ப
+                            தனிப்பயனாக்கப்பட்ட சிகிச்சை திட்டத்தை உருவாக்குவார்கள்
                         </p>
-                        <div className="flex flex-wrap gap-6">
-                            <a href="tel:+917871111115" className="bg-[#c22220] px-8 py-4 rounded-2xl font-bold hover:bg-white hover:text-black transition-all">
-                                Call Consultant
+
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a
+                                href="tel:+917871111115"
+                                className="inline-flex items-center justify-center gap-3 bg-[#c22220] hover:bg-[#991b1b] text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-red-500/30"
+                            >
+                                <Phone className="w-5 h-5" />
+                                <span>உடனடி ஆலோசனை</span>
                             </a>
-                            <button className="border border-white/20 px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition-all">
-                                Download Brochure
-                            </button>
+
+                            <Link
+                                href="/contact"
+                                className="inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300"
+                            >
+                                <Calendar className="w-5 h-5" />
+                                <span>முன்பதிவு செய்யவும்</span>
+                            </Link>
                         </div>
                     </div>
                 </div>

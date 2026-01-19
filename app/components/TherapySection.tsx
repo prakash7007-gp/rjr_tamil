@@ -67,8 +67,8 @@ export default function TherapySection({ data }: TherapySectionProps) {
                             தெரபி<span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-300"> சிகிச்சைகள்</span>
                         </h2>
                     </div>
-                    <p className="text-white/60 max-w-md text-sm md:text-base leading-relaxed text-left">
-                        உடல் மற்றும் மனதை புதுப்பிக்கும் பாரம்பரிய வர்ம மற்றும் தொக்கண சிகிச்சை முறைகள் மூலம் உங்கள் ஆரோக்கியத்தை மீட்டெடுங்கள்.
+                    <p className="text-white/60 max-w-md text-sm md:text-base leading-relaxed text-left">   
+                       எங்களது தெரபி சிகிச்சைகள் மனம், உடல், ஆன்மாவை இணைத்து புத்துணர்ச்சி அளிக்கிறது. இயற்கை முறைகளையும் பாரம்பரிய அறிவையும் அடிப்படையாகக் கொண்டு, முழுமையான நலனைக் கிடைக்கச் செய்வதே எங்களின் முக்கிய நோக்கமாகும்.    
                     </p>
                 </div>
 
@@ -121,7 +121,7 @@ function TherapyCard({
             />
 
             {/* Dark Gradient Overlay */}
-            <div className={`absolute inset-0 bg-gradient-to-t from-[#0a1a18] via-[#0a1a18]/60 to-transparent transition-opacity duration-500 ${isActive ? 'opacity-90' : 'opacity-70 group-hover:opacity-40'}`} />
+            <div className={`absolute inset-0  duration-500 ${isActive ? 'opacity-90' : 'opacity-70 group-hover:opacity-40'}`} />
 
             {/* Content */}
             <div className="absolute inset-0 p-5 md:p-8 flex flex-col justify-end">
@@ -164,7 +164,7 @@ function TherapyCard({
 
                                 <Link
                                     href={`/therapies`}
-                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-500/10 hover:bg-emerald-600 border border-emerald-500/30 rounded-full text-white text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all group/btn"
+                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-500 border border-emerald-500/30 rounded-full text-white text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all group/btn"
                                 >
                                     <span>மேலும் அறிக</span>
                                     <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -177,7 +177,7 @@ function TherapyCard({
 
             {/* Number Indicator */}
             {isActive && (
-                <div className="absolute top-4 right-6 text-emerald-500/10 font-black text-6xl md:text-8xl leading-none select-none pointer-events-none">
+                <div className="absolute top-4 right-6 text-emerald-500/20 font-black text-6xl md:text-8xl leading-none select-none pointer-events-none">
                     {therapy.id.replace('t', '0')}
                 </div>
             )}

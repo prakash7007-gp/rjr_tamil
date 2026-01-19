@@ -89,7 +89,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
                                 ABOUT RJR HERBAL
                             </span>
                             <h2 className="text-3xl lg:text-4xl font-bold leading-snug">
-                                RJR மருத்துவமனையின் <span className="text-yellow-400">150 ஆண்டு கால</span> சேவை
+                                RJR மருத்துவமனையின் <br /> <span className="text-yellow-400">150 ஆண்டு கால</span> சேவை
                             </h2>
                         </motion.div>
 
@@ -112,7 +112,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
                             className="text-lg leading-relaxed opacity-90 mt-4 font-normal"
                         >
                             ஐந்தாம் தலைமுறைக் குடும்பமாக, 150 ஆண்டுகளுக்கும் மேலான பாரம்பரிய
-                            அறிவை நாங்கள் பாதுகாத்து வருகிறோம். 2008-ல் டாக்டர் ஜெயதுரை
+                            அறிவை நாங்கள் பாதுகாத்து வருகிறோம். 2008-ல் <br />டாக்டர். S.R.ஜெயதுரை
                             அவர்களால் சென்னையில் தொடங்கப்பட்ட RJR, இன்று 102-க்கும் மேற்பட்ட
                             கிளைகளுடன் தென்னிந்தியா முழுவதும் விரிவடைந்துள்ளது.
                         </motion.p>
@@ -124,7 +124,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
                             viewport={{ once: true }}
                             className="text-yellow-400 leading-relaxed font-bold mt-4 mb-6"
                         >
-                            RJR-ன் தாரக மந்திரம் – “நோயில்லாத சமுதாயத்தை உருவாக்குவதே”.
+                            “நோயில்லாத சமுதாயத்தை உருவாக்குவதே”. - RJR-யின் நோக்கம்
                         </motion.p>
 
                         <div><motion.a
