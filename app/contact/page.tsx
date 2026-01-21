@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import {
   Phone,
   Mail,
@@ -8,136 +7,50 @@ import {
   PhoneCall,
   MailOpen,
   Clock,
+
 } from "lucide-react";
 import Image from "next/image";
-
+import { useState } from "react";
 
 export default function ContactPage() {
-  const [popup, setPopup] = useState<{
-    type: "success" | "error" | null;
-    message: string;
-  }>({
-    type: null,
-    message: "",
-  });
-
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
+    treatment: "",
+    branch: "",
     message: "",
   });
-
-  const [errors, setErrors] = useState<{
-    name?: string;
-    phone?: string;
-    email?: string;
-    message?: string;
-  }>({});
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const validateForm = () => {
-    const newErrors: typeof errors = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = "பெயர் அவசியம் *";
-    }
-
-    if (!formData.phone.trim()) {
-      newErrors.phone = "தொலைபேசி எண் அவசியம் *";
-    } else if (!/^[0-9]{10}$/.test(formData.phone.trim())) {
-      newErrors.phone = "சரியான 10 இலக்க எண்ணை உள்ளிடவும்";
-    }
-
-    if (formData.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
-      newErrors.email = "சரியான மின்னஞ்சலை உள்ளிடவும்";
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = "செய்தி அவசியம் *";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    // Clear error when user starts typing
-    if (errors[name as keyof typeof errors]) {
-      setErrors({ ...errors, [name]: undefined });
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbwPJhfIXrB8HwOA5YYtF0ofNI9yz6cFm2oPblq3fPH0X8muCoGCHdOWH-RqhlL5ITUp/exec";
-
-    const form = new FormData();
-    form.append("name", formData.name);
-    form.append("phone", formData.phone);
-    form.append("email", formData.email);
-    form.append("message", formData.message);
-
-    try {
-      const res = await fetch(scriptURL, {
-        method: "POST",
-        body: form,
-      });
-
-      const text = await res.text();
-      let data;
-
-      try {
-        data = JSON.parse(text);
-      } catch {
-        setPopup({
-          type: "error",
-          message: "சேவையகத்தில் பிழை ஏற்பட்டுள்ளது. தயவுசெய்து மீண்டும் முயற்சிக்கவும்.",
-        });
-        return;
-      }
-
-      if (data.status === "success") {
-        setPopup({
-          type: "success",
-          message: "உங்கள் செய்தி வெற்றிகரமாக அனுப்பப்பட்டது!",
-        });
-        setFormData({ name: "", phone: "", email: "", message: "" });
-        setErrors({});
-      } else {
-        setPopup({
-          type: "error",
-          message: "செய்தியை அனுப்புவதில் பிழை ஏற்பட்டது.",
-        });
-      }
-    } catch (err) {
-      setPopup({
-        type: "error",
-        message: "இணைய இணைப்பு பிழை. தயவுசெய்து பின்னர் முயற்சிக்கவும்.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-
-    // Auto close popup after 4 seconds
-    setTimeout(() => {
-      setPopup({ type: null, message: "" });
-    }, 4000);
-  };
+  const [success, setSuccess] = useState(false);
 
   return (
     <main className="bg-gray-50 min-h-screen">
+      {success && (
+        <div className="fixed top-6 right-6 z-50 animate-slide-in">
+          <div className="flex items-start gap-4 rounded-xl border border-green-200 bg-white shadow-xl p-5 max-w-sm">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
+              <svg
+                className="h-6 w-6 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+
+            <div>
+              <p className="font-bold text-green-700">
+                பதிவு வெற்றிகரமாக முடிந்தது!
+              </p>
+              <p className="text-sm text-gray-600 mt-1">
+                எங்கள் மருத்துவக் குழு உங்களை விரைவில் தொடர்பு கொள்ளும்.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* ----------------------------------------------------------- */}
       {/* HERO SECTION */}
       {/* ----------------------------------------------------------- */}
@@ -237,77 +150,112 @@ export default function ContactPage() {
               <p className="text-gray-600 mb-8">
                 கீழுள்ள படிவத்தை நிரப்பவும். எங்கள் மருத்துவக் குழு உங்களை விரைவில் தொடர்பு கொள்ளும்.
               </p>
-              <form className="space-y-6" onSubmit={handleSubmit}>
+
+              <form
+                className="space-y-6"
+                onSubmit={async (e) => {
+                  e.preventDefault();
+
+                  await fetch(
+                    "https://script.google.com/macros/s/AKfycbwRtOtth67So6dDZaqoCWvuKV9dhOLGJ8hb0ln-_W-jXrOab9-zfsXm2SSL9Zc/exec",
+                    {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(formData),
+                      mode: "no-cors", // ⭐ IMPORTANT
+                    }
+                  );
+
+                  setSuccess(true);
+                  setTimeout(() => setSuccess(false), 4000);
+
+
+                  setFormData({
+                    name: "",
+                    phone: "",
+                    treatment: "",
+                    branch: "",
+                    message: "",
+                  });
+                }}
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label>பெயர் <span className="text-red-500">*</span></label>
-                    <input
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="உங்கள் பெயர்"
-                      className={`w-full rounded-lg border px-4 py-3 ${errors.name ? "border-red-500 focus:ring-red-200" : "border-gray-200 focus:ring-red-100"} outline-none focus:border-[#C22220] transition-all`}
-                    />
-                    {errors.name && (
-                      <p className="text-red-500 text-sm">{errors.name}</p>
-                    )}
-                  </div>
-                  <div className="space-y-2">
-                    <label>தொலைபேசி எண் <span className="text-red-500">*</span></label>
-                    <input
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="உங்கள் எண்"
-                      className={`w-full rounded-lg border px-4 py-3 ${errors.phone ? "border-red-500 focus:ring-red-200" : "border-gray-200 focus:ring-red-100"} outline-none focus:border-[#C22220] transition-all`}
-                    />
-                    {errors.phone && (
-                      <p className="text-red-500 text-sm">{errors.phone}</p>
-                    )}
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label>மின்னஞ்சல்</label>
+                  {/* Name */}
                   <input
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="example@email.com"
-                    className={`w-full rounded-lg border px-4 py-3 ${errors.email ? "border-red-500 focus:ring-red-200" : "border-gray-200 focus:ring-red-100"} outline-none focus:border-[#C22220] transition-all`}
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
+                    className="w-full rounded-lg border border-gray-300 px-4 py-3"
+                    placeholder="உங்கள் பெயர்"
                   />
-                  {errors.email && (
-                    <p className="text-red-500 text-sm">{errors.email}</p>
-                  )}
+
+                  {/* Phone */}
+                  <input
+                    value={formData.phone}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
+                    className="w-full rounded-lg border border-gray-300 px-4 py-3"
+                    placeholder="உங்கள் எண்"
+                  />
+
+                  {/* Treatment */}
+                  <div className="space-y-2">
+                    <label className="text-sm font-semibold text-gray-700">
+                      சிகிச்சை தேவை
+                    </label>
+                    <input
+                      value={formData.treatment}
+                      onChange={(e) =>
+                        setFormData({ ...formData, treatment: e.target.value })
+                      }
+                      className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-[#C22220] focus:border-transparent transition-all outline-none bg-gray-50 focus:bg-white"
+                      placeholder="சிகிச்சை பதிவு செய்யவும்"
+                    />
+                  </div>
+
+                  {/* Branch */}
+                  <div className="space-y-2">
+                    <label className="text-sm font-semibold text-gray-700">
+                      அருகிலுள்ள கிளை
+                    </label>
+                    <input
+                      value={formData.branch}
+                      onChange={(e) =>
+                        setFormData({ ...formData, branch: e.target.value })
+                      }
+                      className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-[#C22220] focus:border-transparent transition-all outline-none bg-gray-50 focus:bg-white"
+                      placeholder="கிளை பெயரை உள்ளிடவும்"
+                    />
+                  </div>
                 </div>
+
+                {/* Notes (Optional) */}
                 <div className="space-y-2">
-                  <label>தகவல் / சந்தேகம் <span className="text-red-500">*</span></label>
+                  <label className="text-sm font-semibold text-gray-700">
+                    குறிப்புகள் (விருப்பமான)
+                  </label>
                   <textarea
-                    name="message"
                     value={formData.message}
-                    onChange={handleChange}
-                    placeholder="உங்கள் செய்தியை இங்கே தட்டச்சு செய்யவும்..."
-                    className={`w-full rounded-lg border px-4 py-3 min-h-[120px] ${errors.message ? "border-red-500 focus:ring-red-200" : "border-gray-200 focus:ring-red-100"} outline-none focus:border-[#C22220] transition-all`}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
+                    className="w-full rounded-lg border border-gray-300 px-4 py-3"
+                    placeholder="உங்கள் குறிப்புகளை இங்கே எழுதலாம்..."
                   />
-                  {errors.message && (
-                    <p className="text-red-500 text-sm">{errors.message}</p>
-                  )}
                 </div>
-                <button
-                  disabled={isSubmitting}
-                  className="w-full py-4 bg-[#C22220] text-white font-bold rounded-lg hover:bg-red-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
-                      அனுப்புகிறது...
-                    </>
-                  ) : (
-                    "செய்தி அனுப்பவும்"
-                  )}
+
+                <button className="w-full rounded-lg py-4 bg-[#C22220] text-white font-bold text-lg hover:bg-[#a01b1a] hover:shadow-lg transform transition-all active:scale-[0.98]">
+                  செய்தி அனுப்பவும்
                 </button>
               </form>
+
             </div>
           </div>
+
 
         </div>
       </section>
@@ -371,53 +319,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      {popup.type && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
-          <div
-            className={`w-full max-w-md rounded-2xl shadow-2xl p-6 text-center animate-fadeIn
-        ${popup.type === "success"
-                ? "bg-green-50 border-t-8 border-green-600"
-                : "bg-red-50 border-t-8 border-red-600"
-              }`}
-          >
-            <div
-              className={`mx-auto w-16 h-16 flex items-center justify-center rounded-full mb-4
-          ${popup.type === "success"
-                  ? "bg-green-100 text-green-600"
-                  : "bg-red-100 text-red-600"
-                }`}
-            >
-              {popup.type === "success" ? "✓" : "✕"}
-            </div>
-
-            <h3
-              className={`text-2xl font-bold mb-2
-          ${popup.type === "success"
-                  ? "text-green-700"
-                  : "text-red-700"
-                }`}
-            >
-              {popup.type === "success" ? "வெற்றி!" : "பிழை!"}
-            </h3>
-
-            <p className="text-gray-700 mb-6">{popup.message}</p>
-
-            <button
-              onClick={() => setPopup({ type: null, message: "" })}
-              className={`px-6 py-2 rounded-lg font-semibold text-white
-          ${popup.type === "success"
-                  ? "bg-green-600 hover:bg-green-700"
-                  : "bg-red-600 hover:bg-red-700"
-                }`}
-            >
-              மூடவும்
-            </button>
-          </div>
-        </div>
-      )}
-
-
 
     </main>
+
   );
 }

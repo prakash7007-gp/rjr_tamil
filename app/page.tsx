@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import TreatmentSection from "./components/TreatmentSection";
@@ -13,23 +14,47 @@ import PhotoBanner from "./components/PhotoBanner";
 import VideoSection from "./components/VideoSection";
 import CreativeSection from "./components/CreativeSection";
 
+export const metadata: Metadata = {
+  title: "Home - Advanced Siddha, Ayurveda & Herbal Treatments in Tamil Nadu",
+  description: "Experience world-class natural healing at RJR Herbal Hospitals. We specialize in Siddha and Ayurveda treatments for chronic diseases with a 150-year legacy of excellence.",
+};
+
 export default async function HomePage() {
   const data = await getData();
 
   return (
     <>
+      {/* Hero Section */}
       <Hero data={data.hero} />
+
+      {/* About Section */}
       <AboutSection data={data.about} />
-      <TreatmentSection data={data.majorTreatments} />
-      <TherapySection data={data.therapies} />
+
+      {/* Stats Section - Achievements */}
       <StatsSection data={data.stats} />
-      {/* <DoctorSection data={data.doctors} /> */}
+
+      {/* Major Treatments Section */}
+      <TreatmentSection data={data.majorTreatments} />
+
+      {/* Therapy Section */}
+      <TherapySection data={data.therapies} />
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs data={data.whyChooseUs} />
+
+      {/* Before & After Results */}
       <BeforeAfter data={data.beforeAfter} />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection data={data.testimonials} />
+
+      {/* Chennai Branch & Doctors Section */}
+      <DoctorSection data={data.doctors} />
+
+      {/* Optional Sections - Uncomment if needed */}
       {/* <VideoSection /> */}
       {/* <PhotoBanner /> */}
-      <WhyChooseUs data={data.whyChooseUs} />
       {/* <CreativeSection data={data} /> */}
-      <TestimonialsSection data={data.testimonials} />
     </>
   );
 }

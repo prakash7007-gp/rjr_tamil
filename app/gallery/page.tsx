@@ -7,44 +7,31 @@ import { motion, AnimatePresence } from "framer-motion";
 
 /* ================= FILE ARRAYS ================= */
 
-const beforeAfterImages = [
-  "/images/ba1.webp", "/images/ba2.webp", "/images/ba3.webp", "/images/ba4.webp",
-  "/images/ba5.webp", "/images/ba6.webp", "/images/ba7.webp", "/images/ba8.webp",
-  "/images/ba9.webp", "/images/ba10.webp", "/images/ba11.webp", "/images/ba12.webp",
-  "/images/ba13.webp", "/images/ba14.webp", "/images/ba15.webp", "/images/ba16.webp",
-  "/images/ba17.webp", "/images/ba18.webp",
-];
+const beforeAfterImages = Array.from({ length: 18 }, (_, i) => `/Before_after_images/g${i + 1}.webp`);
 
 const youtubeVideos = [
-  { src: "/videos/asthmanew.mp4", title: "ஆஸ்துமா சிகிச்சை", description: "வெற்றிகரமான மீட்பு" },
-  { src: "/videos/constipationnew.mp4", title: "மலச்சிக்கல் தீர்வு", description: "இயற்கை சிகிச்சை" },
-  { src: "/videos/diabetesnew.mp4", title: "சர்க்கரை நோய்", description: "மூலிகை மருத்துவம்" },
-  { src: "/videos/digestionnew.mp4", title: "ஜீரண கோளாறு", description: "மூலிகை முறை" },
-  { src: "/videos/fibroidnew.mp4", title: "ஃபைப்ராய்டு சிகிச்சை", description: "நிரந்தர தீர்வு" },
-  { src: "/videos/gallstonenew.mp4", title: "பித்தக்கல் தீர்வு", description: "அறுவை சிகிச்சையின்றி" },
-  { src: "/videos/gastricnew.mp4", title: "காஸ்ட்ரிக் பிரச்சனை", description: "மூலிகை தீர்வு" },
-  { src: "/videos/hippainnew.mp4", title: "இடுப்பு வலி", description: "நிவாரணம்" },
-  { src: "/videos/kidneystonenew.mp4", title: "சிறுநீரக கல்", description: "மூலிகை சிகிச்சை" },
-  { src: "/videos/kneepainnew.mp4", title: "முட்டி வலி", description: "இயற்கை தீர்வு" },
-  { src: "/videos/nasalpolypsnew.mp4", title: "மூக்கு பாலிப்", description: "சித்த மருத்துவம்" },
-  { src: "/videos/nervousproblemnew.mp4", title: "நரம்பு கோளாறு", description: "சித்த மருத்துவம்" },
-  { src: "/videos/pilesnew.mp4", title: "மூல நோய்", description: "நிரந்தர தீர்வு" },
-  { src: "/videos/psoriasisnew.mp4", title: "சொரியாசிஸ்", description: "தோல் நோய் தீர்வு" },
-  { src: "/videos/ulcernew.mp4", title: "அல்சர் சிகிச்சை", description: "ஆரோக்கியமான மீட்பு" },
-  { src: "/videos/urinaryinfectionnew.mp4", title: "சிறுநீர் தொற்று", description: "நிபுணத்துவ சிகிச்சை" },
-  { src: "/videos/varicosenew.mp4", title: "வெரிகோஸ் வெயின்", description: "இயற்கை மருத்துவம்" },
+  { src: "/Video_gallery/asthmanew.mp4", title: "ஆஸ்துமா சிகிச்சை", description: "வெற்றிகரமான மீட்பு" },
+  { src: "/Video_gallery/constipationnew.mp4", title: "மலச்சிக்கல் தீர்வு", description: "இயற்கை சிகிச்சை" },
+  { src: "/Video_gallery/diabetesnew.mp4", title: "சர்க்கரை நோய்", description: "மூலிகை மருத்துவம்" },
+  { src: "/Video_gallery/digestionnew.mp4", title: "ஜீரண கோளாறு", description: "மூலிகை முறை" },
+  { src: "/Video_gallery/fibroidnew.mp4", title: "ஃபைப்ராய்டு சிகிச்சை", description: "நிரந்தர தீர்வு" },
+  { src: "/Video_gallery/gallstonenew.mp4", title: "பித்தக்கல் தீர்வு", description: "அறுவை சிகிச்சையின்றி" },
+  { src: "/Video_gallery/gastricnew.mp4", title: "காஸ்ட்ரிக் பிரச்சனை", description: "மூலிகை தீர்வு" },
+  { src: "/Video_gallery/hippainnew.mp4", title: "இடுப்பு வலி", description: "நிவாரணம்" },
+  { src: "/Video_gallery/kidneystonenew.mp4", title: "சிறுநீரக கல்", description: "மூலிகை சிகிச்சை" },
+  { src: "/Video_gallery/kneepainnew.mp4", title: "முட்டி வலி", description: "இயற்கை தீர்வு" },
+  { src: "/Video_gallery/nasalpolypsnew.mp4", title: "மூக்கு பாலிப்", description: "சித்த மருத்துவம்" },
+  { src: "/Video_gallery/nervousproblemnew.mp4", title: "நரம்பு கோளாறு", description: "சித்த மருத்துவம்" },
+  { src: "/Video_gallery/pilesnew.mp4", title: "மூல நோய்", description: "நிரந்தர தீர்வு" },
+  { src: "/Video_gallery/psoriasisnew.mp4", title: "சொரியாசிஸ்", description: "தோல் நோய் தீர்வு" },
+  { src: "/Video_gallery/ulcernew.mp4", title: "அல்சர் சிகிச்சை", description: "ஆரோக்கியமான மீட்பு" },
+  { src: "/Video_gallery/urinaryinfectionnew.mp4", title: "சிறுநீர் தொற்று", description: "நிபுணத்துவ சிகிச்சை" },
+  { src: "/Video_gallery/varicosenew.mp4", title: "வெரிகோஸ் வெயின்", description: "இயற்கை மருத்துவம்" },
 ];
 
 const galleryImages = [
-  "/images/p1.webp", "/images/p2.webp", "/images/p3.webp", "/images/p4.webp",
-  "/images/p5.webp", "/images/p6.webp", "/images/p7.webp", "/images/p8.webp",
-  "/images/p9.webp", "/images/p10.webp", "/images/p11.webp", "/images/p12.webp",
-  "/images/p13.webp", "/images/p14.webp", "/images/p15.webp", "/images/p16.webp",
-  "/images/p17.webp", "/images/p18.webp", "/images/p19.webp", "/images/p20.webp",
-  "/images/p21.webp", "/images/p22.webp", "/images/p23.webp", "/images/p24.webp",
-  "/images/p25.webp", "/images/p26.webp", "/images/p27.webp", "/images/p28.webp",
-  "/images/p29.webp", "/images/p30.webp", "/images/p31.webp", "/images/p32.webp",
-  "/images/p33.webp", "/images/p34.webp", "/images/p35.webp",
+  ...Array.from({ length: 27 }, (_, i) => `/Photo_gallery/${i + 1}.webp`),
+  ...Array.from({ length: 8 }, (_, i) => `/Photo_gallery/r${i + 1}.webp`),
 ];
 
 /* ================= COMPONENT ================= */
@@ -84,16 +71,17 @@ export default function GalleryPage() {
       <section className="max-w-4xl mx-auto px-6 -mt-16 relative z-20">
         <div className="p-1.5 bg-white/80 backdrop-blur-2xl border border-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] flex md:flex-row flex-col gap-1">
           {[
+            { key: "photo", label: "புகைப்பட கேலரி", icon: "📸" },
             { key: "before", label: "சிகிச்சைக்கு முன் & பின்", icon: "✨" },
             { key: "video", label: "வீடியோ கேலரி", icon: "🎬" },
-            { key: "photo", label: "புகைப்பட கேலரி", icon: "📸" },
+
           ].map(tab => (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key as any)}
               className={`relative flex-1 flex items-center justify-center gap-3 py-4 rounded-2xl font-bold transition-all duration-500 overflow-hidden ${activeTab === tab.key
-                  ? "text-white"
-                  : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
+                ? "text-white"
+                : "text-gray-500 hover:text-gray-800 hover:bg-gray-50"
                 }`}
             >
               {activeTab === tab.key && (
@@ -135,11 +123,11 @@ export default function GalleryPage() {
               </div>
             )}
 
-            {/* 2. VIDEO GRID (Phone Frame Style) */}
+            {/* 2. VIDEO GRID (Clean Vertical Style) */}
             {activeTab === "video" && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 lg:gap-14 place-items-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                 {youtubeVideos.map((video, i) => (
-                  <VideoPhoneCard
+                  <VideoGalleryCard
                     key={i}
                     video={video}
                     isActive={activeVideo === i}
@@ -232,47 +220,50 @@ function GalleryCard({ src, index, onClick, label }: any) {
   );
 }
 
-function VideoPhoneCard({ video, isActive, onPlay }: any) {
+function VideoGalleryCard({ video, isActive, onPlay }: any) {
   return (
-    <div className="w-full max-w-[280px]">
-      <div className={`relative rounded-[2.8rem] overflow-hidden bg-[#111] border-[8px] border-[#111] shadow-2xl transition-all duration-500 aspect-[9/18.5] ${isActive ? "scale-[1.05]" : "hover:scale-[1.02]"
-        }`}>
-        {/* Notch */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-5 bg-[#111] rounded-b-2xl z-30 pointer-events-none" />
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className={`relative w-full aspect-[9/16] rounded-3xl overflow-hidden bg-black shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-200 ${isActive ? "ring-4 ring-[#c22220]" : ""}`}
+    >
+      {isActive ? (
+        <video
+          src={video.src}
+          controls
+          autoPlay
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : (
+        <div className="relative w-full h-full cursor-pointer flex flex-col justify-end" onClick={onPlay}>
+          <video
+            src={video.src}
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
+            muted
+            loop
+            onMouseEnter={(e) => e.currentTarget.play()}
+            onMouseLeave={(e) => {
+              e.currentTarget.pause();
+              e.currentTarget.currentTime = 0;
+            }}
+          />
 
-        <div className="relative w-full h-full bg-black rounded-[2.1rem] overflow-hidden">
-          {isActive ? (
-            <video
-              src={video.src}
-              controls
-              autoPlay
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          ) : (
-            <div className="relative w-full h-full cursor-pointer group/vid flex flex-col justify-end" onClick={onPlay}>
-              <video
-                src={video.src}
-                className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover/vid:opacity-40 transition-opacity"
-              />
-
-              {/* Play Button */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 bg-[#c22220] rounded-full flex items-center justify-center shadow-xl ring-4 ring-white/20 group-hover/vid:scale-110 transition-transform duration-500">
-                  <svg fill="white" viewBox="0 0 24 24" className="w-8 h-8 ml-1"><path d="M8 5v14l11-7z" /></svg>
-                </div>
+          {/* Play Button */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-white/30">
+              <div className="w-12 h-12 bg-[#c22220] rounded-full flex items-center justify-center shadow-lg">
+                <svg fill="white" viewBox="0 0 24 24" className="w-6 h-6 ml-1"><path d="M8 5v14l11-7z" /></svg>
               </div>
-
-              {/* Info Overlay */}
-              <div className="relative z-10 p-6 text-left">
-                <h4 className="text-white font-bold text-lg leading-tight mb-1">{video.title}</h4>
-                <p className="text-white/70 text-sm">{video.description}</p>
-              </div>
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent pointer-events-none" />
             </div>
-          )}
+          </div>
+
+          {/* Info Overlay */}
+          <div className="relative z-10 p-5 bg-gradient-to-t from-black via-black/50 to-transparent pt-12 pointer-events-none">
+            <h4 className="text-white font-bold text-lg leading-tight mb-1 drop-shadow-sm">{video.title}</h4>
+            <p className="text-white/80 text-xs font-medium">{video.description}</p>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </motion.div>
   );
 }

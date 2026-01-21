@@ -2,7 +2,7 @@
 "use client";
 
 import Image from "next/image";
-import { Plus } from "lucide-react";
+import { Plus, MapPin, Phone, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface DoctorProps {
@@ -20,7 +20,7 @@ export default function DoctorSection({ data }: DoctorProps) {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 640); // sm breakpoint
+      setIsMobile(window.innerWidth < 640);
     };
 
     handleResize();
@@ -43,50 +43,92 @@ export default function DoctorSection({ data }: DoctorProps) {
   const visibleDoctors = isMobile && hasDoctors ? [data[currentIndex]] : data;
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#c22220] text-center mb-8 sm:mb-10 lg:mb-12">
-          அனுபவம் வாய்ந்த மருத்துவர் குழு 
-        </h2>
+    <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* CHENNAI BRANCH HEADER */}
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-1.5 bg-red-100 text-[#c22220] rounded-full text-sm font-bold tracking-widest uppercase mb-4 shadow-sm">
+            Our Head Office - Chennai
+          </span>
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6">
+            சென்னை கிளையின் <span className="text-[#c22220]">மருத்துவக் குழு</span>
+          </h2>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-8 max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+            <div className="flex items-start gap-3 text-left">
+              <MapPin className="text-[#c22220] shrink-0 mt-1" size={24} />
+              <div>
+                <p className="font-bold text-gray-900">Address:</p>
+                <p className="text-gray-600">150, Habibulla Road, T.Nagar, Chennai - 600017.</p>
+              </div>
+            </div>
+
+            <div className="h-12 w-[1px] bg-gray-200 hidden md:block"></div>
+
+            <div className="flex items-start gap-3 text-left">
+              <Phone className="text-[#c22220] shrink-0 mt-1" size={24} />
+              <div>
+                <p className="font-bold text-gray-900">Contact:</p>
+                <p className="text-red-700 font-bold">+91 78711 11115</p>
+              </div>
+            </div>
+
+            <div className="h-12 w-[1px] bg-gray-200 hidden md:block"></div>
+
+            <div className="flex items-start gap-3 text-left">
+              <Clock className="text-[#c22220] shrink-0 mt-1" size={24} />
+              <div>
+                <p className="font-bold text-gray-900">Timing:</p>
+                <p className="text-gray-600">9:00 AM - 7:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* DOCTORS GRID */}
         <div
-          className={`grid gap-6 sm:gap-8 lg:gap-10 ${
-            isMobile ? "grid-cols-1" : "sm:grid-cols-2 lg:grid-cols-4"
-          }`}
+          className={`grid gap-8 lg:gap-10 ${isMobile ? "grid-cols-1" : "sm:grid-cols-2 lg:grid-cols-4"
+            }`}
         >
           {visibleDoctors.map((doctor, idx) => (
             <div
               key={doctor.name + idx}
-              className="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden hover:-translate-y-1 transition-all duration-300"
+              className="group bg-white rounded-[2rem] shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-gray-100"
             >
-              {/* TOP IMAGE */}
-              <div className="relative h-64 sm:h-72 lg:h-80 w-full">
+              {/* IMAGE CONTAINER */}
+              <div className="relative h-72 sm:h-80 w-full overflow-hidden">
                 <Image
                   src={doctor.image}
                   alt={doctor.name}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-top group-hover:scale-110 transition-transform duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
 
-              {/* DIVIDER WITH CIRCLE BUTTON */}
+              {/* DIVIDER WITH PLUS BUTTON */}
               <div className="relative">
-                <div className="w-full h-[3px] bg-[#c22220]" />
-                <div className="absolute left-1/2 -translate-x-1/2 -top-3 sm:-top-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#c22220] rounded-full flex items-center justify-center shadow-xl">
-                    <Plus className="text-white" size={22} strokeWidth={3} />
+                <div className="w-full h-1 bg-gradient-to-r from-[#c22220] to-[#6e0f0f]" />
+                <div className="absolute left-1/2 -translate-x-1/2 -top-6">
+                  <div className="w-12 h-12 bg-white text-[#c22220] rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#c22220] group-hover:text-white transition-all duration-300 transform group-hover:rotate-90">
+                    <Plus size={24} strokeWidth={3} />
                   </div>
                 </div>
               </div>
 
-              {/* CONTENT */}
-              <div className="text-center px-4 sm:px-6 pb-6 sm:pb-8 pt-8 sm:pt-10">
-                <h3 className="text-lg sm:text-xl font-semibold">{doctor.name}</h3>
-                <p className="text-red-600 uppercase tracking-wide text-xs sm:text-sm mt-2 font-bold">
+              {/* DOCTOR INFO */}
+              <div className="text-center px-6 pb-10 pt-10">
+                <h3 className="text-sm font-bold text-gray-900 group-hover:text-[#c22220] transition-colors">{doctor.name}</h3>
+                <p className="text-red-700 uppercase tracking-widest text-xs mt-2 font-black">
                   {doctor.qualification}
                 </p>
 
-                <p className="text-gray-600 mt-2 text-xs sm:text-sm">{doctor.experience}</p>
+                <div className="h-1 w-10 bg-gray-100 mx-auto my-4 group-hover:w-20 group-hover:bg-red-200 transition-all duration-500" />
+
+                <p className="text-gray-500 text-sm font-medium leading-relaxed">
+                  {doctor.experience}
+                </p>
               </div>
             </div>
           ))}
@@ -94,35 +136,31 @@ export default function DoctorSection({ data }: DoctorProps) {
 
         {/* Mobile slider controls */}
         {isMobile && hasDoctors && (
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
+          <div className="flex items-center justify-center gap-4 mt-12">
             <button
               type="button"
               onClick={prev}
-              className="h-9 w-9 sm:h-10 sm:w-10 rounded-full border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 transition-all hover:scale-110 shadow-sm"
-              aria-label="Previous doctor"
+              className="h-12 w-12 rounded-full border border-gray-200 bg-white text-gray-700 hover:bg-[#c22220] hover:text-white transition-all hover:scale-110 shadow-md flex items-center justify-center"
             >
-              <span className="text-lg sm:text-xl">‹</span>
+              <span className="text-2xl">‹</span>
             </button>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               {data.map((_, i) => (
                 <button
                   key={i}
                   type="button"
                   onClick={() => setCurrentIndex(i)}
-                  className={`h-2 sm:h-2.5 rounded-full transition-all ${
-                    i === currentIndex ? "w-6 sm:w-8 bg-[#c22220]" : "w-2.5 sm:w-3 bg-gray-300"
-                  }`}
-                  aria-label={`Go to doctor ${i + 1}`}
+                  className={`h-2.5 rounded-full transition-all ${i === currentIndex ? "w-10 bg-[#c22220]" : "w-2.5 bg-gray-300"
+                    }`}
                 />
               ))}
             </div>
             <button
               type="button"
               onClick={next}
-              className="h-9 w-9 sm:h-10 sm:w-10 rounded-full border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 transition-all hover:scale-110 shadow-sm"
-              aria-label="Next doctor"
+              className="h-12 w-12 rounded-full border border-gray-200 bg-white text-gray-700 hover:bg-[#c22220] hover:text-white transition-all hover:scale-110 shadow-md flex items-center justify-center"
             >
-              <span className="text-lg sm:text-xl">›</span>
+              <span className="text-2xl">›</span>
             </button>
           </div>
         )}

@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { MapPin, Phone, User, Clock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { getData } from "../../lib/loadData";
+import DoctorSection from "../../components/DoctorSection";
 
 // Helper to find a branch by ID across all regions
 const getBranchById = (id: string) => {
@@ -30,20 +32,29 @@ export async function generateMetadata({ params }: { params: Promise<{ branchId:
     if (!data) return { title: "Branch Not Found" };
 
     return {
-        title: `${data.branch.city} Branch - RJR Herbal Hospitals`,
-        description: `Visit our ${data.branch.city} branch in ${data.regionName}. Doctor: ${data.branch.doctorName}. Ph: ${data.branch.phone}`,
+        title: `${data.branch.city} Branch | Best Siddha & Ayurveda Treatment in ${data.regionName}`,
+        description: `Visit RJR Herbal Hospitals in ${data.branch.city}, ${data.regionName}. We offer traditional Siddha and Ayurveda treatments for Asthma, Psoriasis, and Arthritis under the care of ${data.branch.doctorName}. Contact: ${data.branch.phone}`,
+        keywords: [
+            `${data.branch.city} Ayurveda hospital`,
+            `Siddha medicine ${data.branch.city}`,
+            `Ayurvedic clinic in ${data.branch.city}`,
+            `Best herbal hospital ${data.regionName}`,
+            `Natural treatment ${data.branch.city}`
+        ]
     };
 }
 
 export default async function BranchDetailPage(props: { params: Promise<{ branchId: string }> }) {
     const params = await props.params;
     const data = getBranchById(params.branchId);
+    const siteData = await getData();
 
     if (!data) {
         notFound();
     }
 
     const { branch, regionName } = data;
+    const isChennai = branch.id === "chennai";
 
     return (
         <main className="bg-gray-50 min-h-screen py-10 px-4">
@@ -145,35 +156,37 @@ export default async function BranchDetailPage(props: { params: Promise<{ branch
 
                     {/* RIGHT COLUMN - DOCTOR & HOURS */}
                     <div className="space-y-8">
-                        {/* DOCTOR PROFILE */}
-                        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 text-center relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#c22220]/10 to-transparent"></div>
+                        {/* DOCTOR PROFILE - Only show if not Chennai (Chennai shows full team below) */}
+                        {!isChennai && (
+                            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 text-center relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#c22220]/10 to-transparent"></div>
 
-                            <div className="w-32 h-32 mx-auto relative rounded-full overflow-hidden border-4 border-white shadow-lg bg-gray-100 mb-4 z-10">
-                                {/* Use next/image correctly if you have real images, for now placeholder */}
-                                <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
-                                    <User size={48} />
+                                <div className="w-32 h-32 mx-auto relative rounded-full overflow-hidden border-4 border-white shadow-lg bg-gray-100 mb-4 z-10">
+                                    {/* Use next/image correctly if you have real images, for now placeholder */}
+                                    <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
+                                        <User size={48} />
+                                    </div>
+                                </div>
+
+                                <h3 className="text-xl font-bold text-gray-900">{branch.doctorName}</h3>
+                                <p className="text-[#c22220] font-medium mb-4">Senior Consultant</p>
+
+                                <div className="text-sm text-gray-500 bg-gray-50 rounded-lg p-3">
+                                    "Dedicated to providing the best herbal care with over 15 years of experience."
+                                </div>
+
+                                <div className="mt-6 pt-6 border-t border-gray-100">
+                                    <div className="flex justify-between items-center mb-2">
+                                        <span className="text-gray-500 text-sm">Experience</span>
+                                        <span className="font-bold text-gray-800">15+ Years</span>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-gray-500 text-sm">Languages</span>
+                                        <span className="font-bold text-gray-800">Tamil, English</span>
+                                    </div>
                                 </div>
                             </div>
-
-                            <h3 className="text-xl font-bold text-gray-900">{branch.doctorName}</h3>
-                            <p className="text-[#c22220] font-medium mb-4">Senior Consultant</p>
-
-                            <div className="text-sm text-gray-500 bg-gray-50 rounded-lg p-3">
-                                "Dedicated to providing the best herbal care with over 15 years of experience."
-                            </div>
-
-                            <div className="mt-6 pt-6 border-t border-gray-100">
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-gray-500 text-sm">Experience</span>
-                                    <span className="font-bold text-gray-800">15+ Years</span>
-                                </div>
-                                <div className="flex justify-between items-center">
-                                    <span className="text-gray-500 text-sm">Languages</span>
-                                    <span className="font-bold text-gray-800">Tamil, English</span>
-                                </div>
-                            </div>
-                        </div>
+                        )}
 
                         {/* TIMINGS */}
                         <div className="bg-[#c22220] text-white rounded-2xl shadow-lg p-6">
@@ -200,6 +213,13 @@ export default async function BranchDetailPage(props: { params: Promise<{ branch
                         </div>
                     </div>
                 </div>
+
+                {/* DOCTOR TEAM SECTION - ONLY FOR CHENNAI */}
+                {isChennai && (
+                    <div className="mt-12">
+                        <DoctorSection data={siteData.doctors} />
+                    </div>
+                )}
             </div>
         </main>
     );

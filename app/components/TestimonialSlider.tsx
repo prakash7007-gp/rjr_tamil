@@ -35,7 +35,7 @@ export default function TestimonialSlider({ testimonials, button }: SliderProps)
       <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row min-h-[500px] transition-all duration-300">
 
         {/* LEFT — IMAGE SECTION */}
-        <div className="w-full md:w-[45%] relative bg-gray-100 h-[350px] md:h-auto group">
+        <div className="w-full md:w-[45%] relative bg-red-100 h-[350px] md:h-auto group">
           <Image
             src={t.image}
             alt={t.imageAlt}

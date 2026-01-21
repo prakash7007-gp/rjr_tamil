@@ -5,8 +5,8 @@ import { Stethoscope, UserCheck, Clock, Leaf } from "lucide-react";
 import TreatmentsGrid from "./TreatmentsGrid";
 
 export const metadata = {
-  title: "Our Treatments | RJR Herbal Hospital",
-  description: "சித்த மருத்துவத்தில் வழங்கப்படும் அனைத்து சிகிச்சைகள்",
+  title: "Specialized Ayurveda & Siddha Treatments | Traditional Healing",
+  description: "Explore our wide range of traditional Siddha and Ayurveda treatments at RJR Herbal Hospitals. We provide natural solutions for chronic ailments, joint pains, skin issues, and wellness therapies with 150 years of legacy.",
 };
 
 export default async function TreatmentsPage() {
@@ -36,7 +36,7 @@ export default async function TreatmentsPage() {
             பாரம்பரிய சித்த மருத்துவம்
           </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            எங்கள் சிறப்பு <span className="text-[#c22220]">சிகிச்சைகள்</span>
+            எங்கள் சிறப்பு <span className="text-yellow-300">சிகிச்சைகள்</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
             நவீன வசதிகளுடன் கூடிய பாரம்பரிய சித்த மருத்துவ சிகிச்சைகள் மூலம்

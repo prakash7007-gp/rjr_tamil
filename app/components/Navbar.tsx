@@ -71,16 +71,16 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white shadow-md">
+      <header className="sticky top-0 z-50 bg-gradient-to-r from-[#c22220] via-[#a81c1c] to-[#6e0f0f] md:bg-none md:bg-white shadow-md">
         {/* LOGO ROW */}
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/images/logo (1).png" alt="Logo" width={60} height={60} className="w-[50px] md:w-[70px] h-auto" />
+            <Image src="/images/newlogo.png" alt="Logo" width={70} height={670} className="w-[70px] md:w-[100px] h-auto" />
             <div>
-              <h1 className="text-lg md:text-xl font-bold text-[#c22220]">
+              <h1 className="text-lg md:text-xl font-bold text-white md:text-[#c22220]">
                 RJR ஹெர்பல் மருத்துவமனை
               </h1>
-              <p className="text-xs md:text-sm text-gray-700">
+              <p className="text-xs md:text-sm text-gray-100 md:text-gray-700">
                 ஐந்து தலைமுறை அனுபவம்
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function Navbar() {
           <HeaderInfo />
 
           <button
-            className="md:hidden p-2 text-gray-700 hover:text-[#c22220] transition"
+            className="md:hidden p-2 text-white hover:text-yellow-400 transition"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
@@ -98,7 +98,7 @@ export default function Navbar() {
         </div>
 
         {/* DESKTOP MENU BAR */}
-        <div className="bg-[#c22220] text-white hidden md:block">
+        <div className="bg-gradient-to-r from-[#c22220] via-[#a81c1c] to-[#6e0f0f] text-white hidden md:block shadow-lg">
           <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
             <nav className="flex gap-8 text-white font-medium">
               {navLinks.map((link) => (
@@ -145,29 +145,29 @@ export default function Navbar() {
 
         {/* Sidebar Content */}
         <div
-          className={`relative w-4/5 max-w-[300px] bg-white h-full shadow-2xl p-6 flex flex-col transform transition-transform duration-300 ease-in-out ${open ? "translate-x-0" : "translate-x-full"
+          className={`relative w-4/5 max-w-[300px] bg-gradient-to-b from-[#c22220] to-[#5a0606] h-full shadow-2xl p-6 flex flex-col transform transition-transform duration-300 ease-in-out ${open ? "translate-x-0" : "translate-x-full"
             }`}
         >
-          <div className="flex justify-between items-center mb-8 border-b pb-4">
-            <h2 className="text-xl font-bold text-[#c22220]">Menu</h2>
+          <div className="flex justify-between items-center mb-8 border-b border-white/20 pb-4">
+            <h2 className="text-xl font-bold text-white">Menu</h2>
             <button
               onClick={() => setOpen(false)}
-              className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition text-gray-700"
+              className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition text-white"
               aria-label="Close menu"
             >
               <X size={24} />
             </button>
           </div>
 
-          <nav className="flex flex-col gap-4 text-gray-700 font-medium text-lg">
+          <nav className="flex flex-col gap-4 text-white font-medium text-lg">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
                 className={`py-2 px-3 rounded-lg transition-colors ${pathname === link.href
-                  ? "bg-red-50 text-[#c22220] font-bold border-l-4 border-[#c22220]"
-                  : "hover:bg-gray-50 hover:text-[#c22220]"
+                  ? "bg-white/20 text-yellow-400 font-bold border-l-4 border-yellow-400"
+                  : "hover:bg-white/10 hover:text-yellow-300"
                   }`}
               >
                 {link.label}
@@ -175,20 +175,20 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="mt-8 pt-6 border-t">
+          <div className="mt-8 pt-6 border-t border-white/20">
             <button
               onClick={() => {
                 setOpen(false);
                 setModalOpen(true);
               }}
-              className="flex w-full items-center justify-center gap-2 bg-[#c22220] text-white py-4 rounded-xl font-bold hover:bg-red-700 transition shadow-md active:scale-[0.98]"
+              className="flex w-full items-center justify-center gap-2 bg-yellow-400 text-[#7a1514] py-4 rounded-xl font-bold hover:bg-white transition shadow-md active:scale-[0.98]"
             >
               <Stethoscope size={20} />
               FOR CONSULTATION
             </button>
           </div>
 
-          <div className="mt-auto text-center text-sm text-gray-400 py-4">
+          <div className="mt-auto text-center text-sm text-white/50 py-4">
             &copy; RJR Herbal Hospitals
           </div>
         </div>

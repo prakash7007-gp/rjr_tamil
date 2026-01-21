@@ -1,5 +1,10 @@
-// app/about/page.tsx
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About Us | 150 Years of Heritage in Siddha & Ayurveda",
+  description: "Learn about RJR Herbal Hospitals' 150-year legacy of traditional healing. Founded by Dr. S.R. Jeyadurai, we bring 5 generations of medical wisdom in Siddha and Ayurveda to modern healthcare.",
+};
 
 const timelineEvents = [
   {
@@ -107,7 +112,7 @@ export default function AboutPage() {
       </section>
 
       {/* ----------------------------------------------------------- */}
-      {/* HERITAGE TIMELINE (Clean List Layout) */}
+      {/* HERITAGE TIMELINE (Original Card Layout - No Images) */}
       {/* ----------------------------------------------------------- */}
       <section className="bg-[#fdf5f5] py-16">
         <div className="max-w-6xl mx-auto px-4">
@@ -118,34 +123,23 @@ export default function AboutPage() {
             <div className="w-24 h-1.5 bg-yellow-400 mx-auto rounded-full"></div>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {timelineEvents.map((event, index) => (
               <div
                 key={index}
-                className="flex flex-col md:flex-row gap-8 bg-white rounded-2xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-2xl shadow-md p-6 md:p-10 border border-gray-100 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-full md:w-1/4 flex-shrink-0">
-                  <div className="relative h-56 md:h-48 w-full bg-gray-50 rounded-xl overflow-hidden border border-gray-100">
-                    <Image
-                      src={event.image}
-                      alt={event.title}
-                      fill
-                      className="object-contain p-2"
-                    />
-                  </div>
-                </div>
-
-                <div className="w-full md:w-3/4 flex flex-col justify-center">
-                  <div className="text-[#C22220] font-bold text-xl mb-2 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-yellow-400 inline-block"></span>
+                <div className="flex flex-col justify-center">
+                  <div className="text-[#C22220] font-extrabold text-2xl mb-3 flex items-center gap-3">
+                    <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
                     {event.year}
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
                     {event.title}
                   </h3>
 
-                  <p className="text-gray-600 leading-relaxed text-base">
+                  <p className="text-gray-600 leading-relaxed text-lg">
                     {event.desc}
                   </p>
                 </div>

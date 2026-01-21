@@ -2,7 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ShieldCheck, Leaf, HeartPulse, Activity, Sparkles, Zap, Award } from "lucide-react";
+import { ShieldCheck, Leaf, HeartPulse, Activity, Sparkles, Award } from "lucide-react";
+
+const iconMap: { [key: string]: any } = {
+  "நிரந்தரமான தீர்வு": Award,
+  "பக்க விளைவு அற்றது": Leaf,
+  "பாதுகாப்பானது": ShieldCheck,
+  "நோய் எதிர்ப்புச் சக்தி மேம்பாடு": Activity,
+  "நாடி மருத்துவம்": HeartPulse,
+  "மீண்டும் வராமல் தடுக்கும்": Sparkles,
+};
 
 export default function WhyChooseUs({ data }: { data: any[] }) {
   const items = data || [];
@@ -35,7 +44,7 @@ export default function WhyChooseUs({ data }: { data: any[] }) {
             transition={{ duration: 0.6 }}
             className="inline-block relative"
           >
-           
+
             <h2 className="text-4xl md:text-4xl font-black text-gray-900 tracking-tight leading-tight">
               நம்பிக்கையின் <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c22220] to-[#ff4d4d]">அடையாளம்</span>
             </h2>
@@ -56,7 +65,7 @@ export default function WhyChooseUs({ data }: { data: any[] }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 items-center relative">
 
           {/* CENTER IMAGE (Mobile: Top, Desktop: Center) */}
-          <div className="lg:col-start-2 lg:row-start-1 h-[400px] lg:h-[500px] flex items-center justify-center relative order-first lg:order-none lg:mb-0">
+          <div className="lg:col-start-2 lg:row-start-1 h-[400px] lg:h-[500px] flex items-center justify-center relative order-first lg:order-none lg:mb-0 sm:pt-10 ">
 
             {/* Product Floating Animation */}
             <motion.div
@@ -65,8 +74,7 @@ export default function WhyChooseUs({ data }: { data: any[] }) {
               className="relative w-full h-full max-w-sm mx-auto z-20"
             >
               <Image
-                src="/images/rjr-2.png
-                "
+                src="/images/rjr-2.png"
                 alt="RJR Herbal Product"
                 fill
                 className="object-contain drop-shadow-2xl"
@@ -88,7 +96,7 @@ export default function WhyChooseUs({ data }: { data: any[] }) {
           </div>
 
           {/* LEFT FEATURES */}
-          <div className="lg:col-start-1 lg:row-start-1 space-y-12 lg:pr-12 relative z-10">
+          <div className="lg:col-start-1 lg:row-start-1 space-y-12 lg:pr-12 relative z-10 sm:pt-10">
             {leftItems.map((item, idx) => (
               <FeatureItem
                 key={idx}
@@ -100,7 +108,7 @@ export default function WhyChooseUs({ data }: { data: any[] }) {
           </div>
 
           {/* RIGHT FEATURES */}
-          <div className="lg:col-start-3 lg:row-start-1 space-y-12 lg:pl-12 relative z-10">
+          <div className=" lg:col-start-3 lg:row-start-1 space-y-12 lg:pl-12 relative z-10">
             {rightItems.map((item, idx) => (
               <FeatureItem
                 key={idx}
@@ -120,6 +128,7 @@ export default function WhyChooseUs({ data }: { data: any[] }) {
 // Sub-component for individual feature
 function FeatureItem({ item, align, delay }: { item: any, align: 'left' | 'right', delay: number }) {
   const isRightAlign = align === 'right';
+  const IconComponent = iconMap[item.title] || ShieldCheck;
 
   return (
     <motion.div
@@ -142,12 +151,8 @@ function FeatureItem({ item, align, delay }: { item: any, align: 'left' | 'right
       {/* ICON BUBBLE */}
       <div className="shrink-0 relative">
         <div className="w-16 h-16 rounded-2xl bg-white shadow-lg border border-red-50 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#c22220] transition-all duration-300 z-10 relative">
-          <Image
-            src={item.icon}
-            alt={item.title}
-            width={32}
-            height={32}
-            className="w-8 h-8 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+          <IconComponent
+            className="w-8 h-8 text-[#c22220] transition-all duration-300 group-hover:text-white group-hover:scale-110"
           />
         </div>
         {/* Pulse Effect on Icon */}
