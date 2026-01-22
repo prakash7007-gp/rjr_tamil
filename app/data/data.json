@@ -6,10 +6,10 @@
       "phone": "+91 7871111115",
       "email": "care@rjrherbalhospitals.com",
       "address": "150, ஹபிபுல்‌லா ரோடு, டி நகர், நார்த் உத்மான் ரோட் போஸ்ட் ஆபிஸ் பின் பக்கத்தில், சென்னை – 600017, தமிழ்நாடு, இந்தியா.",
-      "facebook": "https://facebook.com/rjrherbal",
-      "instagram": "https://instagram.com/rjrherbal",
+      "facebook": "https://www.facebook.com/rjrherbalhospitals/",
+      "instagram": "https://www.instagram.com/rjrherbalhospitalindia/?hl=en",
       "twitter": "https://twitter.com/rjrherbal",
-      "youtube": "https://youtube.com/@rjrherbal"
+      "youtube": "https://www.youtube.com/@rjrherbalhospitals"
     },
     "footerLinks": [
       {
@@ -782,7 +782,7 @@
       "videoId": "SPnF3tE69Q8",
       "title": "ஆஸ்துமா (ASTHMA)",
       "description": "30 வருடங்களா ஆஸ்துமாவால் பாதிக்கப்பட்டடேன் "
-    } ,
+    },
     {
       "videoId": "Ezm69jbHEHM",
       "title": "குடல் புண் / அல்சர் (STOMACH ULCER)",
@@ -790,6 +790,8 @@
     }
   ],
   "testimonials": {
+
+    
     "title": "நோயாளிகள் கருத்துகள்",
     "subtitle": "எங்கள் சிகிச்சையை அனுபவித்தவர்களின் உண்மையான கருத்துகள்",
     "button": "மேலும் படிக்க",
@@ -800,7 +802,7 @@
         "age": 58,
         "condition": "ஆஸ்துமா (மூச்சுத்திணறல்)",
         "treatment": "சித்த & ஆயுர்வேத சுவாச சிகிச்சை",
-        "testimonial": "பல வருடங்களாக இருந்த ஆஸ்துமா மற்றும் மூச்சுத்திணறல் RJR மருத்துவமனையின் சிகிச்சையால் 45 நாட்களில் முழுமையாகக் குணமடைந்தது. இப்போது என்னால் தடையின்றி சுவாசிக்க முடிகிறது.",
+        "testimonial": "பல வருடங்களாக இருந்த ஆஸ்துமா மற்றும் மூச்சுத்திணறல்  RJR மருத்துவமனையின் சிகிச்சையால் 45 நாட்களில் முழுமையாகக் குணமடைந்தது. இப்போது என்னால் தடையின்றி சுவாசிக்க முடிகிறது.",
         "image": "/images/testimonials/kl.jpg",
         "imageAlt": "ஆஸ்துமா சிகிச்சை பெற்ற குமார்"
       },
@@ -810,7 +812,7 @@
         "age": 55,
         "condition": "மூட்டு மற்றும் முதுகு வலி",
         "treatment": "வர்ம மற்றும் வாத சிகிச்சை",
-        "testimonial": "மூட்டு மற்றும் முதுகு வலியால் அவதிப்பட்டு வந்த எனக்கு, வெறும் 7 நாட்களிலேயே 60% வலி குறைந்து பெரும் நிம்மதி கிடைத்தது. RJR மருத்துவமனையின் சேவை அற்புதம்.",
+        "testimonial": "மூட்டு மற்றும் முதுகு வலியால் அவதிப்பட்டு வந்த எனக்கு, வெறும் 7 நாட்களிலேயே வலி குறைந்து பெரும் நிம்மதி கிடைத்தது. RJR மருத்துவமனையின் சேவை அற்புதம்.",
         "image": "/images/testimonials/backpain.png",
         "imageAlt": "சிகிச்சை பெற்று வரும் லதா"
       },

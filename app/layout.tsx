@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import TopBar from "./components/Topbar";
 import Navbar from "./components/Navbar";
 import { getData } from "./lib/loadData";
@@ -6,11 +6,17 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import { Noto_Sans_Tamil } from "./fonts";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getData();
   const navData = data.site;
 
   return {
+    metadataBase: new URL("https://www.rjrherbalhospitals.com/"),
     title: {
       default: `${navData.name} - Best Ayurveda, Siddha & Herbal Hospital in Tamil Nadu`,
       template: `%s | ${navData.name}`
@@ -35,8 +41,14 @@ export async function generateMetadata(): Promise<Metadata> {
       "Siddha for skin diseases"
     ],
     authors: [{ name: navData.name }],
-    viewport: "width=device-width, initial-scale=1",
     robots: "index, follow",
+    alternates: {
+      canonical: "https://www.rjrherbalhospitals.com/", // Replace with the actual Tamil domain if different
+      languages: {
+        'ta-IN': 'https://www.rjrherbalhospitals.com/',
+        // 'en-IN': 'https://main.rjrherbalhospitals.com/', // Example of cross-linking to English site
+      },
+    },
     openGraph: {
       type: "website",
       locale: "ta_IN",

@@ -26,8 +26,18 @@ export async function generateMetadata({ params }: Props) {
       `Specialist for ${treatment.title}`,
       `Ayurvedic cure for ${treatment.title}`,
       `Siddha medicine for ${treatment.title}`,
-      treatment.category
+      treatment.category,
+      // The following keywords were in the provided instruction but use variables not available in this context.
+      // They are commented out to prevent errors.
+      // `Best herbal hospital ${data.regionName}`,
+      // `Natural treatment ${data.branch.city}`
     ],
+    alternates: {
+      canonical: `https://www.rjrherbalhospitals.com/treatments/${slug}`,
+      languages: {
+        'ta-IN': `https://www.rjrherbalhospitals.com/treatments/${slug}`,
+      },
+    },
   };
 }
 

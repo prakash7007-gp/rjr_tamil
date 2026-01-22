@@ -40,7 +40,13 @@ export async function generateMetadata({ params }: { params: Promise<{ branchId:
             `Ayurvedic clinic in ${data.branch.city}`,
             `Best herbal hospital ${data.regionName}`,
             `Natural treatment ${data.branch.city}`
-        ]
+        ],
+        alternates: {
+            canonical: `https://www.rjrherbalhospitals.com/branches/${resolvedParams.branchId}`,
+            languages: {
+                'ta-IN': `https://www.rjrherbalhospitals.com/branches/${resolvedParams.branchId}`,
+            },
+        },
     };
 }
 

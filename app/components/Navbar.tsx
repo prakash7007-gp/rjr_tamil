@@ -77,10 +77,10 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             <Image src="/images/newlogo.png" alt="Logo" width={70} height={670} className="w-[70px] md:w-[100px] h-auto" />
             <div>
-              <h1 className="text-lg md:text-xl font-bold text-white md:text-[#c22220]">
+              <div className="text-lg md:text-xl font-bold text-white md:text-[#c22220]">
                 RJR ஹெர்பல் மருத்துவமனை
-              </h1>
-              <p className="text-xs md:text-sm text-gray-100 md:text-gray-700">
+              </div>
+              <p className="text-xs md:text-sm  text-yellow-400  md:text-gray-700">
                 ஐந்து தலைமுறை அனுபவம்
               </p>
             </div>

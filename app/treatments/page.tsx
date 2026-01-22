@@ -1,12 +1,20 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getTreatments } from "../lib/loadData";
 import { Stethoscope, UserCheck, Clock, Leaf } from "lucide-react";
 import TreatmentsGrid from "./TreatmentsGrid";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Specialized Ayurveda & Siddha Treatments | Traditional Healing",
   description: "Explore our wide range of traditional Siddha and Ayurveda treatments at RJR Herbal Hospitals. We provide natural solutions for chronic ailments, joint pains, skin issues, and wellness therapies with 150 years of legacy.",
+  keywords: [
+    "Ayurveda treatments Tamil Nadu",
+    "Siddha medicine specialist",
+    "Herbal hospital Chennai",
+    "Natural cure for chronic diseases",
+    "Traditional healing India"
+  ],
 };
 
 export default async function TreatmentsPage() {
