@@ -7,7 +7,20 @@ import { motion, AnimatePresence } from "framer-motion";
 
 /* ================= FILE ARRAYS ================= */
 
-const beforeAfterImages = Array.from({ length: 18 }, (_, i) => `/Before_after_images/g${i + 1}.webp`);
+const beforeAfterImages = [
+  "/Before_after_images/asthuma.png",
+  "/Before_after_images/asthuma1.png",
+  "/Before_after_images/backpain.png",
+  "/Before_after_images/handpain.png",
+  "/Before_after_images/kneepain.png",
+  "/Before_after_images/kneepain2.png",
+  "/Before_after_images/parlaysis.png",
+  "/Before_after_images/8.png",
+  "/Before_after_images/9.png",
+  "/Before_after_images/10.png",
+  "/Before_after_images/11.png",
+  "/Before_after_images/12.png",
+];
 
 const youtubeVideos = [
   { src: "/Video_gallery/asthmanew.mp4", title: "ஆஸ்துமா சிகிச்சை", description: "வெற்றிகரமான மீட்பு" },
