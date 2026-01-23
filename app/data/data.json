@@ -699,12 +699,6 @@
       "qualification": "B.S.M.S,.DVM",
       "image": "/images/kavitha.png",
       "experience": "5+ Years Experience"
-    },
-    {
-      "name": "டாக்டர். புவனேஸ்வரி ",
-      "qualification": "",
-      "image": "/images/bhuvaneshwari.png",
-      "experience": "5+ Years Experience"
     }
   ],
   "testimonialsContent": [
@@ -790,8 +784,6 @@
     }
   ],
   "testimonials": {
-
-    
     "title": "நோயாளிகளின் கருத்துகள்",
     "subtitle": "எங்கள் சிகிச்சையை  பெற்றவர்களின் உண்மையான கருத்துகள்",
     "button": "மேலும் படிக்க",

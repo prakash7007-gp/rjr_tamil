@@ -80,10 +80,10 @@ export default function DoctorSection({ data }: DoctorProps) {
         {/* CHENNAI BRANCH HEADER */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 bg-red-100 text-[#c22220] rounded-full text-sm font-bold tracking-widest uppercase mb-4 shadow-sm">
-            Our Head Office - Chennai
+            Our Headquarters - Chennai (T.Nagar)
           </span>
           <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6">
-            சென்னை கிளையின் <span className="text-[#c22220]">மருத்துவக் குழு</span>
+            சென்னை (T.Nagar) கிளையின் <span className="text-[#c22220]">மருத்துவக் குழு</span>
           </h2>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-8 max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
@@ -119,7 +119,7 @@ export default function DoctorSection({ data }: DoctorProps) {
 
         {/* DOCTORS GRID */}
         <div
-          className={`grid gap-8 lg:gap-10 ${isMobile ? "grid-cols-1" : "sm:grid-cols-2 lg:grid-cols-4"
+          className={`grid gap-8 lg:gap-10 ${isMobile ? "grid-cols-1" : "sm:grid-cols-2 lg:grid-cols-3"
             }`}
         >
           {visibleDoctors.map((doctor, idx) => (

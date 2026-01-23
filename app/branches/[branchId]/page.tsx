@@ -60,7 +60,8 @@ export default async function BranchDetailPage(props: { params: Promise<{ branch
     }
 
     const { branch, regionName } = data;
-    const isChennai = branch.id === "chennai";
+    const isChennai = branch.city.toLowerCase().includes("chennai") ||
+        ["tnagar", "arumbakkam", "urapakkam"].includes(branch.id);
 
     return (
         <main className="bg-gray-50 min-h-screen py-10 px-4">
@@ -123,21 +124,26 @@ export default async function BranchDetailPage(props: { params: Promise<{ branch
 
                         {/* FACILITIES / ABOUT (Placeholder) */}
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">About this Branch</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-4">இந்த கிளை பற்றி</h3>
                             <p className="text-gray-600 leading-relaxed mb-6">
-                                Welcome to our RJR Herbal Hospital in {branch.city}. We provide world-class herbal treatments
-                                for various ailments including Asthma, Psoriasis, Arthritis, and more. Our facility is equipped
-                                with modern amenities and staffed by experienced professionals dedicated to your well-being.
+                                {branch.city} உள்ள எங்கள் RJR Herbal Hospital-க்கு உங்களை வரவேற்கிறோம். ஆஸ்துமா, சொரியாசிஸ், ஆர்த்ரைட்டிஸ் உள்ளிட்ட பல்வேறு நோய்களுக்கு உலகத் தரமுடைய மூலிகை சிகிச்சைகளை நாங்கள் வழங்குகிறோம். நவீன வசதிகளுடன் அமைந்த எங்கள் மருத்துவமனையில், உங்கள் உடல் நலத்திற்காக அர்ப்பணிக்கப்பட்ட அனுபவமிக்க மருத்துவ நிபுணர்கள் பணியாற்றுகின்றனர்.
                             </p>
 
-                            <h4 className="font-bold text-gray-800 mb-3">Treatments Available Here:</h4>
+                            <h4 className="font-bold text-gray-800 mb-3">இங்கே கிடைக்கும் சிகிச்சைகள்</h4>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-600">
-                                {["Asthma Care", "Psoriasis Treatment", "Arthritis Relief", "Diabetes Management", "Hypertension", "Skin Care", "Joint Pain", "General Wellness"].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-2">
-                                        <span className="w-2 h-2 rounded-full bg-[#c22220]"></span>
-                                        {item}
-                                    </li>
-                                ))}
+                                {["ஆஸ்துமா பராமரிப்பு",
+                                    "சொரியாசிஸ் சிகிச்சை",
+                                    "மூட்டு வலி நிவாரணம்",
+                                    "நீரிழிவு கட்டுப்பாடு",
+                                    "உயர் இரத்த அழுத்தம்",
+                                    "தோல் பராமரிப்பு",
+                                    "மூட்டு வலி",
+                                    "பொது உடல் நல பராமரிப்பு"].map((item, i) => (
+                                        <li key={i} className="flex items-center gap-2">
+                                            <span className="w-2 h-2 rounded-full bg-[#c22220]"></span>
+                                            {item}
+                                        </li>
+                                    ))}
                             </ul>
                         </div>
 
