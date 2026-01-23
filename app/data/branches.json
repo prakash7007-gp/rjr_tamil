@@ -12,11 +12,29 @@
                 "doctorImage": "/images/dhakshnamoorthy.png"
             },
             {
-                "id": "chennai",
-                "city": "Chennai",
+                "id": "chennai tnagar",
+                "city": "Chennai (tnagar) Headquarters",
                 "address": "No.150, Habibulla Road, Near Devar Kalyana Mandabam, North Usman Road Post Office Back Side, T.Nagar, Chennai, Tamil Nadu. Pincode: 600017.",
-                "phone": "+91 7871111115",
+                "phone": "+91 7871111115, +91 9962800003",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Chennai&output=embed",
+                "doctorName": "",
+                "doctorImage": "/images/kavitha.png"
+            },
+             {
+                "id": "chennai arumbakkam",
+                "city": "Chennai (arumbakkam) ",
+                "address": " No:376, Poonamalle High Road, Opposite to Anna Arch, Arumbakkam, Chennai, Tamil Nadu. Pincode: 600106.",
+                "phone": "+91 70927 77118",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3878049620143!2d80.215961075006!3d13.074591012612107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267002fd4ac61%3A0xd2d40ce6cc8fd8e8!2sRJR%20HERBAL%20HOSPITALS%20-%20ARUMBAKKAM!5e0!3m2!1sen!2sin!4v1769165931259!5m2!1sen!2sin",
+                "doctorName": "",
+                "doctorImage": "/images/kavitha.png"
+            },
+             {
+                "id": "chennai urapakkam",
+                "city": "Chennai (urapakkam) ",
+                "address": "No:11, Near Airtel Store, G.S.T Road, Urapakkam(Near Kilambakkam Bus Stand), Chengalpattu District, Chennai-603210.",
+                "phone": "8608777112",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.67744529558!2d80.07202737500322!3d12.86409791722624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f7200c35d343%3A0x9ae51d479a79728c!2sRJR%20HERBAL%20HOSPITAL%20-%20URAPAKKAM%20(KILAMBAKKAM)!5e0!3m2!1sen!2sin!4v1769166052990!5m2!1sen!2sin",
                 "doctorName": "",
                 "doctorImage": "/images/kavitha.png"
             },
@@ -43,7 +61,7 @@
                 "city": "Dharmapuri",
                 "address": "No. 3/183/H, Govt Arts College Bus Stop, Dharmapuri to Salem main road, Savulupatti, Collectorate (post), Dharmapuri, Pincode: 636705. LM: Opposite govt college ladies hostel.",
                 "phone": "04342262006, +91 9092977711",
-                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.176120639502!2d78.14043207499368!3d12.10009253338598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac1770122f37f7%3A0x9181a491512e7e74!2sRJR%20Herbal%20Hospital%20-%20Dharmapuri!5e0!3m2!1sen!2sin!4v1768988451232!5m2!1sen!2sin ",
+                "mapUrl":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.176120639502!2d78.14043207499368!3d12.10009253338598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac1770122f37f7%3A0x9181a491512e7e74!2sRJR%20Herbal%20Hospital%20-%20Dharmapuri!5e0!3m2!1sen!2sin!4v1768988451232!5m2!1sen!2sin ",
                 "doctorName": "Dr V.Vijayalakshmi BSMS MDs",
                 "doctorImage": "/images/dhakshnamoorthy.png"
             },
@@ -51,7 +69,7 @@
                 "id": "dindigul",
                 "city": "Dindigul",
                 "address": "No.165/5A, Kottapatti Pirivu, Palani bypass bus stop, Dindigul. LM: Near HP Petrol Bunk. Pincode: 624601.",
-                "phone": "+91 9514955555",
+                "phone": "+91 9514955555,+91 7871111115",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Dindigul&output=embed",
                 "doctorName": "Dr.P.SARANYA. B.S.M.S.",
                 "doctorImage": "/images/kavitha.png"
@@ -114,7 +132,7 @@
                 "id": "krishnagiri",
                 "city": "Krishnagiri",
                 "address": "No:5/318/35, Salem - bangalore highway raod, Salem byepass service road, Near NSK land mark, Appollo Tyres, Krishnagiri Pincode:635001.",
-                "phone": "+91 9514955555",
+                "phone": "+91 9514955555,+91 7871111115",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Krishnagiri&output=embed",
                 "doctorName": "DR.D.MERLIN PERSIA. B.S.M.S.,P.G.D.Y.",
                 "doctorImage": "/images/dhakshnamoorthy.png"
@@ -294,7 +312,7 @@
                 "id": "vellore",
                 "city": "Vellore",
                 "address": "Ward No:1, Block No:3, New Bypass, No 61/1B2, 1st Floor, SK Tower, Bengaluru - Chennai Hwy, Vellore, Tamil Nadu, Pincode :632004",
-                "phone": "+91 9514955555",
+                "phone": "+91 9514955555,+91 7871111115",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Vellore&output=embed",
                 "doctorName": "DR.M.KALAISELVI, B.A.M.S.",
                 "doctorImage": "/images/dhakshnamoorthy.png"
@@ -864,6 +882,7 @@
                 "doctorName": "",
                 "doctorImage": "/images/kavitha.png"
             },
+
             {
                 "id": "nagpur",
                 "city": "Nagpur",
