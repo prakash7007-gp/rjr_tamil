@@ -95,8 +95,7 @@ export default function WhyChooseUs({ data }: { data: any[] }) {
             </div>
           </div>
 
-          {/* LEFT FEATURES */}
-          <div className="lg:col-start-1 lg:row-start-1 space-y-12 lg:pr-12 relative z-10 sm:pt-10">
+          <div className="lg:col-start-1 lg:row-start-1 space-y-12 lg:space-y-16 lg:pr-12 relative z-10 sm:pt-10">
             {leftItems.map((item, idx) => (
               <FeatureItem
                 key={idx}
@@ -107,8 +106,7 @@ export default function WhyChooseUs({ data }: { data: any[] }) {
             ))}
           </div>
 
-          {/* RIGHT FEATURES */}
-          <div className=" lg:col-start-3 lg:row-start-1 space-y-12 lg:pl-12 relative z-10">
+          <div className=" lg:col-start-3 lg:row-start-1 space-y-12 lg:space-y-16 lg:pl-12 relative z-10 pt-12 lg:pt-0">
             {rightItems.map((item, idx) => (
               <FeatureItem
                 key={idx}

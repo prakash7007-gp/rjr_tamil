@@ -94,7 +94,7 @@ export default function ContactPage() {
                     <p className="font-semibold text-gray-900 text-lg mb-1">முகவரி</p>
                     <p className="text-gray-600 leading-relaxed">
                       150, ஹபிபுல்‌லா ரோடு, டி நகர்,<br />
-                      நார்த் உஸ்மான் ரோட் போஸ்ட் ஆபிஸ் பின்,<br />
+                      நார்த் உஸ்மான் ரோடு போஸ்ட் ஆபிஸ்  பின்புறம் ,<br />
                       சென்னை – 600017.
                     </p>
                   </div>

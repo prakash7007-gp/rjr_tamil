@@ -21,6 +21,10 @@ interface SliderProps {
 
 export default function TestimonialSlider({ testimonials, button }: SliderProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
 
   const previous = () =>
     setActiveIndex(activeIndex === 0 ? testimonials.length - 1 : activeIndex - 1);
@@ -28,10 +32,37 @@ export default function TestimonialSlider({ testimonials, button }: SliderProps)
   const next = () =>
     setActiveIndex(activeIndex === testimonials.length - 1 ? 0 : activeIndex + 1);
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      next();
+    } else if (isRightSwipe) {
+      previous();
+    }
+  };
+
   const t = testimonials[activeIndex];
 
   return (
-    <div className="w-full  mx-auto  relative">
+    <div
+      className="w-full  mx-auto  relative"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row min-h-[500px] transition-all duration-300">
 
         {/* LEFT — IMAGE SECTION */}
@@ -84,14 +115,6 @@ export default function TestimonialSlider({ testimonials, button }: SliderProps)
           <div className="border-l-4 border-[#c22220] pl-4 mb-8 bg-gray-50 py-3 pr-3 rounded-r-lg">
             <p className="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Success Treatment</p>
             <p className="text-lg font-medium text-gray-800">{t.treatment}</p>
-          </div>
-
-          {/* Action Button */}
-          <div className="mb-8">
-            <button className="px-8 py-3 bg-[#c22220] text-white rounded-lg text-lg font-medium shadow-lg shadow-red-100 hover:bg-[#a71c1a] hover:shadow-xl transition-all flex items-center gap-2 group/btn">
-              {button}
-              <svg className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-            </button>
           </div>
 
           {/* Controls */}

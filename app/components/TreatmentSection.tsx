@@ -46,6 +46,10 @@ export default function TreatmentSection({ data }: TreatmentSectionProps) {
   }, [treatments, itemsPerSlide]);
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
 
   useEffect(() => {
     setCurrentSlide((prev) => {
@@ -66,8 +70,35 @@ export default function TreatmentSection({ data }: TreatmentSectionProps) {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+  };
+
   return (
-    <section className="relative py-16 sm:py-20 lg:py-28 overflow-hidden bg-[#fffdf7]">
+    <section
+      className="relative py-16 sm:py-20 lg:py-28 overflow-hidden bg-[#fffdf7]"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* 🌿 CREATIVE BACKGROUND: Floating Leaves & Gradient */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {/* Soft gradient orb in top left */}
@@ -96,7 +127,7 @@ export default function TreatmentSection({ data }: TreatmentSectionProps) {
           <h2 className="text-[#c22220] text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
             முக்கிய சிகிச்சைகள்
           </h2>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-gray-600 leading-relaxed px-4">
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-gray-900 leading-relaxed px-4">
             பலதரப்பட்ட மருத்துவ சிறப்புகளில் அனுபவம் வாய்ந்தவர்கள். எங்கள்
             நிபுணத்துவம் பெற்ற சில முக்கிய சிகிச்சைகள் கீழே கொடுக்கப்பட்டுள்ளன.
           </p>

@@ -17,6 +17,10 @@ interface DoctorProps {
 export default function DoctorSection({ data }: DoctorProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,10 +44,37 @@ export default function DoctorSection({ data }: DoctorProps) {
     setCurrentIndex((prev) => (prev - 1 + data.length) % data.length);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd || !isMobile) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      next();
+    } else if (isRightSwipe) {
+      prev();
+    }
+  };
+
   const visibleDoctors = isMobile && hasDoctors ? [data[currentIndex]] : data;
 
   return (
-    <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
+    <section
+      className="py-12 sm:py-16 lg:py-24 bg-gray-50"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* CHENNAI BRANCH HEADER */}

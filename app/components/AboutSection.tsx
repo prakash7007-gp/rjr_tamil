@@ -86,9 +86,9 @@ export default function AboutSection({ data }: AboutSectionProps) {
                             className="mb-6"
                         >
                             <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-yellow-300 text-sm font-bold tracking-wide mb-3">
-                                ABOUT RJR HERBAL
+                                ABOUT RJR HERBAL HOSPITALS
                             </span>
-                            <h2 className="text-3xl lg:text-4xl font-bold leading-snug">
+                            <h2 className="text-2xl lg:text-4xl font-bold leading-snug">
                                 RJR மருத்துவமனையின் <br /> <span className="text-yellow-400">150 ஆண்டு கால</span> சேவை
                             </h2>
                         </motion.div>
@@ -109,7 +109,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.6 }}
                             viewport={{ once: true }}
-                            className="text-lg leading-relaxed opacity-90 mt-4 font-normal"
+                            className="text-lg leading-relaxed opacity-90 mt-4 font-normal "
                         >
                             ஐந்தாம் தலைமுறைக் குடும்பமாக, 150 ஆண்டுகளுக்கும் மேலான பாரம்பரிய
                             அறிவை நாங்கள் பாதுகாத்து வருகிறோம். 2008-ல் <br />டாக்டர். S.R.ஜெயதுரை

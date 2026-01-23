@@ -20,18 +20,50 @@ interface HeroCarouselProps {
 
 export default function HeroCarousel({ slides }: HeroCarouselProps) {
   const [current, setCurrent] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  // Minimum swipe distance (in pixels) to trigger slide change
+  const minSwipeDistance = 50;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    } else if (isRightSwipe) {
+      setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+    }
+  };
 
 
-  // Auto slide - 8 seconds per slide
+  // Auto slide - 12 seconds per slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 8000);
+    }, 12000);
     return () => clearInterval(interval);
   }, [slides.length]);
 
   return (
-    <div className="relative w-full h-auto lg:h-[650px] flex flex-col lg:flex-row bg-[#f9f9f9]">
+    <div
+      className="relative w-full h-auto lg:h-[650px] flex flex-col lg:flex-row bg-[#f9f9f9]"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* 🖼️ RIGHT SIDE: IMAGE CAROUSEL */}
       <div className="w-full lg:w-1/2 h-[400px] lg:h-auto relative overflow-hidden order-1 lg:order-1">
         <AnimatePresence mode="wait">
@@ -40,7 +72,7 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
             className="absolute inset-0 w-full h-full"
           >
             <Image
@@ -79,7 +111,7 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 30 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
             className="relative z-10"
           >
             {/* Badge */}

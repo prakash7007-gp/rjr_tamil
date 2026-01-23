@@ -13,7 +13,7 @@ const navLinks = [
   { label: "எங்களைப் பற்றி", href: "/about" },
   { label: "சிகிச்சைகள்", href: "/treatments" },
   { label: "IPD", href: "/ipd" },
-  { label: "தெரஃபிகள்", href: "/therapies" },
+  { label: "தெரபிகள்", href: "/therapies" },
   { label: "கிளைகள்", href: "/branches" },
   { label: "கேலரி", href: "/gallery" },
   { label: "தொடர்புக்கு", href: "/contact" },
@@ -45,7 +45,7 @@ const HeaderInfo = () => (
       <Image src="/images/calendar.png" alt="Calendar" width={42} height={42} />
       <div>
         <p className="font-semibold text-gray-900">Working Time</p>
-        <p className="text-sm text-gray-600">9:00 AM – 6:00 PM</p>
+        <p className="text-sm text-gray-600">9:00 AM – 7:00 PM</p>
       </div>
     </div>
   </div>

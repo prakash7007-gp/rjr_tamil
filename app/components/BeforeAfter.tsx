@@ -18,6 +18,10 @@ export default function BeforeAfter({ data }: BeforeAfterProps) {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(1);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
 
   // Responsive items per view
   useEffect(() => {
@@ -48,10 +52,37 @@ export default function BeforeAfter({ data }: BeforeAfterProps) {
     }
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+  };
+
   if (!data || data.length === 0) return null;
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section
+      className="py-16 bg-white relative overflow-hidden"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-[300px] bg-gradient-to-b from-gray-50 to-white -z-10" />
 
@@ -98,18 +129,21 @@ export default function BeforeAfter({ data }: BeforeAfterProps) {
             </button>
           </div>
 
-          {/* Slider Windows */}
-          <div className="overflow-hidden py-4 -mx-4 px-4">
+          <div className="overflow-hidden py-4">
             <motion.div
-              className="flex gap-6 md:gap-8"
-              animate={{ x: `-${currentIndex * (100 / itemsPerView)}%` }}
+              className="flex"
+              animate={{
+                x: `-${currentIndex * (100 / itemsPerView)}%`
+              }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               {data.map((item, idx) => (
                 <div
                   key={idx}
-                  className="shrink-0"
-                  style={{ width: `calc((100% - ${(itemsPerView - 1) * 24}px) / ${itemsPerView})` }}
+                  className="shrink-0 transition-opacity duration-300 px-2"
+                  style={{
+                    width: `${100 / itemsPerView}%`
+                  }}
                 >
                   <SuccessCard
                     item={item}
@@ -154,7 +188,7 @@ function SuccessCard({ item, isActive, onPlay }: { item: ShortItem; isActive: bo
             className="absolute inset-0 z-20 bg-black"
           >
             <iframe
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&rel=0&modestbranding=1&controls=1`}
               title={item.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

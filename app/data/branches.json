@@ -15,7 +15,7 @@
                 "id": "chennai",
                 "city": "Chennai",
                 "address": "No.150, Habibulla Road, Near Devar Kalyana Mandabam, North Usman Road Post Office Back Side, T.Nagar, Chennai, Tamil Nadu. Pincode: 600017.",
-                "phone": "+91 7871111115, +91 9962800003",
+                "phone": "+91 7871111115",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Chennai&output=embed",
                 "doctorName": "",
                 "doctorImage": "/images/kavitha.png"
@@ -133,7 +133,7 @@
                 "city": "Madurai",
                 "address": "Plot No:1, Next to Sono Scans, Paal Pannai Signal, K K Nagar, Madurai. Pincode - 625 020.",
                 "phone": "+91 70921 77711",
-                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Madurai&output=embed",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.0854039483947!2d78.14216139999999!3d9.9268453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5cd1370b83d%3A0x6630a197cfb06ecf!2sRJR%20Herbal%20Hospital%20Madurai!5e0!3m2!1sen!2sin!4v1763466904494!5m2!1sen!2sin",
                 "doctorName": "DR.A.OPHILIA MARY. B.N.Y.S.",
                 "doctorImage": "/images/naveersir1.png"
             },
@@ -268,7 +268,7 @@
                 "city": "Tiruppur",
                 "address": "No: 164/487-488, Dharapuram Main Road, Aranmanai Pudur, Near Old Bus Stand, Tiruppur. LM: Opposite to Gem Super Market. Pincode : 641604.",
                 "phone": "04214546006, +91 7092377711",
-                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tiruppur&output=embed",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.2126515890013!2d77.35052757498235!3d11.09752305318902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba907bd84f40001%3A0x4d5feb64fa4db8a8!2sRJR%20Herbal%20Hospital%20-Trippur!5e0!3m2!1sen!2sin!4v1769150922489!5m2!1sen!2sin",
                 "doctorName": "DR.GOWSALYA, B.A.M.S",
                 "doctorImage": "/images/kavitha.png"
             },
@@ -591,7 +591,7 @@
             {
                 "id": "nizamabad",
                 "city": "Nizamabad",
-                "address": "No: 6-2-129, Kanteshwar Water Tank, Subahash Nagar Road, Near Zilla Praishad Office, Nizamabad, Telangana. Pincode: 503002.",
+                "address": "No: 6-2-129, Kanteshwar Temple Road, Subahash Nagar Road, Near Zilla Praishad Office, Nizamabad, Telangana. Pincode: 503002.",
                 "phone": "08462293003, +91 7094977711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nizamabad&output=embed",
                 "doctorName": "DR.VIVIN JOHN B.N.Y.S.",
@@ -772,9 +772,9 @@
             {
                 "id": "pondicherry",
                 "city": "Pondicherry",
-                "address": "No.: 24, Carpender Street, Opposite to Sumangali Kalyana Mandabam, Nelli Thoppu, Near New Bus Stand, Pondicherry. Pincode: 605005.",
+                "address": "No:13,Ground floor,Villianur Main Rd,Kaveri Nagar,Reddiarpalayam,Puducherry,Landmark: Nearby Mahindra Car Showroom,Puducherry, 605010",
                 "phone": "+91 7448677711",
-                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Pondicherry&output=embed",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997214.7593380838!2d79.35990374331965!3d12.491606871316097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53619e1d686ae7%3A0x9d26baa156b57711!2sRJR%20Herbal%20Hospitals%20-%20Pondichery!5e0!3m2!1sen!2sin!4v1769152106401!5m2!1sen!2sin",
                 "doctorName": "Dr.J.PRIYANGA. B.A.M.S",
                 "doctorImage": "/images/dhakshnamoorthy.png"
             }
@@ -784,8 +784,8 @@
         "state": "Maharashtra",
         "branches": [
             {
-                "id": "mumbai-/-bombay",
-                "city": "Mumbai / Bombay",
+                "id": "mumbai---bombay",
+                "city": "Mumbai - Bombay",
                 "address": "No: 12A, HubTown Seasons, Opposite to Mono Rail Pillar-19, Ramakrishna Chemburkar marg , Chembur, Mumbai. L.M: Near to Jockey show room Pincode: 400071.",
                 "phone": "022-20858787, +91 9087771127",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Mumbai+/+Bombay&output=embed",
@@ -815,7 +815,7 @@
                 "city": "Pune",
                 "address": "Shop no: 4 & 5, Kamala Corner Ground Floor, Near Jugana Bazar Chowk, Mangalwar Peth, Pune, Maharastra-411011.",
                 "phone": "022-20858787, +91 7871777116",
-                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Pune&output=embed",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.032024723003!2d73.8633941!3d18.527454900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c15f56e3aa9d%3A0x36fdf2233b58f24f!2sRJR%20Herbal%20Hospital%20-Pune!5e0!3m2!1sen!2sin!4v1769152467049!5m2!1sen!2sin",
                 "doctorName": "",
                 "doctorImage": "/images/dhakshnamoorthy.png"
             },
@@ -824,7 +824,7 @@
                 "city": "Nashik",
                 "address": "Bharath Petrol Pump, Ashoka Realty Atharva Heights, No: 8 & 9, Jail Rd, next to Dasak, Dhara Society, Panchak, Nashik, Maharashtra 422101",
                 "phone": "8608777115",
-                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nashik&output=embed",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59994.00713908602!2d73.76849654863281!3d19.982248099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddc14c13917f33%3A0x8b078274f9839a8c!2sRJR%20HERBAL%20HOSPITAL-Nashik!5e0!3m2!1sen!2sin!4v1769152549002!5m2!1sen!2sin",
                 "doctorName": "",
                 "doctorImage": "/images/kavitha.png"
             },
@@ -833,7 +833,7 @@
                 "city": "Solapur",
                 "address": "Dufferin Chowk, No:150, VIP Rd, near Khairnar hospital, Solapur, Maharashtra 413001",
                 "phone": "8608777116,02174036889",
-                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Solapur&output=embed",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801.646772331738!2d75.89877587508087!3d17.66688109469356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5db3c43d99db9%3A0xfb975f275067b724!2sRJR%20HERBAL%20HOSPITAL%20-%20Solapur!5e0!3m2!1sen!2sin!4v1769152615211!5m2!1sen!2sin",
                 "doctorName": "",
                 "doctorImage": "/images/naveersir1.png"
             },
@@ -842,7 +842,7 @@
                 "city": "Aurangabad",
                 "address": "No : 327, Abhyuday Complex, Chhatrapati Sambhaji Nagar Near CIDCO Signal, opposite Deepali Hotel, N 3, Cidco, Chhatrapati Sambhajinagar, Maharashtra 431001",
                 "phone": "8608777119",
-                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Aurangabad&output=embed",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.2187455925628!2d75.36412617512661!3d19.872983126470025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba31010177c9d%3A0x318a1097559ed609!2sRJR%20Herbal%20Hospital%20-%20Aurangabad!5e0!3m2!1sen!2sin!4v1769152670972!5m2!1sen!2sin",
                 "doctorName": "",
                 "doctorImage": "/images/md sir nadi.png"
             },
@@ -869,7 +869,7 @@
                 "city": "Nagpur",
                 "address": "Plot number 193, Surya Nagar, Kalamna Market Road, Near SBI Bank , Nagpur - 440035.",
                 "phone": "7092777116",
-                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nagpur&output=embed",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7812230.252443689!2d74.3945501990082!3d17.04496721129733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c758756b1523%3A0x16cdb72dc7b166d7!2sRjr%20Herbal%20Hospital%20-%20Nagpur!5e0!3m2!1sen!2sin!4v1769152792002!5m2!1sen!2sin",
                 "doctorName": "",
                 "doctorImage": "/images/naveersir1.png"
             },
@@ -905,7 +905,7 @@
                 "city": "Jalgaon",
                 "address": "No : 5, Shiv Naman, bus stop, opposite to Nayara Petrol Pump, near shiv Shiv Colony, Ganesh Colony, Jalgaon, Maharashtra 425001",
                 "phone": "022-20858787, +91 7448777106",
-                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Jalgaon&output=embed",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.620798657212!2d75.54513097515272!3d21.007832288497223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd90f39812eb5cf%3A0x83ec0d7da44dc460!2sRJR%20HERBAL%20HOSPITAL%20-%20Jalgaon!5e0!3m2!1sen!2sin!4v1769152913149!5m2!1sen!2sin",
                 "doctorName": "",
                 "doctorImage": "/images/naveersir1.png"
             },
@@ -914,7 +914,7 @@
                 "city": "Pimpri Chinchwad",
                 "address": "9,206, Sunshine Plaza, Ambedkar circle, No.8, Station Rd, MIDC, Pimpri Colony, Pimpri-Chinchwad, Maharashtra 411018",
                 "phone": "022-20858787, +91 7448777110",
-                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Pimpri+Chinchwad&output=embed",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.8462923629504!2d73.80273337510006!3d18.625982065946072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9a809643c71%3A0x28cb828fbe45b6a6!2sRJR%20HERBAL%20HOSPITALS%20-PIMPRI%20CHINCHWAD!5e0!3m2!1sen!2sin!4v1769152972010!5m2!1sen!2sin",
                 "doctorName": "",
                 "doctorImage": "/images/md sir nadi.png"
             },
@@ -932,7 +932,7 @@
                 "city": "Melegaon",
                 "address": "No.44, upstairs of mosum Engineering works, Malegaon - Satana Rd, Soygaon, Malegaon, Maharashtra 423203",
                 "phone": "+91 7448777114",
-                "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Melegaon&output=embed",
+                "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7471.908295333937!2d74.50188669357911!3d20.549056900000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bde99a8b89f63d5%3A0x9d0d476c3ba90d9d!2sRJR%20HERBAL%20HOSPITAL%20-%20MALEGAON!5e0!3m2!1sen!2sin!4v1769153086970!5m2!1sen!2sin",
                 "doctorName": "",
                 "doctorImage": "/images/kavitha.png"
             }

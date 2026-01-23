@@ -67,33 +67,28 @@ const treatments = [
 export default function IPDPage() {
     return (
         <main className="min-h-screen bg-white">
-            {/* Hero Section */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                <Image
-                    src="/images/therpy-1.JPG"
-                    alt="IPD Ward"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+            {/* Hero Section - Gradient Style */}
+            <section className="relative h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#c22220] via-[#801010] to-[#4a0808]">
+                {/* Decorative Elements */}
+                <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-black/20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
 
-                <div className="container mx-auto px-6 relative z-10 text-white">
+                <div className="container mx-auto px-6 relative z-10 text-white text-center">
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="max-w-3xl"
+                        className="max-w-4xl mx-auto"
                     >
-                        <div className="flex items-center gap-2 mb-4 bg-[#c22220] w-fit px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                            <HeartPulse size={14} />
+                        <div className="flex items-center gap-2 mb-6 bg-white/10 backdrop-blur-md border border-white/20 w-fit px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mx-auto">
+                            <HeartPulse size={16} className="text-yellow-400" />
                             <span>In-Patient Department (IPD)</span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                        <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
                             உள்நோயாளி <span className="text-yellow-400">சிகிச்சை</span> பிரிவு
                         </h1>
-                        <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8">
-                            நாள்பட்ட நோய்களுக்குப் பாரம்பரிய முறையில் தங்கி சிகிச்சை பெற்று விரைவாகக் குணம் பெற எங்களின் சிறப்பு உள்நோயாளி பிரிவு உதவுகிறது.
+                        <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-medium">
+                            நாள்பட்ட நோய்களுக்குப் பாரம்பரிய முறையில் தங்கி சிகிச்சை பெற்று <br className="hidden md:block" /> விரைவாகக் குணம் பெற எங்களின் சிறப்பு உள்நோயாளி பிரிவு உதவுகிறது.
                         </p>
                     </motion.div>
                 </div>
@@ -113,19 +108,19 @@ export default function IPDPage() {
                                 முழுமையான கவனிப்பு மற்றும் <br />
                                 <span className="text-[#c22220]">நிரந்தர தீர்வு</span>
                             </h2>
-                            <div className="space-y-6 text-gray-600 leading-relaxed">
+                            <div className="space-y-6 text-gray-600 leading-relaxed text-left md:text-justify lg:text-left">
                                 <p>
-                                    IP (Inpatient) care is the care of patients where condition requires admission to the hospital. Different in patient ward are located on the adjacent to each other and in close proximity to each other. This closeness may be aimed to serve the convenience of patients and family.
+                                    உள்நோயாளி சிகிச்சை (IPD) என்பது மருத்துவமனையில் தங்கி சிகிச்சை பெற வேண்டிய அவசியம் உள்ளவர்களுக்கான ஒரு சிறப்புப் பிரிவாகும். நோயாளிகள் மற்றும் அவர்களின் குடும்பத்தினரின் வசதிக்காக, பல்வேறு வார்டுகள் ஒன்றோடொன்று அருகருகே அமைக்கப்பட்டுள்ளன.
                                 </p>
                                 <p>
-                                    Once a patient admitted to IPD, the consultant doctors/specialist visits the patient for evaluation and advice further treatment plan. A staff is assigned to the patient on rotation basis to monitor the vitals, take care of medicine and provide food on time.
+                                    நோயாளி உள்நோயாளி பிரிவில் அனுமதிக்கப்பட்டவுடன், சிறப்பு மருத்துவர்கள் நோயாளியை நேரில் சந்தித்து பரிசோதித்து, மேலதிக சிகிச்சை முறைகளைத் திட்டமிடுகின்றனர். நோயாளிகளைக் கண்காணிக்கவும், மருந்துகள் மற்றும் சத்தான உணவுகளைச் சரியான நேரத்தில் வழங்கவும் சுழற்சி முறையில் பிரத்யேக மருத்துவப் பணியாளர்கள் நியமிக்கப்படுகிறார்கள்.
                                 </p>
                                 <div className="flex flex-wrap gap-4 mt-8">
                                     <div className="flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm font-bold">
-                                        <Leaf size={16} /> 100% Natural Treatments
+                                        <Leaf size={16} /> 100% இயற்கை சிகிச்சைகள்
                                     </div>
                                     <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-bold">
-                                        <ShieldCheck size={16} /> No Side Effects
+                                        <ShieldCheck size={16} /> பக்கவிளைவுகள் அற்றது
                                     </div>
                                 </div>
                             </div>
@@ -150,6 +145,41 @@ export default function IPDPage() {
                                 <p className="text-white/80">Equipped with 6 specialized treatment rooms</p>
                             </div>
                         </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* IPD Ward Photo Gallery */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-red-100 text-[#c22220] rounded-full text-xs font-bold uppercase tracking-widest mb-4">
+                            <Camera size={14} />
+                            <span>Facility Tour</span>
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">எங்கள் உள்நோயாளி <span className="text-[#c22220]">பிரிவின் தோற்றம்</span></h2>
+                        <p className="text-gray-500">சுத்தமான மற்றும் சுகாதாரமான முறையில் பராமரிக்கப்படும் எங்களது உள்நோயாளி அறைகள்.</p>
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((num) => (
+                            <motion.div
+                                key={num}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.4, delay: num * 0.05 }}
+                                viewport={{ once: true }}
+                                className="relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg"
+                            >
+                                <Image
+                                    src={`/ipd/r${num}.jpg`}
+                                    alt={`IPD Ward Photo ${num}`}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
