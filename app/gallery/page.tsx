@@ -9,8 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const beforeAfterImages = [
   "/Before_after_images/asthuma.png",
-  "/Before_after_images/asthuma1.png",
-  "/Before_after_images/backpain.png",
+  "/Before_after_images/asthuma1.png",  
   "/Before_after_images/handpain.png",
   "/Before_after_images/kneepain.png",
   "/Before_after_images/kneepain2.png",
@@ -123,7 +122,7 @@ export default function GalleryPage() {
           >
             {/* 1. BEFORE / AFTER GRID */}
             {activeTab === "before" && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {beforeAfterImages.map((src, i) => (
                   <GalleryCard
                     key={i}
@@ -136,7 +135,7 @@ export default function GalleryPage() {
               </div>
             )}
 
-            {/* 2. VIDEO GRID (Clean Vertical Style) */}
+            {/* 2. VIDEO GRID (Shorts/Vertical Style) */}
             {activeTab === "video" && (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                 {youtubeVideos.map((video, i) => (
@@ -152,7 +151,7 @@ export default function GalleryPage() {
 
             {/* 3. PHOTO GRID */}
             {activeTab === "photo" && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {galleryImages.map((src, i) => (
                   <GalleryCard
                     key={i}
@@ -212,7 +211,7 @@ function GalleryCard({ src, index, onClick, label }: any) {
   return (
     <motion.div
       whileHover={{ y: -10 }}
-      className="group relative cursor-pointer rounded-[40px] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.08)] bg-white aspect-[4/5] border border-gray-100"
+      className="group relative cursor-pointer rounded-[40px] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.08)] bg-white aspect-video border border-gray-100"
       onClick={onClick}
     >
       <Image src={src} alt={label} fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
