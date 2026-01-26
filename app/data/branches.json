@@ -8,17 +8,15 @@
                 "address": "Door No:1 Ground Floor, Anna Nagar, Ambur Plantation R F, Chennai to Bangalore Highway Road, Ambur. LM: Near Bajaj Bike Showroom. Pincode: 635802.",
                 "phone": "04174290066, +91 9514577711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ambur&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": []
             },
             {
                 "id": "tnagar",
-                "city": "Chennai (T.Nagar) Headquarters",
+                "city": "Chennai (T Nagar) Headquarters",
                 "address": "No.150, Habibulla Road, Near Devar Kalyana Mandabam, North Usman Road Post Office Back Side, T.Nagar, Chennai, Tamil Nadu. Pincode: 600017.",
                 "phone": "+91 7871111115, +91 9962800003",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Chennai&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             },
             {
                 "id": "arumbakkam",
@@ -26,8 +24,7 @@
                 "address": " No:376, Poonamalle High Road, Opposite to Anna Arch, Arumbakkam, Chennai, Tamil Nadu. Pincode: 600106.",
                 "phone": "+91 70927 77118",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3878049620143!2d80.215961075006!3d13.074591012612107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267002fd4ac61%3A0xd2d40ce6cc8fd8e8!2sRJR%20HERBAL%20HOSPITALS%20-%20ARUMBAKKAM!5e0!3m2!1sen!2sin!4v1769165931259!5m2!1sen!2sin",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             },
             {
                 "id": "urapakkam",
@@ -35,8 +32,7 @@
                 "address": "No:11, Near Airtel Store, G.S.T Road, Urapakkam(Near Kilambakkam Bus Stand), Chengalpattu District, Chennai-603210.",
                 "phone": "8608777112",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.67744529558!2d80.07202737500322!3d12.86409791722624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f7200c35d343%3A0x9ae51d479a79728c!2sRJR%20HERBAL%20HOSPITAL%20-%20URAPAKKAM%20(KILAMBAKKAM)!5e0!3m2!1sen!2sin!4v1769166052990!5m2!1sen!2sin",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             },
             {
                 "id": "coimbatore",
@@ -44,8 +40,13 @@
                 "address": "No:624, BSR Complex, Ground Floor, 100 Feet Road, Gandhipuram, Coimbatore (Landmark GP Signal) Tamil Nadu. Pincode: 641012.",
                 "phone": "04224384965, 04224214511, +91 7092077711, +91 9677608444",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Coimbatore&output=embed",
-                "doctorName": "DR.JUNO, B.S.M.S., M.SC(PSY)",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.JUNO",
+                        "role": "B.S.M.S., M.SC(PSY)",
+                        "image": "/images/Doctors/TamilNadu/Coimbatore.webp"
+                    }
+                ]
             },
             {
                 "id": "cuddalore",
@@ -53,8 +54,13 @@
                 "address": "No:15, Nellikuppam Main Road, S N Chavadi, Near TVS Showroom, Cuddalore, Tamil Nadu, Pincode-607001.",
                 "phone": "+91 97873 77711, 04142222006",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Cuddalore&output=embed",
-                "doctorName": "DR.M.MONICA, B.A.M.S",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr.M.MONICA",
+                        "role": "B.A.M.S",
+                        "image": "/images/Doctors/TamilNadu/Cuddalore.webp"
+                    }
+                ]
             },
             {
                 "id": "dharmapuri",
@@ -62,8 +68,13 @@
                 "address": "No. 3/183/H, Govt Arts College Bus Stop, Dharmapuri to Salem main road, Savulupatti, Collectorate (post), Dharmapuri, Pincode: 636705. LM: Opposite govt college ladies hostel.",
                 "phone": "04342262006, +91 9092977711",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.176120639502!2d78.14043207499368!3d12.10009253338598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac1770122f37f7%3A0x9181a491512e7e74!2sRJR%20Herbal%20Hospital%20-%20Dharmapuri!5e0!3m2!1sen!2sin!4v1768988451232!5m2!1sen!2sin ",
-                "doctorName": "Dr V.Vijayalakshmi BSMS MDs",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr. V.Vijayalakshmi ",
+                        "role": "BSMS MDs",
+                        "image": "/images/Doctors/TamilNadu/Dharmapuri.png"
+                    }
+                ]
             },
             {
                 "id": "dindigul",
@@ -71,8 +82,13 @@
                 "address": "No.165/5A, Kottapatti Pirivu, Palani bypass bus stop, Dindigul. LM: Near HP Petrol Bunk. Pincode: 624601.",
                 "phone": "+91 9514955555,+91 7871111115",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Dindigul&output=embed",
-                "doctorName": "Dr.P.SARANYA. B.S.M.S.",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr.P.SARANYA. ",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Dindigul.png"
+                    }
+                ]
             },
             {
                 "id": "erode",
@@ -80,8 +96,13 @@
                 "address": "No.:40, Meenachi Sundaram Street, Near State Bank, Tirunagar Colony, Karungalpalayam Road, V.O.C Park Back side Gate, Erode, Tamil Nadu. Pincode: 638003.",
                 "phone": "+91 9087577711",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.7520785916245!2d77.71996057498512!3d11.352810548297933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96fe371be4685%3A0x61b4268b106283ba!2sRJR%20Herbal%20Hospitals%20-%20Erode!5e0!3m2!1sen!2sin!4v1768988650193!5m2!1sen!2sin",
-                "doctorName": "DR.C.SARANYA. B.S.M.S.",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.C.SARANYA. ",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Erode.png"
+                    }
+                ]
             },
             {
                 "id": "hosur",
@@ -89,8 +110,13 @@
                 "address": "NO.: 58, Bangalore Highway, Opposite to Traffic Police Station, Near Agarval Eye Hospital, Hosur, Tamil Nadu. Pincode: 635109.",
                 "phone": "04344244006, +91 7871677711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Hosur&output=embed",
-                "doctorName": "DR.M.SANGEETHA, B.S.M.S., D.P.T.",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr.M.SANGEETHA",
+                        "role": "B.S.M.S., D.P.T.",
+                        "image": "/images/Doctors/TamilNadu/Hosur.png"
+                    }
+                ]
             },
             {
                 "id": "kanchipuram",
@@ -98,8 +124,13 @@
                 "address": "No.: 80D, Salai Street [Vellore Highway], Opposite to Veeralakshmi Super Market, Near Ekambaranathar Kovil, Kanchipuram, Tamil Nadu. Pincode: 631502.",
                 "phone": "04427227266, +91 9087277711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kanchipuram&output=embed",
-                "doctorName": "DR.S.KAVIYA. B.S.M.S.",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr.S.KAVIYA. ",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Kanchipuram.png"
+                    }
+                ]
             },
             {
                 "id": "karaikudi",
@@ -107,8 +138,13 @@
                 "address": "No:31/2 Kalanivasal road near Apollo pharmacy Muthu meenal complex, kalanivasal Karaikudi. Pincode:630002",
                 "phone": "+91 9176277711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Karaikudi&output=embed",
-                "doctorName": "Dr.V.GIRIJA. B.S.M.S.",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr.V.GIRIJA. ",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Karaikudi.png"
+                    }
+                ]
             },
             {
                 "id": "karur",
@@ -116,8 +152,7 @@
                 "address": "Oppo to Bharat, Petrol Bunk, No161/A, Aswitha tower's Dindigul main road , Thanthonimalai Bus stop, Karur, Tamil Nadu 639005",
                 "phone": "04324260006, +91 9514377711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Karur&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": []
             },
             {
                 "id": "kovilpatti",
@@ -125,8 +160,13 @@
                 "address": "No:64 A, Esther Rani Mahal, Near Apollo pharmacy, New road or G.H road, Railway station bus stop, Old bus stand, Kovilpatti. Pincode: 628501",
                 "phone": "04632-224266, +91 9087177711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kovilpatti&output=embed",
-                "doctorName": "Dr. G.JEYAVANI, B.S.M.S.",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr. G.JEYAVANI",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Kovilpatti.png"
+                    }
+                ]
             },
             {
                 "id": "krishnagiri",
@@ -134,8 +174,13 @@
                 "address": "No:5/318/35, Salem - bangalore highway raod, Salem byepass service road, Near NSK land mark, Appollo Tyres, Krishnagiri Pincode:635001.",
                 "phone": "+91 9514955555,+91 7871111115",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Krishnagiri&output=embed",
-                "doctorName": "DR.D.MERLIN PERSIA. B.S.M.S.,P.G.D.Y.",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr. D. MERLIN PERSIA",
+                        "role": "B.S.M.S., P.G.D.Y.",
+                        "image": "/images/Doctors/TamilNadu/Krishnagiri.png"
+                    }
+                ]
             },
             {
                 "id": "kumbakonam",
@@ -143,8 +188,13 @@
                 "address": "No.: 28, Shanthi Nagar, Chennai Silks Back side, Near CRC Bus Depot, Kumbakonam, Tamil Nadu. Pincode: 612001.",
                 "phone": "04352412006, +91 7449277711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kumbakonam&output=embed",
-                "doctorName": "DR. P.G.REVATHI, B.S.M.S.",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr. P.G.REVATHI",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Kumbakonam.png"
+                    }
+                ]
             },
             {
                 "id": "madurai",
@@ -152,8 +202,13 @@
                 "address": "Plot No:1, Next to Sono Scans, Paal Pannai Signal, K K Nagar, Madurai. Pincode - 625 020.",
                 "phone": "+91 70921 77711",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.0854039483947!2d78.14216139999999!3d9.9268453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5cd1370b83d%3A0x6630a197cfb06ecf!2sRJR%20Herbal%20Hospital%20Madurai!5e0!3m2!1sen!2sin!4v1763466904494!5m2!1sen!2sin",
-                "doctorName": "DR.A.OPHILIA MARY. B.N.Y.S.",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.A.OPHILIA MARY",
+                        "role": "B.N.Y.S.",
+                        "image": "/images/Doctors/TamilNadu/Madurai.png"
+                    }
+                ]
             },
             {
                 "id": "marthandam",
@@ -161,8 +216,13 @@
                 "address": "NO.: 5 - 81/2, pansy Plaza, Market Road, Near New Bus Stand and Canara Bank, Marthandam, Tamil Nadu. Pincode: 629165.",
                 "phone": "04651205004, +91 7448977711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Marthandam&output=embed",
-                "doctorName": "DR. R.V. SUGANYA DEVI. B.N.Y.S.",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr. R.V. SUGANYA DEVI",
+                        "role": "B.N.Y.S.",
+                        "image": "/images/Doctors/TamilNadu/Marthandam.png"
+                    }
+                ]
             },
             {
                 "id": "mayiladuthurai",
@@ -170,8 +230,13 @@
                 "address": "No.: 123 B/1, Muthu vakkil Salai, Opposite to St.Francis Xavier Church, Gandhiji Road, Near Old Bus Stand, Mayiladuthurai, Tamil Nadu. Pincode: 609001.",
                 "phone": "+91 9092877711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Mayiladuthurai&output=embed",
-                "doctorName": "DR.POUNGODI. B.A.M.S.",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr.POUNGODI",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Mayiladuthurai.png"
+                    }
+                ]
             },
             {
                 "id": "nagapattinam",
@@ -179,8 +244,13 @@
                 "address": "No.: 1, Mak Complex, Kaariyankudi Chetti Street, Opposite to CRC Bus Depot, Velipalayam, Near New Bus Stand, Nagapattinam, Tamil Nadu. Pincode: 611001.",
                 "phone": "04365247002, +91 9514177711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nagapattinam&output=embed",
-                "doctorName": "Dr.S.NARMADHA B.A.M.S",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr.S.NARMADHA ",
+                        "role": "B.A.M.S",
+                        "image": "/images/Doctors/TamilNadu/Nagapattinam.png"
+                    }
+                ]
             },
             {
                 "id": "nagercoil",
@@ -188,8 +258,13 @@
                 "address": "No: 22/30, Parvathavarthini Street, Old Employment Office Road, Near Collector Office, Nagercoil, Pincode: 629001.",
                 "phone": "04652403606, +91 7092277711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nagercoil&output=embed",
-                "doctorName": "DR.V.S.REVA NAVENA. B.A.M.S.",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.V.S.REVA NAVENA. ",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Nagercoil.png"
+                    }
+                ]
             },
             {
                 "id": "pollachi",
@@ -197,8 +272,13 @@
                 "address": "No.3, ASD Puram, Mahalingapuram, Opposite to Sarathy TVS Showroom, Nearby UCO Bank. Pollachi, Pincode– 642001.",
                 "phone": "+91 9087977711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Pollachi&output=embed",
-                "doctorName": "Dr S.sajna B.S.M.S",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr.S.Sajna ",
+                        "role": "B.S.M.S",
+                        "image": "/images/Doctors/TamilNadu/Pollachi.png"
+                    }
+                ]
             },
             {
                 "id": "pudukkottai",
@@ -206,8 +286,13 @@
                 "address": "No.: 52B, Seshaiya Road, Ezhil Nagar, Opposite to District Stadium, Near K K C Women’s College, Near New Bus Stand, Puthukottai, Tamil Nadu. Pincode: 622001.",
                 "phone": "04322226555, +91 9176177711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Pudukkottai&output=embed",
-                "doctorName": "Dr. R.Lakshana B.A.M.S",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr. R.Lakshana ",
+                        "role": "B.A.M.S",
+                        "image": "/images/Doctors/TamilNadu/Pudukkottai.png"
+                    }
+                ]
             },
             {
                 "id": "ramanathapuram",
@@ -215,8 +300,13 @@
                 "address": "No.: 1/2001-A, Arul Nagar, Sakkaraikottai, opposite to Fish Marker, Near By Best Mummy Bakery, Ramanathapuram, Pincode: 623504.",
                 "phone": "04567232006, +91 9092177711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ramanathapuram&output=embed",
-                "doctorName": "DR.K.SHARMILA. B.A.M.S.",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr.K.SHARMILA. ",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Ramanathapuram.png"
+                    }
+                ]
             },
             {
                 "id": "salem",
@@ -224,8 +314,7 @@
                 "address": "No: 186, Ground Floor, City Centre Mall, Opposite to Saradha Womens College, Yercaud Road (5 Road), Salem. Pincode: 636015.",
                 "phone": "+91 9092777112",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Salem&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": []
             },
             {
                 "id": "sivakasi",
@@ -233,8 +322,13 @@
                 "address": "No:2005/D, Opposite to Jeycees Nursery school, Srinivasa mess stop, Virudhunagar main road or Periya karuppan road, Sivakasi. Pincode:626123",
                 "phone": "04562290738, +91 7092477711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Sivakasi&output=embed",
-                "doctorName": "DR.SHARMILA, B.S.M.S.",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr.SHARMILA",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Sivakasi.png"
+                    }
+                ]
             },
             {
                 "id": "tenkasi",
@@ -242,8 +336,13 @@
                 "address": "No : 317 ganapathi Nagar, TVS bike showroom opposite, Madurai main road. Tenkasi Pincode-627811",
                 "phone": "9087377711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tenkasi&output=embed",
-                "doctorName": "Dr.Rayeesha Ali Fathima BS.M.S",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr.Rayeesha Ali Fathima ",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Tenkasi.png"
+                    }
+                ]
             },
             {
                 "id": "thanjauvr",
@@ -251,8 +350,13 @@
                 "address": "No: 64, Jayendra Saraswati Nagar, Trichy Road, Near New Bus Stand, Thanjavur. LM: Opposite to Bharat College. Pincode : 613005",
                 "phone": "+91 9514277711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Thanjauvr&output=embed",
-                "doctorName": "DR.Sarath SASI. B.S.M.S.,",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr.SARATH SASI ",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Thanjavur.png"
+                    }
+                ]
             },
             {
                 "id": "theni",
@@ -260,8 +364,13 @@
                 "address": "No:12-2-1, T B N Road, Near mini bus road, Opposite to Auto stand, Palani Chettipatti, Theni. L.M: Below Kosamattam Finance. Pincode : 625531",
                 "phone": "+91 9092377711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Theni&output=embed",
-                "doctorName": "DR M.SEETHA BSMS MD",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr. M.SEETHA ",
+                        "role": "BSMS MD",
+                        "image": "/images/Doctors/TamilNadu/Theni.png"
+                    }
+                ]
             },
             {
                 "id": "thiruvallur",
@@ -269,8 +378,13 @@
                 "address": "No:969,TNHB Road, Kakkalur Bypass Rd, Kakkalur, Tiruvallur, Tamil Nadu. Pincode:602001",
                 "phone": "04427664411, +91 9176477711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Thiruvallur&output=embed",
-                "doctorName": "DR.T.TAMIZHKALAI. M.D.SIDDHA.",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr.T.TAMIZHKALAI",
+                        "role": "M.D.SIDDHA.",
+                        "image": "/images/Doctors/TamilNadu/Thiruvallur.png"
+                    }
+                ]
             },
             {
                 "id": "tirunelveli",
@@ -278,8 +392,13 @@
                 "address": "No : 100/4, Ground Floor, Downstrem of vannarapettai Flyover, near Vannarapettai, Tirunelveli, Tamil Nadu Pincode:627003",
                 "phone": "78713 77711, 0462 2324006",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tirunelveli&output=embed",
-                "doctorName": "DR S Shruthi B.A.M.S,PGDCP,MBA,HHM",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr. S Shruthi ",
+                        "role": " B.A.M.S PGDCP,MBA,HHM",
+                        "image": "/images/Doctors/TamilNadu/Tirunelveli.png"
+                    }
+                ]
             },
             {
                 "id": "tiruppur",
@@ -287,8 +406,13 @@
                 "address": "No: 164/487-488, Dharapuram Main Road, Aranmanai Pudur, Near Old Bus Stand, Tiruppur. LM: Opposite to Gem Super Market. Pincode : 641604.",
                 "phone": "04214546006, +91 7092377711",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.2126515890013!2d77.35052757498235!3d11.09752305318902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba907bd84f40001%3A0x4d5feb64fa4db8a8!2sRJR%20Herbal%20Hospital%20-Trippur!5e0!3m2!1sen!2sin!4v1769150922489!5m2!1sen!2sin",
-                "doctorName": "DR.GOWSALYA, B.A.M.S",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr.GOWSALYA",
+                        "role": "B.A.M.S",
+                        "image": "/images/Doctors/TamilNadu/Tiruppur.png"
+                    }
+                ]
             },
             {
                 "id": "tiruvannamalai",
@@ -296,8 +420,13 @@
                 "address": "No.: 73/26, Pay kopuram Main Road [Near Shakthi Theatre], Opposite to Pay Gopuram or West Gopuram, Tiruvannamalai, Tamil Nadu. Pincode: 606601.",
                 "phone": "04175290007, +91 9092677711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tiruvannamalai&output=embed",
-                "doctorName": "Dr.P.Harini.B.S.M.S.",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.P.Harini ",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Tiruvannamalai.png"
+                    }
+                ]
             },
             {
                 "id": "trichy",
@@ -305,8 +434,13 @@
                 "address": "NSC.No.27, Railway Society Complex, Near Central Bus Stand, Near Indian Oil or Opposite to LKS Mahal, Trichy. Pincode-620001.",
                 "phone": "74491 77711, 0431-2406004",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Trichy&output=embed",
-                "doctorName": "DR.M.THANKA PUSHPA. B.A.M.S.,CFS.",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr.M.THANKA PUSHPA",
+                        "role": "  B.A.M.S. CFS.",
+                        "image": "/images/Doctors/TamilNadu/Trichy.png"
+                    }
+                ]
             },
             {
                 "id": "vellore",
@@ -314,8 +448,13 @@
                 "address": "Ward No:1, Block No:3, New Bypass, No 61/1B2, 1st Floor, SK Tower, Bengaluru - Chennai Hwy, Vellore, Tamil Nadu, Pincode :632004",
                 "phone": "+91 9514955555,+91 7871111115",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Vellore&output=embed",
-                "doctorName": "DR.M.KALAISELVI, B.A.M.S.",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr.M.KALAISELVI",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/TamilNadu/Vellore.png"
+                    }
+                ]
             },
             {
                 "id": "villupuram",
@@ -323,8 +462,13 @@
                 "address": "NO.: 344, Thamarai Street, Suthagar Nagar, Near New Bus Stand, Villupuram, Tamil Nadu. Pincode: 605602.",
                 "phone": "04146-357682, +91 7871877711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Villupuram&output=embed",
-                "doctorName": "DR.S. VIJAYABHAARATHI, B.A.M.S",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr.S. VIJAYABHAARATHI",
+                        "role": "B.A.M.S",
+                        "image": "/images/Doctors/TamilNadu/Villupuram.png"
+                    }
+                ]
             },
             {
                 "id": "virudhachalam",
@@ -332,8 +476,13 @@
                 "address": "No.: 690, Junction Road, Opposite to Fathima Metriculation Higher Secondary School, Virudhachalam, Tamil Nadu. Pincode: 606001.",
                 "phone": "+91 7092877711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Virudhachalam&output=embed",
-                "doctorName": "DR P.ANITHA B.S.M.S",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr. P.ANITHA",
+                        "role": " B.S.M.S",
+                        "image": "/images/Doctors/TamilNadu/Virudhachalam.png"
+                    }
+                ]
             }
         ]
     },
@@ -346,8 +495,18 @@
                 "address": "H.No: 18-2-750, Beside Diwakar travels, Nirmalananda nagar, RTC Bus stand road, Ananthapur, Andhra Pradesh Pin Code - 515001.",
                 "phone": "8554293849, +91 70946 77711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Anantapur&output=embed",
-                "doctorName": "DR. P. VIJAYA LAKSHMI",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr. P. VIJAYA LAKSHMI",
+                        "role": "B.A.M.S., COSMETOLOGY IN AYURVEDA",
+                        "image": "/images/Doctors/AndhraPradesh/Anantapur/Anantapur1.png"
+                    },
+                    {
+                        "name": "Dr. NILOFAR",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Anantapur/Anantapur2.png"
+                    }
+                ]
             },
             {
                 "id": "anakapalle",
@@ -355,8 +514,13 @@
                 "address": "No: 3-7-26, GNT Road, Opposite Mandal Revenue Office, Narasinga Rao Peta, Anakapalle, Andhra Pradesh Pincode - 531001",
                 "phone": "8924237689, +91-7448777139",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Anakapalle&output=embed",
-                "doctorName": "DR.N.SREE SAMYUKTHA",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr.N.SREE SAMYUKTHA",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Anakapalle.png"
+                    }
+                ]
             },
             {
                 "id": "bhimavaram",
@@ -364,8 +528,13 @@
                 "address": "No: 3-13-15,second floor, K.G.S Plaza, Juvvalapalem Road, Opposite to Sonovision, Balusumoodi, Bhimavaram, Andra Pradesh - 534202.",
                 "phone": "8816293919, +91-9087771106",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Bhimavaram&output=embed",
-                "doctorName": "DR.E.POOJITHA",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.E.POOJITHA",
+                        "role": "N.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Bhimavaram.png"
+                    }
+                ]
             },
             {
                 "id": "eluru",
@@ -373,8 +542,13 @@
                 "address": "Door No:25-5-25, SAI TOWERS, Beside New Bus Stand, Narasimharaopet, Eluru, Andhra Pradesh, Pincode: 534006.",
                 "phone": "08812294006, +91-7639677711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Eluru&output=embed",
-                "doctorName": "DR. S. MADHAVI",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr. S. MADHAVI",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Eluru.png"
+                    }
+                ]
             },
             {
                 "id": "guntur",
@@ -382,8 +556,7 @@
                 "address": "No: 26/1/74, Collector Office Road, Near Moodu Bommala Centre, Nagarampalem, Guntur, Andhra Pradesh.Pincode: 522004.",
                 "phone": "8632951510, +91-9786477711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Guntur&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": []
             },
             {
                 "id": "kadapa",
@@ -391,8 +564,13 @@
                 "address": "No: 39/650-6-23, Old Bypass Road, Gurukul Vidyapeeth School, Kadapa, Andhra Pradesh, Pincode - 516002.",
                 "phone": "+91-7868977711,8562278888",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kadapa&output=embed",
-                "doctorName": "DR. SIREESHA",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr. SIREESHA",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/kadappa.png"
+                    }
+                ]
             },
             {
                 "id": "kakinada",
@@ -400,8 +578,13 @@
                 "address": "No: 2/9A/10, Near Pragati Junior College, Venkata Nagar, Kakinada Andra Pradesh Pincode - 533003",
                 "phone": "8842947711, +91-7094877711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kakinada&output=embed",
-                "doctorName": "DR.DANDU SAI MANASA",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.DANDU SAI MANASA",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Kakinada.png"
+                    }
+                ]
             },
             {
                 "id": "kavali",
@@ -409,8 +592,13 @@
                 "address": "No:19-06, Opposite Swaraj Tractors Trunk road, Musunuru, Kavali, Andhra Pradesh Pincode - 524201",
                 "phone": "8662957711, +91-9655555517",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kavali&output=embed",
-                "doctorName": "DR. SOWMYA",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr. SOWMYA",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Kavali.png"
+                    }
+                ]
             },
             {
                 "id": "kurnool",
@@ -418,8 +606,13 @@
                 "address": "No: 45/203-A-62-2, Road No 1, Next to AP Tourism Office, Venkatramana Colony, Ramalingeswar Nagar, Kurnool, Andhra Pradesh. Pincode:518003.",
                 "phone": "8518254444, +91-7094277711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kurnool&output=embed",
-                "doctorName": "DR. K. MANJULA",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr. K. MANJULA",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Kurnool.png"
+                    }
+                ]
             },
             {
                 "id": "nandyal",
@@ -427,8 +620,13 @@
                 "address": "No.25/415-A5, Padmavathi Nagar Road, Opposite P.M.J Jewellers, Saleem nagar, Nandyala, Andhra Pradesh Pin Code : 518501.",
                 "phone": "+91-7826077711, +91-8514244711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nandyal&output=embed",
-                "doctorName": "DR. Shaik Umeshareen",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr. Shaik Umeshareen",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Nandyal.png"
+                    }
+                ]
             },
             {
                 "id": "narasaraopet",
@@ -436,8 +634,7 @@
                 "address": "No 21-1-43, Next to Navata transport,Sattenapalli Main Road,Teachers Colony,Sai Nagar,Narasaraopet, Beside Stadium,Andhra PradeshPincode:522601",
                 "phone": "+91 8647229229, +91 9626777119",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Narasaraopet&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": []
             },
             {
                 "id": "nellore",
@@ -445,8 +642,13 @@
                 "address": "No:25/2/587, Beside Nagendra Swamy Putta Temple, GNT Rd, Near Nippo Center, opposite to Yamaha Motor Showroom, Nellore, Andhra Pradesh Pincode - 524004",
                 "phone": "8612335566, +91-9159277711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nellore&output=embed",
-                "doctorName": "DR.P.AISSHWARYA",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr.P.AISSHWARYA",
+                        "role": "B.A.M.S., YIC",
+                        "image": "/images/Doctors/AndhraPradesh/Nellore.png"
+                    }
+                ]
             },
             {
                 "id": "ongole",
@@ -454,8 +656,13 @@
                 "address": "No:37-1-172, Kurnool Road, Near Addanki Bus Stand Road, Beside KB Residency, Ongole, Andhra Pradesh Pincode-523002",
                 "phone": "76394 77711, 8592227711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ongole&output=embed",
-                "doctorName": "DR. HARIKA",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr. HARIKA",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Ongole.png"
+                    }
+                ]
             },
             {
                 "id": "rajahmundry",
@@ -463,8 +670,13 @@
                 "address": "No:87-7-1-3/B, Opp RTC Complex, RTC Complex road, Ayyappa Nagar, Gandhipuram, LM:Chennai Shopping Mall Opposite, Rajahmundry, Andhra Pradesh. Pincode: 533103.",
                 "phone": "8832444006, +91-7867977711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Rajahmundry&output=embed",
-                "doctorName": "DR. ANITHA REDDY",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr. ANITHA REDDY",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Rajahmundry.png"
+                    }
+                ]
             },
             {
                 "id": "srikakulam",
@@ -472,8 +684,13 @@
                 "address": "H. No: 1-31, Bavajinagar, Beside SBI Bank,Palakonda Road, Balaga, Near Hospital Junction, Srikakulam, Andhra Pradesh Pin Code: 532001.",
                 "phone": "8942294661, +91-7639977711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Srikakulam&output=embed",
-                "doctorName": "DR. GUDURU MOUNIKA",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr. GUDURU MOUNIKA",
+                        "role": "",
+                        "image": "/images/Doctors/AndhraPradesh/Srikakulam.png"
+                    }
+                ]
             },
             {
                 "id": "tirupati",
@@ -481,8 +698,13 @@
                 "address": "No.10-128/6-5, Nethaji nagar, Tiruchanoor road, Near Tiruchanoor flyover Tirupati,Andhra Pradesh Pincode - 517503.",
                 "phone": "8772954006,+91-9047977711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tirupati&output=embed",
-                "doctorName": "DR. K.BHUVANESWARI",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr. K.BHUVANESWARI",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Tirupathi.png"
+                    }
+                ]
             },
             {
                 "id": "vijayawada",
@@ -490,8 +712,13 @@
                 "address": "No: 15A/40-5/7-14, Municipal Employees Colony Main Road, Lalitha Jewellers Opposite Road, Pinnamaneni Poly Clinic Road, Near Benz Circle, Vijayawada, Andhra Pradesh. Pincode: 520010.",
                 "phone": "8662957711, +91-9786377711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Vijayawada&output=embed",
-                "doctorName": "DR. LEELA REDDY",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr. LEELA REDDY",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Vijayawada.png"
+                    }
+                ]
             },
             {
                 "id": "visakhapatnam",
@@ -499,8 +726,13 @@
                 "address": "No. 47-1-99, Ground Floor, Beside B.V.K College, Dwaraka Nagar 6th lane,Visakhapatnam, Andhra Pradesh Pincode: 530016",
                 "phone": "+9159877711,08912999321",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Visakhapatnam&output=embed",
-                "doctorName": "DR. POTTURI SATHA KEERTHI",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr. POTTURI SATHA KEERTHI",
+                        "role": "B.A.M.S., M.D AYURVEDHA",
+                        "image": "/images/Doctors/AndhraPradesh/Vishakapatnam.png"
+                    }
+                ]
             },
             {
                 "id": "vizianagaram",
@@ -508,8 +740,13 @@
                 "address": "Shop 1, Seshadri Complex, Opposite To Hotel Mayura, B-New mobile shop upstairs, Near RTC Complex, Vizianagaram,Andhra Pradesh Pincode : 535003.",
                 "phone": "8922294528, +91-7448477711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Vizianagaram&output=embed",
-                "doctorName": "DR. JYOTHSNA PODILAPU",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr. JYOTHSNA PODILAPU",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/AndhraPradesh/Vizianagaram.png"
+                    }
+                ]
             }
         ]
     },
@@ -522,8 +759,13 @@
                 "address": "No.: 8-3-903/9/4, G1, Nagarjuna Nagar, Road No -1, R.S. Brothers Opposite Road, Ameerpet, Hyderabad, Telangana. Pincode:500073.",
                 "phone": "04020012001, +91 9786277711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ameerpet+-+Hyderabad&output=embed",
-                "doctorName": "DR.C.MADHAVI B.A.M.S",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr.C.MADHAVI ",
+                        "role": "B.A.M.S",
+                        "image": "/images/Doctors/Telangana/Ameerpet.png"
+                    }
+                ]
             },
             {
                 "id": "a.s.rao-nagar---hyderabad",
@@ -531,8 +773,13 @@
                 "address": "No:1-12-144/39, 2-nd Kaman Road, Near VRK Silks, A.S Rao Nagar,Kapra Mandal, Hyderabad,Pincode:500062.",
                 "phone": "+91 9087771125",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+A.S.Rao+Nagar+-+Hyderabad&output=embed",
-                "doctorName": "Dr.M.PRIYANKA",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr.M.PRIYANKA",
+                        "role": "B.A.M.S,MS AYURVEDHA",
+                        "image": "/images/Doctors/Telangana/Asraonagar.png"
+                    }
+                ]
             },
             {
                 "id": "chanda-nagar---hyderabad",
@@ -540,8 +787,13 @@
                 "address": "NO.: 2-132/4A, MMTS ROAD,GANGARAM, CHANDA NAGAR, HYDERABAD,TELANGANAPINCODE: 500050. LANDMARK: OPPOSITE ROAD TO RS BROTHERS",
                 "phone": "+91 9087771104",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Chanda+Nagar+-+Hyderabad&output=embed",
-                "doctorName": "Dr.Archana",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr.Archana",
+                        "role": "B.A.M.S",
+                        "image": "/images/Doctors/Telangana/Chandhanagar.png"
+                    }
+                ]
             },
             {
                 "id": "himayat-nagar---hyderabad",
@@ -549,8 +801,13 @@
                 "address": "No:3-6-524, Flat No:101,First floor, Street No:7, Next building to Reliance digital, Opposite to Minerva coffee shop, Himayat nagar, Hyderabad,Pin Code:500080.",
                 "phone": "+91 9087771128",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Himayat+Nagar+-+Hyderabad&output=embed",
-                "doctorName": "DR.G.KALINDI DEVI",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.G.KALINDI DEVI",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/Telangana/Himyathnagar.png"
+                    }
+                ]
             },
             {
                 "id": "jadcherla",
@@ -558,8 +815,13 @@
                 "address": "No.: 5-250/18/B, Vijayanagar Colony,Jadcherla, Beside Raithanna Milk Centre,Mahabubnagar,Telangana,Pincode: 509301.",
                 "phone": "08542293563, +91 7639277711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Jadcherla&output=embed",
-                "doctorName": "DR.Krupavathi B.A.M.S.",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr.Krupavathi ",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/Telangana/Jadcherla.png"
+                    }
+                ]
             },
             {
                 "id": "jagtial",
@@ -567,8 +829,13 @@
                 "address": "H.No:1-5-132/1, Next building to Bank of Maharashtra, Aravind Nagar, Karimnagar Road, Near New Bus Stand, Jagtial,Pincode:505327.",
                 "phone": "08724221221, +91 9087771103",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Jagtial&output=embed",
-                "doctorName": "Dr.NENAVATH NAGENDRA B.A.M.S",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr.NENAVATH NAGENDRA ",
+                        "role": "B.A.M.S",
+                        "image": "/images/Doctors/Telangana/Jagtial.png"
+                    }
+                ]
             },
             {
                 "id": "karimnagar",
@@ -576,8 +843,13 @@
                 "address": "No.: 7-3-355, 1st Floor, Kashmeer Gadda, Mankammathota, Land Mark : Opposite to Fire Station, Karimnagar, Telangana. Pincode: 505002.",
                 "phone": "08782997711, +91 7094577711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Karimnagar&output=embed",
-                "doctorName": "DR.DIVYA SHREE B.A.M.S",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr.DIVYA SHREE ",
+                        "role": "B.A.M.S",
+                        "image": "/images/Doctors/Telangana/Karimnagar.png"
+                    }
+                ]
             },
             {
                 "id": "khammam",
@@ -585,8 +857,13 @@
                 "address": "Place: No: No.11-10-268/4/1, Next to VVR Hotel, Bypass road, Near New bus stand, Khammam. Pincode - 507002",
                 "phone": "08742293229, +91 7094377711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Khammam&output=embed",
-                "doctorName": "Dr.BLESSY PARIMALA RANI B.A.M.S",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.BLESSY PARIMALA RANI ",
+                        "role": "B.A.M.S",
+                        "image": "/images/Doctors/Telangana/Khammam.png"
+                    }
+                ]
             },
             {
                 "id": "mancherial",
@@ -594,8 +871,13 @@
                 "address": "H.NO 5-200, IQBAL Ahamed Nagar, Near RTC Bus Stand,Behind A1 Hotel, Mancherial, Telangana Pincode : 504208",
                 "phone": "9514877711, 08736-255006",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Mancherial&output=embed",
-                "doctorName": "Dr. Bargavi B.A.M.S.",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr. Bargavi ",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/Telangana/Mancherial.png"
+                    }
+                ]
             },
             {
                 "id": "nalgonda",
@@ -603,8 +885,13 @@
                 "address": "NO: 6-9-317 Hyderabad Road, Raghavendra colony, Near - Vivekananda Statute, Nalgonda - 508 001.",
                 "phone": "08682 293563, +91 7639577711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nalgonda&output=embed",
-                "doctorName": "Dr. Bushireddy Nikhitha Reddy B.A.M.S.",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr. Bushireddy Nikhitha Reddy ",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/Telangana/Nalgonda.png"
+                    }
+                ]
             },
             {
                 "id": "nizamabad",
@@ -612,8 +899,13 @@
                 "address": "No: 6-2-129, Kanteshwar Temple Road, Subahash Nagar Road, Near Zilla Praishad Office, Nizamabad, Telangana. Pincode: 503002.",
                 "phone": "08462293003, +91 7094977711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nizamabad&output=embed",
-                "doctorName": "DR.VIVIN JOHN B.N.Y.S.",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": [
+                    {
+                        "name": "Dr.VIVIN JOHN ",
+                        "role": "B.N.Y.S.",
+                        "image": "/images/Doctors/Telangana/Nizamabad.png"
+                    }
+                ]
             },
             {
                 "id": "siddipet",
@@ -621,8 +913,13 @@
                 "address": "H.no.:19-8, Radha Residency, Housing Board Colony, Prashanth Nagar, Post Mondal, Siddipet, Telangana, Pincode: 502103.",
                 "phone": "08457293563, +91 7449077711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Siddipet&output=embed",
-                "doctorName": "DR.BANDARIPALLY SNEHA B.A.M.S.",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.BANDARIPALLY SNEHA ",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/Telangana/Siddipet.png"
+                    }
+                ]
             },
             {
                 "id": "suryapet",
@@ -630,8 +927,13 @@
                 "address": "No : 1-7-94, Nallabavi Road, Opposite Raghava Plaza, PSR Center, Suryapet, Pincode: 508213.",
                 "phone": "08684293422, +91 7092677711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Suryapet&output=embed",
-                "doctorName": "DR.CHILLAPALLI SANDHYA B.A.M.S.",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr.CHILLAPALLI SANDHYA",
+                        "role": " B.A.M.S.",
+                        "image": "/images/Doctors/Telangana/Suryapet.png"
+                    }
+                ]
             },
             {
                 "id": "warangal",
@@ -639,8 +941,13 @@
                 "address": "No:1-8-384, VRK Silks (or) Kalaniketan Building Backside, Nakkalagutta Main Road, Hanamkonda, Warangal,Pincode:506001.",
                 "phone": "08703510177, +91 9047877711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Warangal&output=embed",
-                "doctorName": "Dr. Jyothi B.A.M.S.",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr. Jyothi ",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/Telangana/Warangal.png"
+                    }
+                ]
             }
         ]
     },
@@ -653,8 +960,7 @@
                 "address": "No:06 Bhushana Bhavana, opp:New Bus Stand, City Union Bank Building, Ballari,Karnataka. Pincode: 583101.",
                 "phone": "+91 7826977711, 08392200533",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ballari&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             },
             {
                 "id": "belgaum",
@@ -662,8 +968,7 @@
                 "address": "No:234/2, Khanapur Road, Opposite to Fire Station, Near Railway Over Bridge, Shastri Nagar, Shahapur, Belagavi, Karnataka Pincode: 590001.",
                 "phone": "+91 7826877711, 08312001579",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Belgaum&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": []
             },
             {
                 "id": "davangere",
@@ -671,8 +976,7 @@
                 "address": "No:150/3,New No:598, Best Enclave - Ground floor, Opposite to Reliance Super Market, Pune Bangalore(P-B) Road, Davanagere Karnataka. Pincode: 577002.",
                 "phone": "+91 7824977711, +91 8192453535",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Davangere&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": []
             },
             {
                 "id": "gulbarga",
@@ -680,8 +984,7 @@
                 "address": "No.C-08, Hirapur Circle, Ambedkar Chowk, Aland Check post road, Kalaburagi, Karnataka. Pincode: 585102.",
                 "phone": "+91 9087771105, 08023900973",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Gulbarga&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": []
             },
             {
                 "id": "hassan",
@@ -689,8 +992,7 @@
                 "address": "Silver Jubilee Building,Bangalore - Mangalore Rd, Opposite to Hassan Railway Station,Shankaripuram, Hassan, Karnataka. Pincode: 573201.",
                 "phone": "+91 90927 77116, +91 8172269999",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Hassan&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             },
             {
                 "id": "hubli",
@@ -698,8 +1000,13 @@
                 "address": "No:1,First floor, Shriya Jupiter, Gokul road, New bus stand, Rajendra Nagar, Hubballi, Karnataka. Pincode: 580030.",
                 "phone": "+91 7639077711, 08362004006",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Hubli&output=embed",
-                "doctorName": "DR.SALUWA. B.A.M.S.",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.SALUWA",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/Karnataka/Hubli.png"
+                    }
+                ]
             },
             {
                 "id": "hsr-layout",
@@ -707,8 +1014,7 @@
                 "address": "No.146, Sector 5, Outer Ring Road, HSR Layout, Bangalore,Karnataka. Pincode: 560102",
                 "phone": "+91 8680077798, +91 9514777114",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Hsr+Layout&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": []
             },
             {
                 "id": "kalyan-nagar---bangalore",
@@ -716,8 +1022,7 @@
                 "address": "No.39/1,Hennur Main Road, HBR Layout, 4th Block, L.M: Near to Axis bank and Dilawar Restaurant Kalyan Nagar, Bangalore, Karnataka. Pincode: 560043",
                 "phone": "+91 9087771192, 08048531669",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kalyan+Nagar+-+Bangalore&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": []
             },
             {
                 "id": "kolar",
@@ -725,8 +1030,7 @@
                 "address": "No:2136, Beside Venkateshwara Talkies, Madras Bangalore (M B) Road, Raja Nagar, Kolar, Karnataka. Pincode: 563 101.",
                 "phone": "+91 78250 77711, 08152 223556",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kolar&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             },
             {
                 "id": "mangalore",
@@ -734,8 +1038,13 @@
                 "address": "No: 101 A, 1st floor, Lotus Paradise Center, Poorvika Showrooom, Near bunts hostel circle, Karangalpady Junction, Mangalore, Karnataka. Pincode: 575003.",
                 "phone": "+91 7639177711, 08242007711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Mangalore&output=embed",
-                "doctorName": "DR.MANASWITHA. B.A.M.S.",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": [
+                    {
+                        "name": "Dr.MANASWITHA ",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/Karnataka/Mangalore.png"
+                    }
+                ]
             },
             {
                 "id": "mysore",
@@ -743,8 +1052,13 @@
                 "address": "No.162/1, Narayana Shastry Road, KR Mohalla, Near Sadvidya Circle, Mysuru, Karnataka. Pincode: 570004",
                 "phone": "+91 7639377711, 08213500532",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Mysore&output=embed",
-                "doctorName": "DR.M.SWETHA. B.A.M.S.",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": [
+                    {
+                        "name": "Dr.M.SWETHA",
+                        "role": "B.A.M.S.",
+                        "image": "/images/Doctors/Karnataka/Mysore.png"
+                    }
+                ]
             },
             {
                 "id": "rajaji-nagar---bangalore",
@@ -752,8 +1066,18 @@
                 "address": "No:307,46th Cross, 9th Main, 4th Block, Rajaji Nagar, Bangalore, Karnataka. Pincode: 560010.",
                 "phone": "+91 7871077711",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Rajaji+Nagar+-+Bangalore&output=embed",
-                "doctorName": "DR.KRISHNA PRABHA. B.S.M.S.,",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr.KRISHNA PRABHA",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/Karnataka/RajajiNagar/RajajiNagar1.png"
+                    },
+                    {
+                        "name": "Dr.S.NAGALAKSHMI",
+                        "role": "B.S.M.S.",
+                        "image": "/images/Doctors/Karnataka/RajajiNagar/RajajiNagar2.png"
+                    }
+                ]
             },
             {
                 "id": "shivamogga",
@@ -761,8 +1085,7 @@
                 "address": "No: 438/60, 15th and, BH Rd, KR Puram, Shivamogga, Karnataka. Pincode: 577 202.",
                 "phone": "+91 9514777114, 08182473398",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Shivamogga&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             },
             {
                 "id": "tumkur",
@@ -770,8 +1093,7 @@
                 "address": "No:24216,1st Floor, B.G Palya Circle, Beside Ganapathi Temple, Vinobha Nagar, B H Road, Tumkur, Karnataka Pincode: 572 101,",
                 "phone": "+91 90927 77118, 08162006500",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Tumkur&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": []
             },
             {
                 "id": "vijayapura",
@@ -779,8 +1101,7 @@
                 "address": "No: 675A/1, Athani Rd, Opposite to Sainik School, near New Bus Stand, 2nd Gate, Shastri Nagar, Vijayapura, Karnataka. Pincode: 586101.",
                 "phone": "+91 7448777169, 08123132555",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Vijayapura&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": []
             }
         ]
     },
@@ -793,8 +1114,13 @@
                 "address": "No:13,Ground floor,Villianur Main Rd,Kaveri Nagar,Reddiarpalayam,Puducherry,Landmark: Nearby Mahindra Car Showroom,Puducherry, 605010",
                 "phone": "+91 7448677711",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997214.7593380838!2d79.35990374331965!3d12.491606871316097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53619e1d686ae7%3A0x9d26baa156b57711!2sRJR%20Herbal%20Hospitals%20-%20Pondichery!5e0!3m2!1sen!2sin!4v1769152106401!5m2!1sen!2sin",
-                "doctorName": "Dr.J.PRIYANGA. B.A.M.S",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": [
+                    {
+                        "name": "Dr.J.PRIYANGA",
+                        "role": "B.A.M.S",
+                        "image": "/images/Doctors/Puducherry/Puducherry.png"
+                    }
+                ]
             }
         ]
     },
@@ -807,8 +1133,7 @@
                 "address": "No: 12A, HubTown Seasons, Opposite to Mono Rail Pillar-19, Ramakrishna Chemburkar marg , Chembur, Mumbai. L.M: Near to Jockey show room Pincode: 400071.",
                 "phone": "022-20858787, +91 9087771127",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Mumbai+/+Bombay&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             },
             {
                 "id": "navi-mumbai",
@@ -816,8 +1141,7 @@
                 "address": "No.16/17, Sathyam Towers, Sector 20, Kopar Khairane, Navi Mumbai, Maharashtra. Pincode: 400709.",
                 "phone": "+91 9751177655",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Navi+Mumbai&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": []
             },
             {
                 "id": "dombivali",
@@ -825,8 +1149,7 @@
                 "address": "No 1, Konark Arcade, Kalyan Road, Besides KDMC sports complex, Dombivali East, Mumbai. L.M: Near Gharda circle Pincode: 421203.",
                 "phone": "+91 97511 77544",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Dombivali&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": []
             },
             {
                 "id": "pune",
@@ -834,8 +1157,7 @@
                 "address": "Shop no: 4 & 5, Kamala Corner Ground Floor, Near Jugana Bazar Chowk, Mangalwar Peth, Pune, Maharastra-411011.",
                 "phone": "022-20858787, +91 7871777116",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.032024723003!2d73.8633941!3d18.527454900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c15f56e3aa9d%3A0x36fdf2233b58f24f!2sRJR%20Herbal%20Hospital%20-Pune!5e0!3m2!1sen!2sin!4v1769152467049!5m2!1sen!2sin",
-                "doctorName": "",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": []
             },
             {
                 "id": "nashik",
@@ -843,8 +1165,7 @@
                 "address": "Bharath Petrol Pump, Ashoka Realty Atharva Heights, No: 8 & 9, Jail Rd, next to Dasak, Dhara Society, Panchak, Nashik, Maharashtra 422101",
                 "phone": "8608777115",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59994.00713908602!2d73.76849654863281!3d19.982248099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddc14c13917f33%3A0x8b078274f9839a8c!2sRJR%20HERBAL%20HOSPITAL-Nashik!5e0!3m2!1sen!2sin!4v1769152549002!5m2!1sen!2sin",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             },
             {
                 "id": "solapur",
@@ -852,8 +1173,7 @@
                 "address": "Dufferin Chowk, No:150, VIP Rd, near Khairnar hospital, Solapur, Maharashtra 413001",
                 "phone": "8608777116,02174036889",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801.646772331738!2d75.89877587508087!3d17.66688109469356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5db3c43d99db9%3A0xfb975f275067b724!2sRJR%20HERBAL%20HOSPITAL%20-%20Solapur!5e0!3m2!1sen!2sin!4v1769152615211!5m2!1sen!2sin",
-                "doctorName": "",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": []
             },
             {
                 "id": "aurangabad",
@@ -861,8 +1181,7 @@
                 "address": "No : 327, Abhyuday Complex, Chhatrapati Sambhaji Nagar Near CIDCO Signal, opposite Deepali Hotel, N 3, Cidco, Chhatrapati Sambhajinagar, Maharashtra 431001",
                 "phone": "8608777119",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.2187455925628!2d75.36412617512661!3d19.872983126470025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba31010177c9d%3A0x318a1097559ed609!2sRJR%20Herbal%20Hospital%20-%20Aurangabad!5e0!3m2!1sen!2sin!4v1769152670972!5m2!1sen!2sin",
-                "doctorName": "",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": []
             },
             {
                 "id": "kolhapur",
@@ -870,8 +1189,7 @@
                 "address": "R S No. 266 Plot No. B 14 Old Pune Bangalore Road (PB Road), Post Market Yard, Kolhapur, Maharashtra. 416005",
                 "phone": "7092777113",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Kolhapur&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": []
             },
             {
                 "id": "ahmednagar",
@@ -879,8 +1197,7 @@
                 "address": "Ambar plaza A wing, No 1 & 32, near Market Yard Road, Bhavani Nagar, Ahilyanagar, Maharashtra 414001",
                 "phone": "7092777114",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Ahmednagar&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             },
             {
                 "id": "nagpur",
@@ -888,8 +1205,7 @@
                 "address": "Plot number 193, Surya Nagar, Kalamna Market Road, Near SBI Bank , Nagpur - 440035.",
                 "phone": "7092777116",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7812230.252443689!2d74.3945501990082!3d17.04496721129733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c758756b1523%3A0x16cdb72dc7b166d7!2sRjr%20Herbal%20Hospital%20-%20Nagpur!5e0!3m2!1sen!2sin!4v1769152792002!5m2!1sen!2sin",
-                "doctorName": "",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": []
             },
             {
                 "id": "nanded",
@@ -897,8 +1213,7 @@
                 "address": "1-18-1099, Anand Nagar Rd, near Rajashri Shahu School, Vasant Nagar, Hyder Bagh, Dashmesh Nagar, Harsh Nagar, Nanded, Nanded-Waghala, Maharashtra 431605",
                 "phone": "7094777117, 8591122222",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Nanded&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": []
             },
             {
                 "id": "akola",
@@ -906,8 +1221,7 @@
                 "address": "No.7/2, Dhagekar Complex, Cricket Club, near Tower Chowk, New Radhakisan Plots, Oposite, Akola, Maharashtra 444001",
                 "phone": "022-20858787, +91 8608777110",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Akola&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": []
             },
             {
                 "id": "amravathi",
@@ -915,8 +1229,7 @@
                 "address": "Address: Irwin Square, No:176, near MedPlus medical store, below LIC Office, Amravati, Maharashtra 444602",
                 "phone": "022-20858787, +91 7448777113",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+Amravathi&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             },
             {
                 "id": "jalgaon",
@@ -924,8 +1237,7 @@
                 "address": "No : 5, Shiv Naman, bus stop, opposite to Nayara Petrol Pump, near shiv Shiv Colony, Ganesh Colony, Jalgaon, Maharashtra 425001",
                 "phone": "022-20858787, +91 7448777106",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.620798657212!2d75.54513097515272!3d21.007832288497223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd90f39812eb5cf%3A0x83ec0d7da44dc460!2sRJR%20HERBAL%20HOSPITAL%20-%20Jalgaon!5e0!3m2!1sen!2sin!4v1769152913149!5m2!1sen!2sin",
-                "doctorName": "",
-                "doctorImage": "/images/naveersir1.png"
+                "doctors": []
             },
             {
                 "id": "pimpri-chinchwad",
@@ -933,8 +1245,7 @@
                 "address": "9,206, Sunshine Plaza, Ambedkar circle, No.8, Station Rd, MIDC, Pimpri Colony, Pimpri-Chinchwad, Maharashtra 411018",
                 "phone": "022-20858787, +91 7448777110",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.8462923629504!2d73.80273337510006!3d18.625982065946072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9a809643c71%3A0x28cb828fbe45b6a6!2sRJR%20HERBAL%20HOSPITALS%20-PIMPRI%20CHINCHWAD!5e0!3m2!1sen!2sin!4v1769152972010!5m2!1sen!2sin",
-                "doctorName": "",
-                "doctorImage": "/images/md sir nadi.png"
+                "doctors": []
             },
             {
                 "id": "satara",
@@ -942,8 +1253,7 @@
                 "address": "9, 7, Star Multiplex Complex, No:UG-8, near Satara Bus Stand, Raviwar Peth, Satara, Maharashtra 415001",
                 "phone": "7448777103",
                 "mapUrl": "https://www.google.com/maps?q=RJR+Herbal+Hospital+SATARA&output=embed",
-                "doctorName": "",
-                "doctorImage": "/images/dhakshnamoorthy.png"
+                "doctors": []
             },
             {
                 "id": "melegaon",
@@ -951,8 +1261,7 @@
                 "address": "No.44, upstairs of mosum Engineering works, Malegaon - Satana Rd, Soygaon, Malegaon, Maharashtra 423203",
                 "phone": "+91 7448777114",
                 "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7471.908295333937!2d74.50188669357911!3d20.549056900000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bde99a8b89f63d5%3A0x9d0d476c3ba90d9d!2sRJR%20HERBAL%20HOSPITAL%20-%20MALEGAON!5e0!3m2!1sen!2sin!4v1769153086970!5m2!1sen!2sin",
-                "doctorName": "",
-                "doctorImage": "/images/kavitha.png"
+                "doctors": []
             }
         ]
     }

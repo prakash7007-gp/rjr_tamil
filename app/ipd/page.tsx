@@ -134,7 +134,7 @@ export default function IPDPage() {
                             className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl"
                         >
                             <Image
-                                src="/images/streambath.JPG"
+                                src="/ipd/r1.jpg"
                                 alt="Therapy Room"
                                 fill
                                 className="object-cover"

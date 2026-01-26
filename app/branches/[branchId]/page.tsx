@@ -3,8 +3,6 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { MapPin, Phone, User, Clock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { getData } from "../../lib/loadData";
-import DoctorSection from "../../components/DoctorSection";
 
 // Helper to find a branch by ID across all regions
 const getBranchById = (id: string) => {
@@ -17,9 +15,12 @@ const getBranchById = (id: string) => {
 
 // Generate all possible branch paths at build time
 export async function generateStaticParams() {
+
+
     const params = [];
     for (const region of branchesData) {
         for (const branch of region.branches) {
+
             params.push({ branchId: branch.id });
         }
     }
@@ -31,37 +32,24 @@ export async function generateMetadata({ params }: { params: Promise<{ branchId:
     const data = getBranchById(resolvedParams.branchId);
     if (!data) return { title: "Branch Not Found" };
 
+
+    const doctorName = data.branch.doctors?.[0]?.name || "Specialist";
+
     return {
-        title: `${data.branch.city} Branch | Best Siddha & Ayurveda Treatment in ${data.regionName}`,
-        description: `Visit RJR Herbal Hospitals in ${data.branch.city}, ${data.regionName}. We offer traditional Siddha and Ayurveda treatments for Asthma, Psoriasis, and Arthritis under the care of ${data.branch.doctorName}. Contact: ${data.branch.phone}`,
-        keywords: [
-            `${data.branch.city} Ayurveda hospital`,
-            `Siddha medicine ${data.branch.city}`,
-            `Ayurvedic clinic in ${data.branch.city}`,
-            `Best herbal hospital ${data.regionName}`,
-            `Natural treatment ${data.branch.city}`
-        ],
-        alternates: {
-            canonical: `https://www.rjrherbalhospitals.com/branches/${resolvedParams.branchId}`,
-            languages: {
-                'ta-IN': `https://www.rjrherbalhospitals.com/branches/${resolvedParams.branchId}`,
-            },
-        },
+        title: `${data.branch.city} Branch - RJR Herbal Hospitals`,
+        description: `Visit our ${data.branch.city} branch in ${data.regionName}. Doctor: ${doctorName}. Ph: ${data.branch.phone}`,
     };
 }
 
 export default async function BranchDetailPage(props: { params: Promise<{ branchId: string }> }) {
     const params = await props.params;
     const data = getBranchById(params.branchId);
-    const siteData = await getData();
 
     if (!data) {
         notFound();
     }
 
     const { branch, regionName } = data;
-    const isChennai = branch.city.toLowerCase().includes("chennai") ||
-        ["tnagar", "arumbakkam", "urapakkam"].includes(branch.id);
 
     return (
         <main className="bg-gray-50 min-h-screen py-10 px-4">
@@ -168,35 +156,39 @@ export default async function BranchDetailPage(props: { params: Promise<{ branch
 
                     {/* RIGHT COLUMN - DOCTOR & HOURS */}
                     <div className="space-y-8">
-                        {/* DOCTOR PROFILE - Only show if not Chennai (Chennai shows full team below) */}
-                        {!isChennai && (
-                            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 text-center relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#c22220]/10 to-transparent"></div>
+                        {/* DOCTOR PROFILE */}
+                        {/* DOCTOR PROFILE - Show only if single doctor in sidebar */}
+                        {branch.doctors && branch.doctors.length === 1 && (
+                            <div className="space-y-6">
+                                {branch.doctors.map((doctor, index) => (
+                                    <div key={index} className="bg-[#c22220] rounded-2xl overflow-hidden shadow-lg border-2 border-[#c22220] h-[450px] flex flex-col">
+                                        {/* Image Section - 80% */}
+                                        <div className="relative h-[80%] bg-white">
+                                            {doctor.image ? (
+                                                <Image
+                                                    src={doctor.image}
+                                                    alt={doctor.name}
+                                                    fill
+                                                    className="object-cover object-top"
+                                                />
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
+                                                    <User size={64} />
+                                                </div>
+                                            )}
+                                        </div>
 
-                                <div className="w-32 h-32 mx-auto relative rounded-full overflow-hidden border-4 border-white shadow-lg bg-gray-100 mb-4 z-10">
-                                    {/* Use next/image correctly if you have real images, for now placeholder */}
-                                    <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
-                                        <User size={48} />
+                                        {/* Info Section - 20% */}
+                                        <div className="h-[20%] flex flex-col items-center justify-center p-2 text-center bg-[#c22220]">
+                                            <h3 className="text-yellow-400 font-bold text-xl md:text-2xl leading-tight mb-1">
+                                                {doctor.name.replace(/^DR\./i, 'Dr.').replace(/^DR\s/i, 'Dr. ')}
+                                            </h3>
+                                            <p className="text-white text-sm md:text-base font-medium opacity-90">
+                                                {doctor.role}
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <h3 className="text-xl font-bold text-gray-900">{branch.doctorName}</h3>
-                                <p className="text-[#c22220] font-medium mb-4">Senior Consultant</p>
-
-                                <div className="text-sm text-gray-500 bg-gray-50 rounded-lg p-3">
-                                    "Dedicated to providing the best herbal care with over 15 years of experience."
-                                </div>
-
-                                <div className="mt-6 pt-6 border-t border-gray-100">
-                                    <div className="flex justify-between items-center mb-2">
-                                        <span className="text-gray-500 text-sm">Experience</span>
-                                        <span className="font-bold text-gray-800">15+ Years</span>
-                                    </div>
-                                    <div className="flex justify-between items-center">
-                                        <span className="text-gray-500 text-sm">Languages</span>
-                                        <span className="font-bold text-gray-800">Tamil, English</span>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         )}
 
@@ -226,13 +218,51 @@ export default async function BranchDetailPage(props: { params: Promise<{ branch
                     </div>
                 </div>
 
-                {/* DOCTOR TEAM SECTION - ONLY FOR CHENNAI */}
-                {isChennai && (
-                    <div className="mt-12">
-                        <DoctorSection data={siteData.doctors} />
+                {/* MULTI DOCTOR SECTION - COMPONENT */}
+                {branch.doctors && branch.doctors.length > 1 && ( 
+                    <div className="mt-12 bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+                        <div className="text-center mb-8">
+                            <span className="inline-block px-3 py-1 bg-red-50 text-[#c22220] rounded-full text-sm font-bold tracking-wide mb-3">
+                                Our Team
+                            </span>
+                            <h2 className="text-3xl font-bold text-gray-900">Meet Our Specialists</h2>
+                        </div>
+
+                        <div className="flex flex-wrap justify-center gap-8">
+                            {branch.doctors.map((doctor, index) => ( 
+                                <div key={index} className="w-full max-w-sm bg-[#c22220] rounded-2xl overflow-hidden shadow-lg border-2 border-[#c22220] h-[500px] flex flex-col transform hover:scale-[1.02] transition-transform duration-300">
+                                    {/* Image Section - 80% */}
+                                    <div className="relative h-[80%] bg-white group">
+                                        {doctor.image ? (
+                                            <Image
+                                                src={doctor.image}
+                                                alt={doctor.name}
+                                                fill
+                                                className="object-cover object-top"
+                                            />
+                                        ) : (
+                                            <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
+                                                <User size={80} />
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Info Section - 20% */}
+                                    <div className="h-[20%] flex flex-col items-center justify-center p-4 text-center bg-[#c22220]">
+                                        <h3 className="text-yellow-400 font-bold text-xl md:text-2xl leading-tight mb-2">
+                                            {doctor.name.replace(/^DR\./i, 'Dr.').replace(/^DR\s/i, 'Dr. ')}
+                                        </h3>
+                                        <p className="text-white text-base font-medium opacity-90">
+                                            {doctor.role}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>
         </main>
     );
 }
+

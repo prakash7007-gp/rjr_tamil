@@ -13,6 +13,7 @@ import WhyChooseUs from "./components/WhyChooseSection";
 import PhotoBanner from "./components/PhotoBanner";
 import VideoSection from "./components/VideoSection";
 import CreativeSection from "./components/CreativeSection";
+import YoutubeShortsSection from "./components/YoutubeShortsSection";
 
 export const metadata: Metadata = {
   title: "Home - Advanced Siddha, Ayurveda & Herbal Treatments in Tamil Nadu",
@@ -55,6 +56,8 @@ export default async function HomePage() {
       {/* <VideoSection /> */}
       {/* <PhotoBanner /> */}
       {/* <CreativeSection data={data} /> */}
+      {/* YouTube Shorts Channels Section */}
+      <YoutubeShortsSection />
     </>
   );
 }

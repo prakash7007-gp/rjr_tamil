@@ -60,43 +60,45 @@ export default function FloatingActionButtons() {
                     <WhatsAppIcon />
                 </a>
 
-                {/* Scroll Top - Above WhatsApp (Right Corner) */}
-                <div
-                    className={`fixed bottom-24 right-6 z-[9999] transition-opacity duration-300 ${showScrollTop ? "opacity-100" : "opacity-0 pointer-events-none"
-                        }`}
-                >
-                    <button
-                        onClick={scrollToTop}
-                        className="relative bg-white rounded-full shadow-xl hover:scale-110 transition-transform duration-300 flex items-center justify-center w-12 h-12 border-2 border-white"
-                        aria-label="Scroll to top"
-                    >
-                        {/* Progress Border SVG */}
-                        <svg className="absolute w-full h-full -rotate-90" width="48" height="48" viewBox="0 0 48 48">
-                            <circle
-                                cx="24"
-                                cy="24"
-                                r="22"
-                                fill="none"
-                                stroke="#fee2e2" // Light red for background track
-                                strokeWidth="3"
-                            />
-                            <circle
-                                cx="24"
-                                cy="24"
-                                r="22"
-                                fill="none"
-                                stroke="#ef4444" // Red-500
-                                strokeWidth="3"
-                                strokeDasharray="138.23" // 2 * PI * 22
-                                strokeDashoffset={138.23 - (138.23 * scrollProgress) / 100}
-                                strokeLinecap="round"
-                            />
-                        </svg>
 
-                        {/* Arrow Icon */}
-                        <ArrowUp className="w-6 h-6 text-red-600 z-10" />
-                    </button>
-                </div>
+            </div>
+
+            {/* Scroll Top - Global (Right Corner) */}
+            <div
+                className={`fixed bottom-4 right-4 md:bottom-24 md:right-6 z-[9999] transition-opacity duration-300 ${showScrollTop ? "opacity-100" : "opacity-0 pointer-events-none"
+                    }`}
+            >
+                <button
+                    onClick={scrollToTop}
+                    className="relative bg-white rounded-full shadow-xl hover:scale-110 transition-transform duration-300 flex items-center justify-center w-12 h-12 border-2 border-white"
+                    aria-label="Scroll to top"
+                >
+                    {/* Progress Border SVG */}
+                    <svg className="absolute w-full h-full -rotate-90" width="48" height="48" viewBox="0 0 48 48">
+                        <circle
+                            cx="24"
+                            cy="24"
+                            r="22"
+                            fill="none"
+                            stroke="#fee2e2" // Light red for background track
+                            strokeWidth="3"
+                        />
+                        <circle
+                            cx="24"
+                            cy="24"
+                            r="22"
+                            fill="none"
+                            stroke="#ef4444" // Red-500
+                            strokeWidth="3"
+                            strokeDasharray="138.23" // 2 * PI * 22
+                            strokeDashoffset={138.23 - (138.23 * scrollProgress) / 100}
+                            strokeLinecap="round"
+                        />
+                    </svg>
+
+                    {/* Arrow Icon */}
+                    <ArrowUp className="w-6 h-6 text-red-600 z-10" />
+                </button>
             </div>
 
             {/* Mobile View (< md) */}

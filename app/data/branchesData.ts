@@ -1,13 +1,18 @@
 
 import branchesRaw from './branches.json';
 
+export interface Doctor {
+    name: string;
+    role: string;
+    image: string;
+}
+
 export interface Branch {
     id: string;
     city: string;
     address: string;
     mapUrl: string;
-    doctorName: string;
-    doctorImage: string;
+    doctors: Doctor[];
     phone: string;
 }
 

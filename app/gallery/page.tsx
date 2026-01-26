@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const beforeAfterImages = [
   "/Before_after_images/asthuma.png",
-  "/Before_after_images/asthuma1.png",  
+  "/Before_after_images/asthuma1.png",
   "/Before_after_images/handpain.png",
   "/Before_after_images/kneepain.png",
   "/Before_after_images/kneepain2.png",
@@ -39,6 +39,15 @@ const youtubeVideos = [
   { src: "/Video_gallery/ulcernew.mp4", title: "அல்சர் சிகிச்சை", description: "ஆரோக்கியமான மீட்பு" },
   { src: "/Video_gallery/urinaryinfectionnew.mp4", title: "சிறுநீர் தொற்று", description: "நிபுணத்துவ சிகிச்சை" },
   { src: "/Video_gallery/varicosenew.mp4", title: "வெரிகோஸ் வெயின்", description: "இயற்கை மருத்துவம்" },
+  // YouTube Shorts from @rjrcuredpatientstamil
+  { id: "MyGkk0ZcvLo", title: "லித்தேஷ் தோல் வியாதி", description: "RJR Cured Patients" },
+  { id: "6zep2zB-Tcg", title: "சொரியாசிஸ்MARUTHI", description: "RJR Cured Patients" },
+  { id: "CBe-oQcazhc", title: "SRI DEVI PSORIASIS 1080", description: "RJR Cured Patients" },
+  { id: "MKXs41ICdeo", title: "SRI DEVI PSORIASIS 720", description: "RJR Cured Patients" },
+  { id: "mF4Pz7k-HFI", title: "Psoriasis CURED PATIENT", description: "RJR Cured Patients" },
+  { id: "8ZJ1hhCqN3U", title: "PCOD Tips", description: "Herbal Tips" },
+  { id: "jTkWCp50an8", title: "Psoriasis Recovery", description: "RJR Cured Patients" },
+  { id: "Qpo_edS0PPo", title: "Skin Treatment", description: "RJR Cured Patients" },
 ];
 
 const galleryImages = [
@@ -233,6 +242,10 @@ function GalleryCard({ src, index, onClick, label }: any) {
 }
 
 function VideoGalleryCard({ video, isActive, onPlay }: any) {
+  const isYouTube = !!video.id;
+  const videoSrc = isYouTube ? `https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0` : video.src;
+  const thumbnail = isYouTube ? `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg` : null;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -240,25 +253,43 @@ function VideoGalleryCard({ video, isActive, onPlay }: any) {
       className={`relative w-full aspect-[9/16] rounded-3xl overflow-hidden bg-black shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-200 ${isActive ? "ring-4 ring-[#c22220]" : ""}`}
     >
       {isActive ? (
-        <video
-          src={video.src}
-          controls
-          autoPlay
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      ) : (
-        <div className="relative w-full h-full cursor-pointer flex flex-col justify-end" onClick={onPlay}>
+        isYouTube ? (
+          <iframe
+            src={videoSrc}
+            className="absolute inset-0 w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
           <video
             src={video.src}
-            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
-            muted
-            loop
-            onMouseEnter={(e) => e.currentTarget.play()}
-            onMouseLeave={(e) => {
-              e.currentTarget.pause();
-              e.currentTarget.currentTime = 0;
-            }}
+            controls
+            autoPlay
+            className="absolute inset-0 w-full h-full object-cover"
           />
+        )
+      ) : (
+        <div className="relative w-full h-full cursor-pointer flex flex-col justify-end" onClick={onPlay}>
+          {isYouTube ? (
+            <Image
+              src={thumbnail || ""}
+              alt={video.title}
+              fill
+              className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
+            />
+          ) : (
+            <video
+              src={video.src}
+              className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
+              muted
+              loop
+              onMouseEnter={(e) => e.currentTarget.play()}
+              onMouseLeave={(e) => {
+                e.currentTarget.pause();
+                e.currentTarget.currentTime = 0;
+              }}
+            />
+          )}
 
           {/* Play Button */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

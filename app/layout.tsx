@@ -6,6 +6,7 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import { Noto_Sans_Tamil } from "./fonts";
 import FloatingActionButtons from "./components/FloatingActionButtons";
+import ChatBot from "./components/ChatBot";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -81,6 +82,7 @@ export default async function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <ChatBot />
         <FloatingActionButtons />
       </body>
     </html>

@@ -137,6 +137,56 @@ export default function HerbalTipsPage() {
                     ))}
                 </div>
 
+                {/* Video Section - YouTube Shorts from @rjrherbalhospitals */}
+                <section className="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                            பயனுள்ள <span className="text-emerald-600">மூலிகை குறிப்பு</span> வீடியோக்கள்
+                        </h2>
+                        <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+                            நிபுணர்கள் வழங்கும் எளிய வீட்டு வைத்தியங்கள் மற்றும் மூலிகை மருத்துவ ஆலோசனைகள்.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {[
+                            { id: "65iEbHrk3LM", title: "Nasal polyps Treatment" },
+                            { id: "AZJeE5o-yv8", title: "Joint Pain Relief" },
+                            { id: "3LK2sq5TW3A", title: "Psoriasis Cure" },
+                            { id: "aAtl24wmpqI", title: "Knee Pain Tips" },
+                            { id: "kbIb8co8pnQ", title: "Infertility & PCOD" },
+                            { id: "jResJx54uWE", title: "Knee Degeneration" },
+                            { id: "YI8Wqh2gNBY", title: "Piles Solution" },
+                            { id: "SkQAjkfrR0g", title: "Wheezing Treatment" }
+                        ].map((video) => (
+                            <div key={video.id} className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-lg bg-black group">
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${video.id}?rel=0`}
+                                    className="absolute inset-0 w-full h-full"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    title={video.title}
+                                />
+                                {/* Overlay Title for accessibility/info */}
+                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <p className="text-white text-sm font-medium">{video.title}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-12 text-center">
+                        <a
+                            href="https://www.youtube.com/@rjrherbalhospitals/shorts"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-emerald-600 font-bold hover:text-emerald-700 transition-colors"
+                        >
+                            மேலும் பல வீடியோக்களை யூடியூபில் காண்க <ChevronRight className="w-5 h-5" />
+                        </a>
+                    </div>
+                </section>
+
                 {/* Disclaimer */}
                 <div className="mt-16 bg-amber-50 border border-amber-100 rounded-2xl p-6 flex gap-4 items-start">
                     <div className="p-2 bg-amber-100 rounded-full shrink-0">

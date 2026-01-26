@@ -131,7 +131,7 @@ export default async function Footer() {
           <div>
             <h3 className="text-white text-lg font-semibold mb-6 flex items-center gap-2">
               <span className="w-1 h-6 bg-white rounded-full"></span>
-              தொடர்பில் இருங்கள்
+              தொடர்புக
             </h3>
 
             <div className="space-y-6">

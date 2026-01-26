@@ -89,7 +89,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
                                 ABOUT RJR HERBAL HOSPITALS
                             </span>
                             <h2 className="text-2xl lg:text-4xl font-bold leading-snug">
-                                RJR மருத்துவமனையின் <br /> <span className="text-yellow-400">150 ஆண்டு கால</span> சேவை
+                              <span className="text-yellow-400">RJR</span> மருத்துவமனையின் <br /> <span className="text-yellow-400">150 ஆண்டு கால</span> சேவை
                             </h2>
                         </motion.div>
 

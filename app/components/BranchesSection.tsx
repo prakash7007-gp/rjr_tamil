@@ -79,15 +79,27 @@ export default function BranchesSection() {
                             <div className="p-4 flex gap-4 items-center">
                                 {/* DOCTOR IMAGE */}
                                 <div className="w-16 h-16 relative rounded-full overflow-hidden border-2 border-yellow-400 flex-shrink-0 bg-gray-100">
-                                    {/* Placeholder content if image fails or for design */}
-                                    <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
-                                        <User size={24} />
-                                    </div>
+                                    {branch.doctors?.[0]?.image ? (
+                                        <Image
+                                            src={branch.doctors[0].image}
+                                            alt={branch.doctors[0].name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    ) : (
+                                        <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
+                                            <User size={24} />
+                                        </div>
+                                    )}
                                 </div>
 
                                 <div className="flex-1">
                                     <p className="text-xs text-gray-500 font-semibold uppercase tracking-wide">Doctor In-Charge</p>
-                                    <p className="font-bold text-gray-900">{branch.doctorName}</p>
+                                    <p className="font-bold text-gray-900">
+                                        {branch.doctors?.[0]?.name ?
+                                            branch.doctors[0].name.replace(/^DR\./i, 'Dr.').replace(/^DR\s/i, 'Dr. ') :
+                                            "Specialist"}
+                                    </p>
                                     <div className="text-sm text-[#c22220] font-medium flex items-center gap-1 mt-1">
                                         <Phone size={14} /> {branch.phone}
                                     </div>
