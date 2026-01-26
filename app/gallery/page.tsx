@@ -244,7 +244,14 @@ function GalleryCard({ src, index, onClick, label }: any) {
 function VideoGalleryCard({ video, isActive, onPlay }: any) {
   const isYouTube = !!video.id;
   const videoSrc = isYouTube ? `https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0` : video.src;
-  const thumbnail = isYouTube ? `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg` : null;
+  const thumbnail = isYouTube ? `https://img.youtube.com/vi/${video.id}/hqdefault.jpg` : null;
+
+  const handleMouseEnter = (e: React.MouseEvent<HTMLVideoElement>) => {
+    const video = e.currentTarget;
+    video.play().catch(() => {
+      // Ignore autoplay errors
+    });
+  };
 
   return (
     <motion.div
@@ -283,7 +290,7 @@ function VideoGalleryCard({ video, isActive, onPlay }: any) {
               className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
               muted
               loop
-              onMouseEnter={(e) => e.currentTarget.play()}
+              onMouseEnter={handleMouseEnter}
               onMouseLeave={(e) => {
                 e.currentTarget.pause();
                 e.currentTarget.currentTime = 0;
