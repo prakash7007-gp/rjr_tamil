@@ -4,6 +4,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronRight, Play, Youtube, Filter } from "lucide-react";
 
 /* ================= FILE ARRAYS ================= */
 
@@ -21,33 +22,170 @@ const beforeAfterImages = [
   "/Before_after_images/12.png",
 ];
 
+const videoCategories = [
+  { id: "all", label: "அனைத்தும்" },
+  { id: "uterine-fibroids", label: "கர்ப்பப்பை கட்டிகள்" },
+  { id: "psoriasis", label: "சொரியாசிஸ்" },
+  { id: "arthritis", label: "மூட்டு வலி" },
+  { id: "hip-pain", label: "இடுப்பு வலி" },
+  { id: "nasal-polyps", label: "மூக்கு பாலிப்" },
+  { id: "shoulder-pain", label: "தோள், கை, கால் வலி" },
+  { id: "pcod", label: "பிசிஓடி" },
+  { id: "knee-pain", label: "முட்டி வலி" },
+  { id: "piles", label: "மூல நோய்" },
+  { id: "asthma", label: "ஆஸ்துமா" },
+  { id: "osteoarthritis", label: "எலும்பு தேய்மானம்" },
+  { id: "wheezing", label: "வீசிங்" },
+  { id: "diabetes", label: "சர்க்கரை நோய்" },
+  { id: "paralysis", label: "பக்கவாதம்" },
+  { id: "kidney-stones", label: "சிறுநீரக கல்" },
+  { id: "disc-problem", label: "தண்டுவட பிரச்சனை" },
+  { id: "sinus", label: "சைனஸ்" },
+  { id: "kidney-problem", label: "சிறுநீரக பிரச்சனை" },
+  { id: "others", label: "இதர சிகிச்சைகள்" }
+];
+
 const youtubeVideos = [
-  { src: "/Video_gallery/asthmanew.mp4", title: "ஆஸ்துமா சிகிச்சை", description: "வெற்றிகரமான மீட்பு" },
-  { src: "/Video_gallery/constipationnew.mp4", title: "மலச்சிக்கல் தீர்வு", description: "இயற்கை சிகிச்சை" },
-  { src: "/Video_gallery/diabetesnew.mp4", title: "சர்க்கரை நோய்", description: "மூலிகை மருத்துவம்" },
-  { src: "/Video_gallery/digestionnew.mp4", title: "ஜீரண கோளாறு", description: "மூலிகை முறை" },
-  { src: "/Video_gallery/fibroidnew.mp4", title: "ஃபைப்ராய்டு சிகிச்சை", description: "நிரந்தர தீர்வு" },
-  { src: "/Video_gallery/gallstonenew.mp4", title: "பித்தக்கல் தீர்வு", description: "அறுவை சிகிச்சையின்றி" },
-  { src: "/Video_gallery/gastricnew.mp4", title: "காஸ்ட்ரிக் பிரச்சனை", description: "மூலிகை தீர்வு" },
-  { src: "/Video_gallery/hippainnew.mp4", title: "இடுப்பு வலி", description: "நிவாரணம்" },
-  { src: "/Video_gallery/kidneystonenew.mp4", title: "சிறுநீரக கல்", description: "மூலிகை சிகிச்சை" },
-  { src: "/Video_gallery/kneepainnew.mp4", title: "முட்டி வலி", description: "இயற்கை தீர்வு" },
-  { src: "/Video_gallery/nasalpolypsnew.mp4", title: "மூக்கு பாலிப்", description: "சித்த மருத்துவம்" },
-  { src: "/Video_gallery/nervousproblemnew.mp4", title: "நரம்பு கோளாறு", description: "சித்த மருத்துவம்" },
-  { src: "/Video_gallery/pilesnew.mp4", title: "மூல நோய்", description: "நிரந்தர தீர்வு" },
-  { src: "/Video_gallery/psoriasisnew.mp4", title: "சொரியாசிஸ்", description: "தோல் நோய் தீர்வு" },
-  { src: "/Video_gallery/ulcernew.mp4", title: "அல்சர் சிகிச்சை", description: "ஆரோக்கியமான மீட்பு" },
-  { src: "/Video_gallery/urinaryinfectionnew.mp4", title: "சிறுநீர் தொற்று", description: "நிபுணத்துவ சிகிச்சை" },
-  { src: "/Video_gallery/varicosenew.mp4", title: "வெரிகோஸ் வெயின்", description: "இயற்கை மருத்துவம்" },
-  // YouTube Shorts from @rjrcuredpatientstamil
-  { id: "MyGkk0ZcvLo", title: "லித்தேஷ் தோல் வியாதி", description: "RJR Cured Patients" },
-  { id: "6zep2zB-Tcg", title: "சொரியாசிஸ்MARUTHI", description: "RJR Cured Patients" },
-  { id: "CBe-oQcazhc", title: "SRI DEVI PSORIASIS 1080", description: "RJR Cured Patients" },
-  { id: "MKXs41ICdeo", title: "SRI DEVI PSORIASIS 720", description: "RJR Cured Patients" },
-  { id: "mF4Pz7k-HFI", title: "Psoriasis CURED PATIENT", description: "RJR Cured Patients" },
-  { id: "8ZJ1hhCqN3U", title: "PCOD Tips", description: "Herbal Tips" },
-  { id: "jTkWCp50an8", title: "Psoriasis Recovery", description: "RJR Cured Patients" },
-  { id: "Qpo_edS0PPo", title: "Skin Treatment", description: "RJR Cured Patients" },
+  // Local Videos
+  { src: "/Video_gallery/asthmanew.mp4", title: "ஆஸ்துமா சிகிச்சை", description: "வெற்றிகரமான மீட்பு", category: "asthma" },
+  { src: "/Video_gallery/constipationnew.mp4", title: "மலச்சிக்கல் தீர்வு", description: "இயற்கை சிகிச்சை", category: "others" },
+  { src: "/Video_gallery/diabetesnew.mp4", title: "சர்க்கரை நோய்", description: "மூலிகை மருத்துவம்", category: "diabetes" },
+  { src: "/Video_gallery/digestionnew.mp4", title: "ஜீரண கோளாறு", description: "மூலிகை முறை", category: "others" },
+  { src: "/Video_gallery/fibroidnew.mp4", title: "ஃபைப்ராய்டு சிகிச்சை", description: "நிரந்தர தீர்வு", category: "uterine-fibroids" },
+  { src: "/Video_gallery/gallstonenew.mp4", title: "பித்தக்கல் தீர்வு", description: "அறுவை சிகிச்சையின்றி", category: "kidney-stones" },
+  { src: "/Video_gallery/gastricnew.mp4", title: "காஸ்ட்ரிக் பிரச்சனை", description: "மூலிகை தீர்வு", category: "others" },
+  { src: "/Video_gallery/hippainnew.mp4", title: "இடுப்பு வலி", description: "நிவாரணம்", category: "hip-pain" },
+  { src: "/Video_gallery/kidneystonenew.mp4", title: "சிறுநீரக கல்", description: "மூலிகை சிகிச்சை", category: "kidney-stones" },
+  { src: "/Video_gallery/kneepainnew.mp4", title: "முட்டி வலி", description: "இயற்கை தீர்வு", category: "knee-pain" },
+  { src: "/Video_gallery/nasalpolypsnew.mp4", title: "மூக்கு பாலிப்", description: "சித்த மருத்துவம்", category: "nasal-polyps" },
+  { src: "/Video_gallery/nervousproblemnew.mp4", title: "நரம்பு கோளாறு", description: "சித்த மருத்துவம்", category: "others" },
+  { src: "/Video_gallery/pilesnew.mp4", title: "மூல நோய்", description: "நிரந்தர தீர்வு", category: "piles" },
+  { src: "/Video_gallery/psoriasisnew.mp4", title: "சொரியாசிஸ்", description: "தோல் நோய் தீர்வு", category: "psoriasis" },
+  { src: "/Video_gallery/ulcernew.mp4", title: "அல்சர் சிகிச்சை", description: "ஆரோக்கியமான மீட்பு", category: "others" },
+  { src: "/Video_gallery/urinaryinfectionnew.mp4", title: "சிறுநீர் தொற்று", description: "நிபுணத்துவ சிகிச்சை", category: "others" },
+  { src: "/Video_gallery/varicosenew.mp4", title: "வெரிகோஸ் வெயின்", description: "இயற்கை மருத்துவம்", category: "others" },
+
+  // Uterine Fibroids
+  { id: "x7tdlk6ulRs", title: "கர்ப்பப்பை கட்டிகள்", description: "RJR Cured Patients", category: "uterine-fibroids" },
+  { id: "WXq9o9s_4z8", title: "கர்ப்பப்பை கட்டிகள்", description: "RJR Cured Patients", category: "uterine-fibroids" },
+  { id: "zncr_JwE_JQ", title: "கர்ப்பப்பை கட்டிகள்", description: "RJR Cured Patients", category: "uterine-fibroids" },
+  { id: "yuTsSEFrxNU", title: "கர்ப்பப்பை கட்டிகள்", description: "RJR Cured Patients", category: "uterine-fibroids" },
+  { id: "9jsy1Uu2AMs", title: "கர்ப்பப்பை கட்டிகள்", description: "RJR Cured Patients", category: "uterine-fibroids" },
+
+  // Psoriasis
+  { id: "GoLnMMDXcFU", title: "சொரியாசிஸ்", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "3LK2sq5TW3A", title: "சொரியாசிஸ்", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "Ix7qywUMUio", title: "சொரியாசிஸ்", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "7HGOGQ1gyJg", title: "சொரியாசிஸ்", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "jOqXGm--Lx0", title: "சொரியாசிஸ்", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "Jb18x0aY82s", title: "சொரியாசிஸ்", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "7G0YAZulXKA", title: "சொரியாசிஸ்", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "J77fbX6iYlk", title: "சொரியாசிஸ்", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "AGI4Pb6psto", title: "சொரியாசிஸ்", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "ztfFlSWpwaM", title: "சொரியாசிஸ்", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "VSs2vQdszTY", title: "சொரியாசிஸ்", description: "RJR Cured Patients", category: "psoriasis" },
+
+  // Arthritis
+  { id: "jcmRsPVaH5U", title: "மூட்டு வலி", description: "RJR Cured Patients", category: "arthritis" },
+  { id: "0oRtuMf6b34", title: "மூட்டு வலி", description: "RJR Cured Patients", category: "arthritis" },
+  { id: "eEhfjEWTQ5Y", title: "மூட்டு வலி", description: "RJR Cured Patients", category: "arthritis" },
+  { id: "aAtl24wmpqI", title: "மூட்டு வலி", description: "RJR Cured Patients", category: "arthritis" },
+  { id: "qorYxk5Tsag", title: "மூட்டு வலி", description: "RJR Cured Patients", category: "arthritis" },
+  { id: "s91mWZWeFF0", title: "மூட்டு வலி", description: "RJR Cured Patients", category: "arthritis" },
+  { id: "PEL3ob7Ok38", title: "மூட்டு வலி", description: "RJR Cured Patients", category: "arthritis" },
+
+  // Hip pain
+  { id: "OvttXRhxbIk", title: "இடுப்பு வலி", description: "RJR Cured Patients", category: "hip-pain" },
+
+  // Nasal polyps
+  { id: "65iEbHrk3LM", title: "மூக்கு பாலிப்", description: "RJR Cured Patients", category: "nasal-polyps" },
+  { id: "LY31UXUwvw4", title: "மூக்கு பாலிப்", description: "RJR Cured Patients", category: "nasal-polyps" },
+
+  // Shoulder pain, leg, hand
+  { id: "AZJeE5o-yv8", title: "தோள், கை, கால் வலி", description: "RJR Cured Patients", category: "shoulder-pain" },
+
+  // PCOD
+  { id: "kbIb8co8pnQ", title: "பிசிஓடி", description: "RJR Cured Patients", category: "pcod" },
+  { id: "1LAY80IctQ0", title: "பிசிஓடி", description: "RJR Cured Patients", category: "pcod" },
+  { id: "8ZJ1hhCqN3U", title: "பிசிஓடி", description: "RJR Cured Patients", category: "pcod" },
+
+  // Knee pain
+  { id: "jResJx54uWE", title: "முட்டி வலி", description: "RJR Cured Patients", category: "knee-pain" },
+  { id: "hj4hP5LG5qI", title: "முட்டி வலி", description: "RJR Cured Patients", category: "knee-pain" },
+  { id: "encMyJikTnk", title: "முட்டி வலி", description: "RJR Cured Patients", category: "knee-pain" },
+  { id: "iVeWemlKHA4", title: "முட்டி வலி", description: "RJR Cured Patients", category: "knee-pain" },
+  { id: "fM657Q5lMJI", title: "முட்டி வலி", description: "RJR Cured Patients", category: "knee-pain" },
+  { id: "XmC5tuqF15A", title: "முட்டி வலி", description: "RJR Cured Patients", category: "knee-pain" },
+  { id: "tWvNHCPPQ1g", title: "முட்டி வலி", description: "RJR Cured Patients", category: "knee-pain" },
+  { id: "WwTsudlFxR0", title: "முட்டி வலி", description: "RJR Cured Patients", category: "knee-pain" },
+  { id: "YvXXzr6XD90", title: "முட்டி வலி", description: "RJR Cured Patients", category: "knee-pain" },
+  { id: "ZfFSKY8_z3Y", title: "முட்டி வலி", description: "RJR Cured Patients", category: "knee-pain" },
+  { id: "X3mw2Ssiwws", title: "முட்டி வலி", description: "RJR Cured Patients", category: "knee-pain" },
+
+  // Piles
+  { id: "YI8Wqh2gNBY", title: "மூல நோய்", description: "RJR Cured Patients", category: "piles" },
+  { id: "TEdHwJHWsEg", title: "மூல நோய்", description: "RJR Cured Patients", category: "piles" },
+
+  // Asthma
+  { id: "SkQAjkfrR0g", title: "ஆஸ்துமா", description: "RJR Cured Patients", category: "asthma" },
+  { id: "SPnF3tE69Q8", title: "ஆஸ்துமா", description: "RJR Cured Patients", category: "asthma" },
+  { id: "p12efStuCyE", title: "ஆஸ்துமா", description: "RJR Cured Patients", category: "asthma" },
+  { id: "6zuvS5sumbY", title: "ஆஸ்துமா", description: "RJR Cured Patients", category: "asthma" },
+  { id: "-ldTWweSYGA", title: "ஆஸ்துமா", description: "RJR Cured Patients", category: "asthma" },
+
+  // Osteoarthritis
+  { id: "khJrVYaVs6k", title: "எலும்பு தேய்மானம்", description: "RJR Cured Patients", category: "osteoarthritis" },
+  { id: "V4YRzK0g_2g", title: "எலும்பு தேய்மானம்", description: "RJR Cured Patients", category: "osteoarthritis" },
+  { id: "5rJzjGbO4B8", title: "எலும்பு தேய்மானம்", description: "RJR Cured Patients", category: "osteoarthritis" },
+
+  // wheezing
+  { id: "xHM4lD7_nN8", title: "வீசிங்", description: "RJR Cured Patients", category: "wheezing" },
+  { id: "pfsjoKN9FS4", title: "வீசிங்", description: "RJR Cured Patients", category: "wheezing" },
+  { id: "AAcAwheoI1U", title: "வீசிங்", description: "RJR Cured Patients", category: "wheezing" },
+  { id: "ZArDOygL0Cw", title: "வீசிங்", description: "RJR Cured Patients", category: "wheezing" },
+  { id: "PVwC53PVx1M", title: "வீசிங்", description: "RJR Cured Patients", category: "wheezing" },
+  { id: "xvD3Bd8sPXM", title: "வீசிங்", description: "RJR Cured Patients", category: "wheezing" },
+  { id: "sCNYbhP1iCg", title: "வீசிங்", description: "RJR Cured Patients", category: "wheezing" },
+  { id: "AqWrTxJU5SM", title: "வீசிங்", description: "RJR Cured Patients", category: "wheezing" },
+  { id: "vm3oSdm_5UY", title: "வீசிங்", description: "RJR Cured Patients", category: "wheezing" },
+  { id: "j5D97TFUgPo", title: "வீசிங்", description: "RJR Cured Patients", category: "wheezing" },
+
+  // Diabetes
+  { id: "6_9UnTNuAeg", title: "சர்க்கரை நோய்", description: "RJR Cured Patients", category: "diabetes" },
+  { id: "Dj3mnP8W4tk", title: "சர்க்கரை நோய்", description: "RJR Cured Patients", category: "diabetes" },
+  { id: "l3jzlnx-zAw", title: "சர்க்கரை நோய்", description: "RJR Cured Patients", category: "diabetes" },
+  { id: "upIti3p3w48", title: "சர்க்கரை நோய்", description: "RJR Cured Patients", category: "diabetes" },
+  { id: "0DngvqHqr-o", title: "சர்க்கரை நோய்", description: "RJR Cured Patients", category: "diabetes" },
+
+  // paralysis
+  { id: "mtyXef6FoOk", title: "பக்கவாதம்", description: "RJR Cured Patients", category: "paralysis" },
+  { id: "iAzWexlY6pc", title: "பக்கவாதம்", description: "RJR Cured Patients", category: "paralysis" },
+  { id: "3aWHgjiCpHA", title: "பக்கவாதம்", description: "RJR Cured Patients", category: "paralysis" },
+
+  // Kidney stones
+  { id: "pvo8T528kUk", title: "சிறுநீரக கல்", description: "RJR Cured Patients", category: "kidney-stones" },
+  { id: "VQOvsx3Hfe0", title: "சிறுநீரக கல்", description: "RJR Cured Patients", category: "kidney-stones" },
+
+  // Disc problem
+  { id: "eAX3AyhEtWs", title: "தண்டுவட பிரச்சனை", description: "RJR Cured Patients", category: "disc-problem" },
+
+  // Lumbar disc herniation
+  { id: "LRnR7MPLP-U", title: "முதுகு தண்டுவட ஜவ்வு விலகல்", description: "RJR Cured Patients", category: "disc-problem" },
+
+  // Sinus
+  { id: "MaXDB3CFsBo", title: "சைனஸ்", description: "RJR Cured Patients", category: "sinus" },
+
+  // Kidney problem
+  { id: "tQHs9OqR9sE", title: "சிறுநீரக பிரச்சனை", description: "RJR Cured Patients", category: "kidney-problem" },
+
+  // More Psoriasis from existing
+  { id: "MyGkk0ZcvLo", title: "லித்தேஷ் தோல் வியாதி", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "6zep2zB-Tcg", title: "சொரியாசிஸ்MARUTHI", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "CBe-oQcazhc", title: "SRI DEVI PSORIASIS 1080", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "MKXs41ICdeo", title: "SRI DEVI PSORIASIS 720", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "mF4Pz7k-HFI", title: "Psoriasis CURED PATIENT", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "jTkWCp50an8", title: "Psoriasis Recovery", description: "RJR Cured Patients", category: "psoriasis" },
+  { id: "Qpo_edS0PPo", title: "Skin Treatment", description: "RJR Cured Patients", category: "psoriasis" },
 ];
 
 const galleryImages = [
@@ -60,7 +198,12 @@ const galleryImages = [
 export default function GalleryPage() {
   const [activeTab, setActiveTab] = useState<"before" | "video" | "photo">("before");
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
-  const [activeVideo, setActiveVideo] = useState<number | null>(null);
+  const [activeVideo, setActiveVideo] = useState<string | number | null>(null);
+  const [videoCategory, setVideoCategory] = useState("all");
+
+  const filteredVideos = videoCategory === "all"
+    ? youtubeVideos
+    : youtubeVideos.filter(v => v.category === videoCategory);
 
   return (
     <main className="min-h-screen bg-[#fafafa]">
@@ -146,15 +289,66 @@ export default function GalleryPage() {
 
             {/* 2. VIDEO GRID (Shorts/Vertical Style) */}
             {activeTab === "video" && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-                {youtubeVideos.map((video, i) => (
-                  <VideoGalleryCard
-                    key={i}
-                    video={video}
-                    isActive={activeVideo === i}
-                    onPlay={() => setActiveVideo(i)}
-                  />
-                ))}
+              <div className="space-y-12">
+                {/* Video Category Filter */}
+                <div className="flex flex-col gap-6">
+                  <div className="flex items-center gap-3 text-slate-800 mb-2">
+                    <Filter className="w-5 h-5 text-[#c22220]" />
+                    <span className="font-bold text-lg">பிரிவுகள்</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {videoCategories.map((cat) => (
+                      <button
+                        key={cat.id}
+                        onClick={() => setVideoCategory(cat.id)}
+                        className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border ${videoCategory === cat.id
+                          ? "bg-[#c22220] border-[#c22220] text-white shadow-lg shadow-[#c22220]/20"
+                          : "bg-white border-gray-200 text-gray-600 hover:border-[#c22220] hover:text-[#c22220]"
+                          }`}
+                      >
+                        {cat.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Video Channel Call to Action */}
+                <div className="bg-white p-8 rounded-[32px] border border-gray-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="flex items-center gap-6">
+                    <div className="w-16 h-16 bg-[#c22220] rounded-2xl flex items-center justify-center text-white shadow-xl shadow-[#c22220]/20 rotate-3 group-hover:rotate-0 transition-transform">
+                      <Youtube size={32} />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-black text-slate-900">எங்கள் யூடியூப் சேனல்</h3>
+                      <p className="text-slate-500 font-medium">மேலும் பல தகவல்களுக்கு குழுசேரவும்</p>
+                    </div>
+                  </div>
+                  <a
+                    href="https://www.youtube.com/@rjrcuredpatientstamil/shorts"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 bg-[#c22220] text-white px-8 py-4 rounded-2xl font-bold hover:bg-[#a01d1b] transition-all duration-300 group shadow-lg shadow-[#c22220]/20"
+                  >
+                    Subscribe Now
+                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+                  <AnimatePresence mode="popLayout">
+                    {filteredVideos.map((video) => {
+                      const videoId = video.id || video.src || "";
+                      return (
+                        <VideoGalleryCard
+                          key={videoId}
+                          video={video}
+                          isActive={activeVideo === videoId}
+                          onPlay={() => setActiveVideo(videoId)}
+                        />
+                      );
+                    })}
+                  </AnimatePresence>
+                </div>
               </div>
             )}
 
@@ -220,6 +414,7 @@ function GalleryCard({ src, index, onClick, label }: any) {
   return (
     <motion.div
       whileHover={{ y: -10 }}
+      layout
       className="group relative cursor-pointer rounded-[40px] overflow-hidden shadow-[0_15px_30px_rgba(0,0,0,0.08)] bg-white aspect-video border border-gray-100"
       onClick={onClick}
     >
@@ -247,17 +442,20 @@ function VideoGalleryCard({ video, isActive, onPlay }: any) {
   const thumbnail = isYouTube ? `https://img.youtube.com/vi/${video.id}/hqdefault.jpg` : null;
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLVideoElement>) => {
-    const video = e.currentTarget;
-    video.play().catch(() => {
+    const videoElement = e.currentTarget;
+    videoElement.play().catch(() => {
       // Ignore autoplay errors
     });
   };
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className={`relative w-full aspect-[9/16] rounded-3xl overflow-hidden bg-black shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-200 ${isActive ? "ring-4 ring-[#c22220]" : ""}`}
+      layout
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      transition={{ duration: 0.3 }}
+      className={`relative w-full aspect-[9/16] rounded-[2rem] overflow-hidden bg-black shadow-lg hover:shadow-2xl transition-all duration-500 group border-4 ${isActive ? "border-[#c22220]" : "border-white"}`}
     >
       {isActive ? (
         isYouTube ? (
@@ -292,8 +490,9 @@ function VideoGalleryCard({ video, isActive, onPlay }: any) {
               loop
               onMouseEnter={handleMouseEnter}
               onMouseLeave={(e) => {
-                e.currentTarget.pause();
-                e.currentTarget.currentTime = 0;
+                const videoElement = e.currentTarget;
+                videoElement.pause();
+                videoElement.currentTime = 0;
               }}
             />
           )}
@@ -302,13 +501,18 @@ function VideoGalleryCard({ video, isActive, onPlay }: any) {
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-white/30">
               <div className="w-12 h-12 bg-[#c22220] rounded-full flex items-center justify-center shadow-lg">
-                <svg fill="white" viewBox="0 0 24 24" className="w-6 h-6 ml-1"><path d="M8 5v14l11-7z" /></svg>
+                <Play fill="white" className="w-6 h-6 ml-1 text-white" />
               </div>
             </div>
           </div>
 
           {/* Info Overlay */}
           <div className="relative z-10 p-5 bg-gradient-to-t from-black via-black/50 to-transparent pt-12 pointer-events-none">
+            <div className="flex flex-wrap gap-2 mb-2">
+              <span className="bg-[#fdc700] text-black text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">
+                {videoCategories.find(c => c.id === video.category)?.label || "சிகிச்சை"}
+              </span>
+            </div>
             <h4 className="text-white font-bold text-lg leading-tight mb-1 drop-shadow-sm">{video.title}</h4>
             <p className="text-white/80 text-xs font-medium">{video.description}</p>
           </div>
@@ -317,3 +521,4 @@ function VideoGalleryCard({ video, isActive, onPlay }: any) {
     </motion.div>
   );
 }
+

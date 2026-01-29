@@ -60,7 +60,7 @@ async function updateAddresses() {
         log(`Processing region: ${region.state}`);
         for (const branch of region.branches) {
             // Construct potential URL
-            // Most follow pattern: https://www.rjrherbalhospitals.com/[id].php
+            // Most follow pattern: https://www.rjrherbalhospitals.in/[id].php
             // Some special cases observed: "ameerpet---hyderabad" -> "ameerpet.php"? NO, context showed "ameerpet.php"
             // I need a mapping strategy. 
             // Simpler heuristic: try to find the link in the state page content I previously fetched?
@@ -98,7 +98,7 @@ async function updateAddresses() {
             // But user just changed Chennai to "T.Nagar, Chennai" short form. 
             // Maybe I should fetch the full T.Nagar address if available.
 
-            const url = `https://www.rjrherbalhospitals.com/${pageName}.php`;
+            const url = `https://www.rjrherbalhospitals.in/${pageName}.php`;
 
             try {
                 const content = await fetchContent(url);

@@ -46,7 +46,7 @@ export default function WhyChooseUs({ data }: { data: any[] }) {
           >
 
             <h2 className="text-4xl md:text-4xl font-black text-gray-900 tracking-tight leading-tight">
-              நம்பிக்கையின் <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c22220] to-[#ff4d4d]">அடையாளம்</span>
+              AYUSH - மருத்துவத்தில் <span className="text-[#c22220]"> ஏன் RJR மருத்துவமனையை தேர்ந்தெடுக்கிறார்கள்?</span>
             </h2>
             <div className="h-2 w-full bg-gradient-to-r from-transparent via-[#c22220] to-transparent mt-4 opacity-30 rounded-full" />
           </motion.div>
@@ -57,7 +57,7 @@ export default function WhyChooseUs({ data }: { data: any[] }) {
             transition={{ delay: 0.3 }}
             className=" text-xl text-gray-500 max-w-2xl mx-auto font-medium"
           >
-            ஏன் ஆயிரக்கணக்கானோர் RJR மருத்துவமனையை தேர்ந்தெடுக்கிறார்கள்?
+
           </motion.p>
         </div>
 
@@ -74,7 +74,7 @@ export default function WhyChooseUs({ data }: { data: any[] }) {
               className="relative w-full h-full max-w-sm mx-auto z-20"
             >
               <Image
-                src="/images/rjr-2.png"
+                src="/images/whyrjrphotos1.png"
                 alt="RJR Herbal Product"
                 fill
                 className="object-contain drop-shadow-2xl"

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -89,7 +90,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
                                 ABOUT RJR HERBAL HOSPITALS
                             </span>
                             <h2 className="text-2xl lg:text-4xl font-bold leading-snug">
-                              <span className="text-yellow-400">RJR</span> மருத்துவமனையின் <br /> <span className="text-yellow-400">150 ஆண்டு கால</span> சேவை
+                                <span className="text-yellow-400">RJR</span> மருத்துவமனையின் <br /> <span className="text-yellow-400">150 ஆண்டு கால</span> சேவை
                             </h2>
                         </motion.div>
 
@@ -112,7 +113,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
                             className="text-lg leading-relaxed opacity-90 mt-4 font-normal "
                         >
                             ஐந்தாம் தலைமுறைக் குடும்பமாக, 150 ஆண்டுகளுக்கும் மேலான பாரம்பரிய
-                            அறிவை நாங்கள் பாதுகாத்து வருகிறோம். 2008-ல் <br />டாக்டர். S.R.ஜெயதுரை
+                            அறிவை நாங்கள் பாதுகாத்து வருகிறோம். 2008-ல் <br />டாக்டர் எஸ்.ஆர். ஜெயதுரை
                             அவர்களால் சென்னையில் தொடங்கப்பட்ட RJR, இன்று 102-க்கும் மேற்பட்ட
                             கிளைகளுடன் தென்னிந்தியா முழுவதும் விரிவடைந்துள்ளது.
                         </motion.p>
@@ -127,18 +128,21 @@ export default function AboutSection({ data }: AboutSectionProps) {
                             “நோயில்லாத சமுதாயத்தை உருவாக்குவதே”. - RJR-யின் நோக்கம்
                         </motion.p>
 
-                        <div><motion.a
-                            href="/about"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            whileHover={{ y: -3, scale: 1.05 }}
-                            transition={{ duration: 0.4, delay: 0.8 }}
-                            viewport={{ once: true }}
-                            className="inline-block bg-yellow-400 text-black font-semibold
-                         px-6 py-3 rounded-lg shadow-lg"
-                        >
-                            மேலும் அறிக →
-                        </motion.a></div>  {/* BUTTON */}
+                        <div>
+                            <Link href="/about">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    whileHover={{ y: -3, scale: 1.05 }}
+                                    transition={{ duration: 0.4, delay: 0.8 }}
+                                    viewport={{ once: true }}
+                                    className="inline-block bg-yellow-400 text-black font-semibold
+                           px-6 py-3 rounded-lg shadow-lg cursor-pointer"
+                                >
+                                    மேலும் அறிக →
+                                </motion.div>
+                            </Link>
+                        </div>  {/* BUTTON */}
 
                     </motion.div>
                 </motion.div>

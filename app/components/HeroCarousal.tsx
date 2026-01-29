@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { div } from "framer-motion/client";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 
 interface Slide {
@@ -59,13 +58,13 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
 
   return (
     <div
-      className="relative w-full h-auto lg:h-[650px] flex flex-col lg:flex-row bg-[#f9f9f9]"
+      className="relative w-full h-auto md:h-[550px] lg:h-[650px] flex flex-col md:flex-row bg-[#f9f9f9]"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
       {/* 🖼️ RIGHT SIDE: IMAGE CAROUSEL */}
-      <div className="w-full lg:w-1/2 h-[400px] lg:h-auto relative overflow-hidden order-1 lg:order-1">
+      <div className="w-full md:w-1/2 h-[400px] md:h-auto relative overflow-hidden order-1 md:order-1">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
@@ -89,7 +88,7 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
         </AnimatePresence>
 
         {/* Mobile Dots (Since arrows are on left side) */}
-        <div className="absolute bottom-4 left-0 w-full flex justify-center gap-2 lg:hidden z-20">
+        <div className="absolute bottom-4 left-0 w-full flex justify-center gap-2 md:hidden z-20">
           {slides.map((_, idx) => (
             <button
               key={idx}
@@ -100,7 +99,7 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
         </div>
       </div>
       {/* 🔴 LEFT SIDE: RED GRADIENT CONTENT */}
-      <div className="w-full lg:w-1/2 bg-gradient-to-br from-[#c22220] to-[#801010] flex flex-col  px-6 py-12 lg:px-16 lg:py-0 relative overflow-hidden z-10 order-1 lg:order-2 lg:py-12">
+      <div className="w-full md:w-1/2 bg-gradient-to-br from-[#c22220] to-[#801010] flex flex-col px-6 py-12 md:px-10 md:py-0 lg:px-16 relative overflow-hidden z-10 order-1 md:order-2 justify-center">
         {/* Decorative Circles */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-black/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>

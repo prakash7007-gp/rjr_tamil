@@ -33,9 +33,9 @@ export async function generateMetadata({ params }: Props) {
       // `Natural treatment ${data.branch.city}`
     ],
     alternates: {
-      canonical: `https://www.rjrherbalhospitals.com/treatments/${slug}`,
+      canonical: `https://www.rjrherbalhospitals.in/treatments/${slug}`,
       languages: {
-        'ta-IN': `https://www.rjrherbalhospitals.com/treatments/${slug}`,
+        'ta-IN': `https://www.rjrherbalhospitals.in/treatments/${slug}`,
       },
     },
   };

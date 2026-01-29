@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const BASE_URL = 'https://www.rjrherbalhospitals.com/';
+const BASE_URL = 'https://www.rjrherbalhospitals.in/';
 const STATES = [
     { file: 'tamil-nadu.php', name: 'Tamil Nadu' },
     { file: 'andra.php', name: 'Andhra Pradesh' },

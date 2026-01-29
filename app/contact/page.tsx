@@ -121,7 +121,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-gray-900 text-lg mb-1">மின்னஞ்சல்</p>
                     <p className="text-gray-600 break-all">
-                      care@rjrherbalhospitals.com
+                      care@rjrherbalhospitals.in
                     </p>
                   </div>
                 </div>

@@ -162,18 +162,21 @@ export default function IPDPage() {
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((num) => (
+                        {[
+                            "r1.jpg", "r2.jpg", "r3.jpg", "r4.jpg", "r5.jpg", "r6.jpg", "r7.jpg", "r8.jpg", "r9.jpg", "r10.jpg", "r11.jpg", "r12.jpg", "r13.jpg",
+                            "HK2A0123.JPG", "HK2A0124.JPG", "HK2A0133.JPG", "HK2A0134.JPG", "HK2A0135.JPG", "HK2A0137.JPG", "HK2A0150.JPG", "HK2A0151.JPG", "HK2A0152.JPG", "HK2A0154.JPG", "HK2A0162.JPG", "HK2A0163.JPG", "HK2A0164.JPG", "HK2A0165.JPG", "HK2A0166.JPG", "HK2A0170.JPG"
+                        ].map((img, idx) => (
                             <motion.div
-                                key={num}
+                                key={idx}
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.4, delay: num * 0.05 }}
+                                transition={{ duration: 0.4, delay: idx * 0.05 }}
                                 viewport={{ once: true }}
                                 className="relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg"
                             >
                                 <Image
-                                    src={`/ipd/r${num}.jpg`}
-                                    alt={`IPD Ward Photo ${num}`}
+                                    src={`/ipd/${img}`}
+                                    alt={`IPD Ward Photo ${idx + 1}`}
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />

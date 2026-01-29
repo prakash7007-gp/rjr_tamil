@@ -1,8 +1,8 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 
 interface MajorTreatment {
@@ -127,69 +127,75 @@ export default function TreatmentSection({ data }: TreatmentSectionProps) {
           <h2 className="text-[#c22220] text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
             முக்கிய சிகிச்சைகள்
           </h2>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-gray-900 leading-relaxed px-4">
-            பலதரப்பட்ட மருத்துவ சிறப்புகளில் அனுபவம் வாய்ந்தவர்கள். எங்கள்
-            நிபுணத்துவம் பெற்ற சில முக்கிய சிகிச்சைகள் கீழே கொடுக்கப்பட்டுள்ளன.
-          </p>
+          நாள்பட்ட நோய்களை (Chronic Diseases) வேரோடு போக்கி, ஆரோக்கியமான வாழ்விற்கு வழிகாட்டுகிறது RJR ஹெர்பல் மருத்துவமனை.
         </div>
 
         {/* CAROUSEL */}
         {hasSlides && (
           <div className="relative">
             {/* Cards for current slide */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {slides[currentSlide].map((treatment, index) => {
-                const globalIndex = currentSlide * itemsPerSlide + index;
-                return (
-                  <div key={treatment.title + globalIndex} className="h-full">
-                    <div className="p-1 h-full">
-                      <div className="h-full rounded-xl sm:rounded-2xl bg-white shadow-md hover:shadow-xl transform-gpu transition-all duration-300 hover:-translate-y-2">
-                        <div className="p-5 sm:p-6 lg:p-8 relative flex flex-col h-full">
-                          {/* INDEX NUMBER */}
-                          <div className="absolute top-3 right-4 sm:top-4 sm:right-6 text-3xl sm:text-4xl font-bold text-gray-200">
-                            {String(globalIndex + 1).padStart(2, "0")}
-                          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 min-h-[400px]">
+              <AnimatePresence mode="wait">
+                {slides[currentSlide].map((treatment, index) => {
+                  const globalIndex = currentSlide * itemsPerSlide + index;
+                  return (
+                    <motion.div
+                      key={treatment.title + globalIndex}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      className="h-full"
+                    >
+                      <div className="p-1 h-full">
+                        <div className="h-full rounded-xl sm:rounded-2xl bg-white shadow-md hover:shadow-xl transform-gpu transition-all duration-300 hover:-translate-y-2">
+                          <div className="p-5 sm:p-6 lg:p-8 relative flex flex-col h-full">
+                            {/* INDEX NUMBER */}
+                            <div className="absolute top-3 right-4 sm:top-4 sm:right-6 text-3xl sm:text-4xl font-bold text-gray-200">
+                              {String(globalIndex + 1).padStart(2, "0")}
+                            </div>
 
-                          {/* IMAGE / ICON */}
-                          <div className="mb-3 sm:mb-4 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-lg sm:rounded-xl bg-[#c22220] overflow-hidden">
-                            <Image
-                              src={treatment.image}
-                              alt={treatment.title}
-                              width={80}
-                              height={80}
-                              className="object-cover h-full w-full bg-white"
-                            />
-                          </div>
+                            {/* IMAGE / ICON */}
+                            <div className="mb-3 sm:mb-4 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-lg sm:rounded-xl bg-[#c22220] overflow-hidden">
+                              <Image
+                                src={treatment.image}
+                                alt={treatment.title}
+                                width={80}
+                                height={80}
+                                className="object-cover h-full w-full bg-white"
+                              />
+                            </div>
 
-                          {/* TITLE */}
-                          <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-[#c22220] leading-tight pr-8">
-                            {treatment.title}
-                          </h3>
+                            {/* TITLE */}
+                            <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-[#c22220] leading-tight pr-8">
+                              {treatment.title}
+                            </h3>
 
-                          {/* DESCRIPTION POINTS */}
-                          {treatment.points && treatment.points.length > 0 && (
-                            <ul className="space-y-1.5 sm:space-y-2 text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 list-disc list-inside leading-relaxed">
-                              {treatment.points.slice(0, 3).map((point, pointIndex) => (
-                                <li key={pointIndex} className="text-left">{point}</li>
-                              ))}
-                            </ul>
-                          )}
+                            {/* DESCRIPTION POINTS */}
+                            {treatment.points && treatment.points.length > 0 && (
+                              <ul className="space-y-1.5 sm:space-y-2 text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 list-disc list-inside leading-relaxed">
+                                {treatment.points.slice(0, 3).map((point, pointIndex) => (
+                                  <li key={pointIndex} className="text-left">{point}</li>
+                                ))}
+                              </ul>
+                            )}
 
-                          {/* ACTION BUTTON */}
-                          <div className="mt-auto pt-3 sm:pt-4">
-                            <Link
-                              href="/treatments"
-                              className="inline-flex items-center px-4 py-2 rounded-full border border-red-100 bg-red-50 text-red-700 text-sm font-semibold hover:bg-[#c22220] hover:text-white hover:border-[#c22220] transition-all duration-300 group"
-                            > மேலும் விவரங்கள்
-                              <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
-                            </Link>
+                            {/* ACTION BUTTON */}
+                            <div className="mt-auto pt-3 sm:pt-4">
+                              <Link
+                                href="/treatments"
+                                className="inline-flex items-center px-4 py-2 rounded-full border border-red-100 bg-red-50 text-red-700 text-sm font-semibold hover:bg-[#c22220] hover:text-white hover:border-[#c22220] transition-all duration-300 group"
+                              > மேலும் விவரங்கள்
+                                <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
+                              </Link>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                );
-              })}
+                    </motion.div>
+                  );
+                })}
+              </AnimatePresence>
             </div>
 
             {/* Carousel controls */}

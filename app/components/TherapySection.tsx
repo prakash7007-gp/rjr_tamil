@@ -67,13 +67,13 @@ export default function TherapySection({ data }: TherapySectionProps) {
                             தெரபி<span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-300"> சிகிச்சைகள்</span>
                         </h2>
                     </div>
-                    <p className="text-white/60 max-w-md text-sm md:text-base leading-relaxed text-left">   
-                       எங்களது தெரபி சிகிச்சைகள் மனம், உடல், ஆன்மாவை இணைத்து புத்துணர்ச்சி அளிக்கிறது. இயற்கை முறைகளையும் பாரம்பரிய அறிவையும் அடிப்படையாகக் கொண்டு, முழுமையான நலனைக் கிடைக்கச் செய்வதே எங்களின் முக்கிய நோக்கமாகும்.    
+                    <p className="text-white/60 max-w-md text-sm md:text-base leading-relaxed text-left">
+                        எங்களது தெரபி சிகிச்சைகள் ரத்த ஓட்டத்தைச் சீராக்கி, உடல் தசை நார்களை வலிமையாக்கி, புத்துணர்ச்சி அளிக்கிறது.இயற்கை முறைகளையும் பாரம்பரிய அறிவையும் அடிப்படையாகக் கொண்டு, முழுமையான நலனைக் கிடைக்கச் செய்வதே எங்களின் முக்கிய நோக்கமாகும்.
                     </p>
                 </div>
 
                 {/* Interactive Accordion */}
-                <div className="flex flex-col lg:flex-row gap-4 h-[700px] md:h-[600px] lg:h-[550px]">
+                <div className="flex flex-col md:flex-row gap-4 h-[700px] md:h-[600px] lg:h-[550px]">
                     {data.map((therapy) => (
                         <TherapyCard
                             key={therapy.id}
@@ -128,8 +128,8 @@ function TherapyCard({
                 <motion.div layout className="relative z-10">
 
                     {/* Mobile/Inactive Title */}
-                    <div className={`${isActive ? 'mb-4' : 'lg:hidden'}`}>
-                        <h3 className={`font-bold text-white transition-all duration-300 ${isActive ? 'text-xl md:text-3xl mb-1' : 'text-lg text-center lg:text-left'}`}>
+                    <div className={`${isActive ? 'mb-4' : 'md:hidden'}`}>
+                        <h3 className={`font-bold text-white transition-all duration-300 ${isActive ? 'text-xl md:text-3xl mb-1' : 'text-lg text-center md:text-left'}`}>
                             {therapy.title}
                         </h3>
                         {isActive && (
@@ -141,7 +141,7 @@ function TherapyCard({
 
                     {/* Desktop Vertical Text when inactive */}
                     {!isActive && (
-                        <div className="hidden lg:block absolute bottom-12 left-1/2 -translate-x-1/2 w-max">
+                        <div className="hidden md:block absolute bottom-12 left-1/2 -translate-x-1/2 w-max">
                             <h3 className="text-xl font-bold text-white/80 whitespace-nowrap -rotate-90 origin-center transition-all group-hover:text-white">
                                 {therapy.title}
                             </h3>

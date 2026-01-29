@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X, Stethoscope } from "lucide-react";
 import ConsultModal from "./ConsultModal";
+import MarqueeBar from "./MarqueeBar";
 
 /* ================= DATA ================= */
 const navLinks = [
@@ -21,7 +22,7 @@ const navLinks = [
 
 /* ================= HEADER INFO ================= */
 const HeaderInfo = () => (
-  <div className="hidden md:flex gap-8 items-center">
+  <div className="hidden lg:flex gap-8 items-center">
     {/* CALL */}
     <div className="flex items-center gap-3">
       <Image src="/images/calling (1).png" alt="Phone" width={42} height={42} />
@@ -71,16 +72,16 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-gradient-to-r from-[#c22220] via-[#a81c1c] to-[#6e0f0f] md:bg-none md:bg-white shadow-md">
+      <header className="sticky top-0 z-50 bg-gradient-to-r from-[#c22220] via-[#a81c1c] to-[#6e0f0f] lg:bg-none lg:bg-white shadow-md">
         {/* LOGO ROW */}
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/images/newlogo.png" alt="Logo" width={70} height={670} className="w-[70px] md:w-[100px] h-auto" />
+            <Image src="/images/newlogo.png" alt="Logo" width={70} height={70} className="w-[70px] md:w-[100px] h-auto" />
             <div>
-              <div className="text-lg md:text-xl font-bold text-white md:text-[#c22220]">
+              <div className="text-lg md:text-xl font-bold text-white lg:text-[#c22220]">
                 RJR ஹெர்பல் மருத்துவமனை
               </div>
-              <p className="text-xs md:text-sm  text-yellow-400  md:text-gray-700">
+              <p className="text-xs md:text-sm  text-yellow-400  lg:text-gray-700">
                 ஐந்து தலைமுறை அனுபவம்
               </p>
             </div>
@@ -89,7 +90,7 @@ export default function Navbar() {
           <HeaderInfo />
 
           <button
-            className="md:hidden p-2 text-white hover:text-yellow-400 transition"
+            className="lg:hidden p-2 text-white hover:text-yellow-400 transition"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
@@ -98,9 +99,9 @@ export default function Navbar() {
         </div>
 
         {/* DESKTOP MENU BAR */}
-        <div className="bg-gradient-to-r from-[#c22220] via-[#a81c1c] to-[#6e0f0f] text-white hidden md:block shadow-lg">
+        <div className="bg-gradient-to-r from-[#c22220] via-[#a81c1c] to-[#6e0f0f] text-white hidden lg:block shadow-lg">
           <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-            <nav className="flex gap-8 text-white font-medium">
+            <nav className="flex gap-4 lg:gap-8 text-white font-medium">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -130,11 +131,12 @@ export default function Navbar() {
         </div>
 
         <ConsultModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+        <MarqueeBar />
       </header>
 
       {/* MOBILE SIDEBAR (DRAWER) */}
       <div
-        className={`fixed inset-0 z-[60] flex justify-end md:hidden transition-opacity duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        className={`fixed inset-0 z-[60] flex justify-end lg:hidden transition-opacity duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           }`}
       >
         {/* Backdrop */}
